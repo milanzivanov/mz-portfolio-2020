@@ -1,0 +1,1 @@
+$(document).ready(function(){"use strict";$(".slick-slider").slick({arrows:!0,dots:!0,autoplay:!0,autoplaySpeed:1e4,cssEase:"ease-out",prevArrow:$(".left-nav-custom"),nextArrow:$(".right-nav-custom"),appendDots:$(".my-pagination")}),console.log("監視タスクの実行!!!!!!")});
