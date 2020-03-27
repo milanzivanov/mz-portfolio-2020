@@ -1,4 +1,5 @@
 .header-box {
+    grid-area: header-box; 
     // background-color: indianred;
     position: relative;
     z-index: 5;
@@ -7,6 +8,30 @@
         justify-content: space-between;
         align-items: center;
         padding: 20px 0;
+
+        .header-logo {
+            a {
+                display: flex;
+                img {
+                    max-width: 100%;
+                    height: auto;
+                }
+            }
+        }
+
+        nav.header-nav {
+            ul {
+                display: flex;
+                li {
+                    a {
+                        display: flex;
+                        font-size: 20px;
+                        padding: 10px;
+                        color: $ltGray;
+                    }
+                }
+            }
+        }
     }
 }
 

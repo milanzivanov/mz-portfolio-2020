@@ -1,10 +1,10 @@
 @import "global";
-@import "header";
-@import "mixins";
 @import "colors";
+@import "mixins";
 @import "typography";
 @import "icons";
 @import "fonts";
+@import "header";
 @import "footer";
 
 html,
@@ -18,37 +18,126 @@ body {
     font-family: "Roboto" sans-serif;
 }
 
-.banner-box {
-    background: url("./../src/img/bg-main.jpeg") center;
+// grid
+.grid-container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+        "header-box header-box header-box header-box" 
+        "banner-box banner-box banner-box banner-box"
+        "banner-box banner-box banner-box banner-box"
+        "banner-box banner-box banner-box banner-box" 
+        "arrow-down-box arrow-down-box arrow-down-box arrow-down-box";
+
+    background: url("./../src/img/laptop-glasses.jpeg") center;
     background-size: cover;
     background-repeat: no-repeat;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    position: relative;
+    z-index: 4;
 
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 2;
-
-
-    .banner-box__bg-overlay {
+    &::after {
+        content: "";
         background-color: rgba(12, 12, 12, 0.6);
         position: absolute;
+        z-index: 4;
         top: 0;
         left: 0;
         right: 0;
         bottom: 0;
     }
+}
+  
+.banner-box { 
+    grid-area: banner-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-    .banner-box__arrow--down {
-        position: absolute;
-        z-index: 5;
-        bottom: 0;
+    .wrapper-inner {
+        .banner-box__content {
+            flex-direction: column;
+            display: flex;
+            position: relative;
+            z-index: 5;
+            color: $white;
+
+            .cta {
+                background: #fff;
+                color: #000;
+                text-decoration: none;
+                font-size: 30px;
+                text-transform: uppercase;
+                padding: .4em;
+                transition: all .1s ease-in-out;
+                cursor: pointer;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-family: ns, Montserrat, sans-serif;
+                overflow: hidden;
+
+                .svg__icon--color {
+                    fill: #000;
+                    padding: 0 0 0 10px;
+                }
+
+                &:hover {
+                    color: #155799;
+                    background: #000;
+                    &:hover .svg__icon--color {
+                        fill: #155799;
+                    }
+                }
+            }
+
+            h1 {
+                font-family: ns,Roboto,sans-serif;
+                text-transform: uppercase;
+                font-size: 60px;
+                order: -1;
+                padding: 0 0 2px;
+
+                span {
+                    color: #eee;
+                    display: inline-block;
+                    background: #000;
+                    margin-bottom: 5px;
+                    padding: 0 .2em;
+                    transition: all .1s ease-in-out;
+                }
+            }
+        }
+
+        // banner 
+        .banner-box__content .cta:hover ~ h1 span {
+            color: #000;
+            background: #fff;
+        }
+    }
+}
+  
+.arrow-down-box { 
+    grid-area: arrow-down-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 5;
+    bottom: 0;
+}
+
+.about-box {
+    .about-box__content,
+    .wrraper-inner {
+        @include flexCHV;
+        padding: 20px;
     }
 }
 
-
+.gallery-box {
+    padding: 20px;
+    background-color: springgreen;
+}
