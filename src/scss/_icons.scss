@@ -9,5 +9,9 @@
   }
 
   .svg__icon--color {
-    fill: #bebebe;
+      fill: #bebebe;
+  }
+
+  .svg__icon--hover:hover {
+      fill: $blue;
   }

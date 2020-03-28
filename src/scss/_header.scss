@@ -1,8 +1,11 @@
 .header-box {
-    grid-area: header-box; 
-    // background-color: indianred;
+    grid-area: header-box;
+    
+    transition: all 0.3s ease-in-out;
     position: relative;
-    z-index: 5;
+    z-index: 6;
+    width: 100%;
+
     .header-box__content {
         display: flex;
         justify-content: space-between;
@@ -14,7 +17,7 @@
                 display: flex;
                 img {
                     max-width: 100%;
-                    height: auto;
+                    height: 75px;
                 }
             }
         }
@@ -28,11 +31,25 @@
                         font-size: 20px;
                         padding: 10px;
                         color: $ltGray;
+                        transition: 0.3s ease-in-out;
+                        &:hover {
+                            color: $blue;
+                        }
                     }
                 }
             }
         }
+
+        .header-nav ul li a.nav-color {
+            color: $dkGray;
+        }
     }
+}
+
+.sticky-active {
+    position: fixed;
+    background: #f5f5f5;
+    color: $dkGray;
 }
 
   ///////////////

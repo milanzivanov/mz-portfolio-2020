@@ -14,30 +14,37 @@ $(document).ready(function() {
     // });
 
     $('.slick-slider').slick({
-        centerMode: true,
-        centerPadding: '60px',
-        slidesToShow: 6,
-        responsive: [
-          {
-            breakpoint: 768,
-            settings: {
-              arrows: false,
-              centerMode: true,
-              centerPadding: '40px',
-              slidesToShow: 3
-            }
-          },
-          {
-            breakpoint: 480,
-            settings: {
-              arrows: false,
-              centerMode: true,
-              centerPadding: '40px',
-              slidesToShow: 1
-            }
-          }
-        ]
-      });
+        arrows: true,
+        dots: true,
+        autoplay: true,
+        autoplaySpeed: 10000,
+        prevArrow: $(".left-nav-custom"),
+        nextArrow: $(".right-nav-custom"),
+        appendDots: $(".my-pagination"),
+        cssEase: 'ease-out',
+    });
 
-    // console.log("監視タスクの実行!!!!!!");
+
+    // adding shadow on scroll and sticky
+    $(window).scroll(function() {
+ 
+        if ($(window).scrollTop() >= 100) { 
+            $('.header-box').addClass('sticky-active');
+            $('.header-nav ul li > a').addClass('nav-color');
+        } else {
+            $('.header-box').removeClass('sticky-active');
+            $('.header-nav ul li a').removeClass('nav-color');
+
+        }
+
+    });
+});
+
+
+//////////
+
+
+//     // open added cart 
+$(".nav-right__total, .close-btn-cart-js").on("click", function(e) {
+    $(".item-added-to-car").toggleClass("active");
 });
