@@ -11,12 +11,17 @@ h2 {
 
 h3 {
     font-size: 30px;
+    color: $ltGray;
+}
+
+h4 {
+    font-size: 25px;
+    color: $ltGray;
 }
 
 p {
     font-weight: 400;
-    font-size: 1.25rem;
+    font-size: 20px;
     line-height: 1.75;
-    margin: 2rem 0;
     text-align: justify;
 }

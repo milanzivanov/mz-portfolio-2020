@@ -135,6 +135,7 @@ body {
 
         .about-box__content--items {
             position: relative;
+
             .navigation-custom-container {
                 position: absolute;
                 top: 115px;
@@ -143,6 +144,13 @@ body {
                 transform: rotate(90deg);
                 background: #858585;
                 padding: 5px;
+
+                @include breakpoint(tablet) {
+                    display: none;
+                }
+                @include breakpoint(mobile) {
+                    display: none;
+                }
 
                 .right-nav-custom.slick-arrow, 
                 .left-nav-custom.slick-arrow {
@@ -154,6 +162,10 @@ body {
 
             .my-pagination {
                 .slick-dots  {
+
+                    p {
+                        margin: 20px 0;
+                    }
 
                     li button:before {
                         color: #a0765b;
@@ -174,13 +186,12 @@ body {
 }
 
 .gallery-box {
-    padding: 10px 0;
-
+    // background: url("./../src/img/bg-pattern.jpg") center;
     .gallery-box__items {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: repeat(4, 1fr);
-        grid-gap: 5px;
+        // grid-gap: 5px;
 
         .div1 { grid-area: 1 / 1 / 2 / 2; }
         .div2 { grid-area: 1 / 2 / 2 / 3; }
@@ -201,34 +212,114 @@ body {
             justify-content: center;
             align-items: center;
             position: relative;
+
             a {
                 img {
                     max-width: 100%;
                     height: auto;
                 }
             }
+
+            &::after {
+                content: "";
+                position: absolute;
+                background-color: rgba(12,12,12,.5);
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                cursor: pointer;
+                transition: 0.3s ease-in-out;
+            }
+
+            &:hover {
+                &::after {
+                    background-color: transparent;
+                }
+            }
         }
+        
+        // center text in gallery
+        .gallery-box__items-item--container {
+            width: 100%;
+            height: 100%;
+            background: url("../src/img/bg-wire.svg") center;
+            flex-direction: column;
+            padding: 10px;
+            @include flexCHV;
+            position: relative;
+            z-index: 3;
+            font-family: "ns", "Roboto", sans-serif;
 
-        .gallery-box__items-item::after {
-            content: "";
-            position: absolute;
-            // background-color: rgba(12,12,12,.5);
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            cursor: pointer;
+            h2 {
+                font-size: 40px;
+                color: $blue;
+            }
+
+            h4 {
+                font-size: 30px;
+            }
         }
+    }
+}
 
-        // .gallery-box__items-item::after {
-        //     &:hover {
-        //         background-color: blueviolet;
-        //     }
-        // }
+.links-box {
+    background: url("../src/img/bg-pattern.jpg") center;
+    .wrapper-inner {
+        display: flex;
+        align-items: center;
+        .links-box_flex-container {
+            width: 100%;
+            .links-box_content {
+                display: flex;
+                flex-wrap: wrap;
+        
+                .links-item {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
 
+                    flex: 1 1 33.333%;
+                    padding: 10px 0;
+                    
+                    @include breakpoint(mobile) {
+                        flex: 1 1 100%;
+                    }
+
+                    a {
+                        display: flex;
+                        align-items: center;
+                        span {
+                            font-family: ns;
+                            margin: 0 20px 0 0;
+                            color: $ltGray;
+                        }
+                    }
+                }
+            }
+        }
 
     }
 }
 
+
+// app box
+.app-box {
+    .wrapper-inner {
+        .app-box__container {
+            display: flex;
+            flex-wrap: wrap;
+            .app-box--item {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 10px 10px 0 0;
+                padding: 25px;
+                background-color: yellowgreen;
+                flex: 1 1 calc(25% - 40px);
+            }
+        }
+    }
+}
 
 
