@@ -5,7 +5,7 @@ const sass = require('gulp-sass');
 const autoprefixer = require('autoprefixer');
 const postcss = require('gulp-postcss');
 const cssnano = require('cssnano');
-const uglify = require('gulp-uglify');
+const terser = require('gulp-terser');
 const browserSync = require('browser-sync');
 
 let path = {
@@ -28,7 +28,7 @@ gulp.task("sassTask", function() {
 gulp.task('jsTask', function() {
     return gulp
       .src(path.src_js)
-      .pipe(uglify())
+      .pipe(terser())
       .pipe(gulp.dest('./dist'))
       .pipe(browserSync.stream());
   });
