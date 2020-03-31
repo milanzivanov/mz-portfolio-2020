@@ -7,7 +7,7 @@ $(document).ready(function() {
         dots: true,
         autoplay: true,
         autoplaySpeed: 10000,
-        prevArrow: $(".left-nav-custom"),
+        preconstrow: $(".left-nav-custom"),
         nextArrow: $(".right-nav-custom"),
         appendDots: $(".my-pagination"),
         cssEase: 'ease-out',
@@ -84,33 +84,33 @@ overlayClose.addEventListener('click', close);
 
 // modal 
 // Get modal element
-// var modal = document.getElementById('simpleModalJs');
+const modal = document.getElementById('simpleModalJs');
 // Get open modal button
-// var modalBtn = document.getElementById('modalBtnJs');
+const modalBtn = document.getElementById('modalBtnJs');
 // Get close button
-// var closeBtn = document.querySelector('.closeBtn');
+const closeBtn = document.querySelector('.closeBtn');
 
 // Listen for open click
-// modalBtn.addEventListener('click', openModal);
+modalBtn.addEventListener('click', openModal);
 // Listen for outside click
-// window.addEventListener('click', outsideClick);
+window.addEventListener('click', outsideClick);
 // Listen for close click
-// closeBtn.addEventListener('click', closeModal);
+closeBtn.addEventListener('click', closeModal);
 
 // Function to open modal
-// function openModal() {
-//     modal.style.display = 'flex';
-// }
+function openModal() {
+    modal.style.display = 'flex';
+}
 
 // Function to close modal
-// function closeModal(){
-//     modal.style.display = 'none';
-// }
+function closeModal(){
+    modal.style.display = 'none';
+}
 
 // // Function to close modal if outside click
-// function outsideClick(e){
-//   if(e.target == modal){
-//     modal.style.display = 'none';
-//   }
-// }
+function outsideClick(e) {
+    if (e.target === modal) {
+        modal.style.display = 'none';
+    }
+}
 

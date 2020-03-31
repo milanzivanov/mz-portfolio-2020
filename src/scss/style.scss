@@ -48,21 +48,76 @@ body {
         right: 0;
         bottom: 0;
     }
+}
 
-    // modal
-    .modal-box {
-        display:none;
-        position: fixed;
-        z-index:1;
-        left: 0;
-        top:0;
-        height: 100%;
-        width:100%;
-        overflow: auto;
-        background-color: rgba(0,0,0,0.5);
+///////////////////
+// modal start
+.modal-box {
+    // 
+    display: flex;
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
+    cursor: pointer;
+
+    justify-content: center;
+    align-items: center;
+    .modal-box__container {
+        position: relative;
+        padding: 5px;
+        background-color: $ltGray;     
+        display: flex;
+        flex-direction: column;
+
+        max-width: 500px;
+    
+        .modal-box__item {
+            flex: 0 1 50%;
+            @include flexCHV;
+
+            img {
+                max-width: 100%;
+                height: auto;
+                object-fit: cover;
+            }
+
+            .html-cv {
+                overflow: hidden;
+                .html-cv__content {
+                    max-width: 100%;
+                    padding: 5px;
+                    display: block;
+                    font-size: 15px;
+                    background-color: #eee;
+
+                    &:hover > strong {
+                        color: lightseagreen;
+                    }
+
+                    strong {
+                        color: indianred;
+                    }
+                }
+            }
+        }
+
+        .closeBtn {
+            position: absolute;
+            top: 0;
+            padding: 10px;
+            right: 0;
+            cursor: pointer;
+            background: aliceblue;
+        }
     }
 }
-  
+
+// banner section
 .banner-box { 
     grid-area: banner-box;
     display: flex;
@@ -342,6 +397,15 @@ body {
     border: 0;
     cursor: pointer;
     outline: transparent;
+
+    display: flex;
+    align-items: center;
+
+    padding: 10px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: aliceblue;
 }
 
 // overlay box
@@ -366,7 +430,8 @@ body {
 .overlay-inner2 {
     background: white;
     width: 700px;
-    padding: 20px;
+    padding: 5px;
+    position: relative;
 }
 
 .overlay-box2 img {

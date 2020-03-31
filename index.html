@@ -38,7 +38,7 @@
             <section class="banner-box">
                 <div class="wrapper-inner">
                     <div class="banner-box__content">
-                        <a class="cta">
+                        <a class="cta" id="modalBtnJs">
                             Frontend Developer
                             <svg class="svg__icon svg__icon--color">
                                 <use xlink:href="./src/img/sprites.svg#icon-arrow-right2"></use>
@@ -59,23 +59,51 @@
 
             </section>            
 
-            <div class="arrow-down-box">
+            <!-- <div class="arrow-down-box">
                 <a href="#">
                     <svg class="svg__icon svg__icon--color">
                         <use xlink:href="./src/img/sprites.svg#icon-circle-down"></use>
                     </svg>
                 </a>  
-            </div>
-
-            <!-- modal -->
-            <!-- <div class="modal-box" id="simpleModalJs>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate, aliquid! In itaque, voluptatem beatae, vero optio porro labore placeat aut cumque voluptatibus dignissimos! Cupiditate impedit incidunt harum illum adipisci voluptate.
-                </p>
-                <span class="closeBtn">&times;</span>
             </div> -->
+
         </div>
         
+        <!-- modal -->
+        <div class="modal-box" id="simpleModalJs">
+            <div class="modal-box__container">
+                <div class="modal-box__item">
+                    <img src="./src/img/just_me3.jpg" alt="my picture">
+                </div>
+                <div class="modal-box__item">
+
+                    <pre class="html-cv">
+                        <code class="html-cv__content">
+&lt!DOCTYPE html&gt
+&lthead&gt
+    &ltname&gt<strong>Milan Zivanov</strong>&lt/name&gt
+    &lttitle&gt<strong>Junior Front End Developer</strong>&lt/title&gt
+    &ltbirth type="year"&gt<strong>1983 best year</strong>&lt/birth&gt
+    &ltplace type="birth"&gt<strong>Novi Knezevac, Serbia</strong>&lt/place&gt
+    &ltlink rel="stylesheet" href="style/male.css"&gt
+    &ltscript<em><strong> src="frontend-developer.js"</strong></em>&gt&lt/script&gt
+&lt/head&gt
+&lt body &gt
+    <span><ul><li>milan.zivanov@gmail.com</li></ul></span>
+&lt/body&gt
+                        </code>
+                    </pre>
+                    <!-- &lt’ and ‘&gt’  -->
+                </div>
+
+                <span class="closeBtn">
+                    <svg class="svg__icon">
+                        <use xlink:href="./src/img/sprites.svg#icon-cross"></use>
+                    </svg>
+                </span>
+            </div>
+        </div>
+
         <section class="about-box padding-tb">
             <div class="wrapper-inner about-box__content">
                 <div class="about-box__content--items">
@@ -104,7 +132,7 @@
                     </div>
 
                     <div class="navigation-custom-container">
-                        <div class="left-nav-custom">
+                        <div class="right-nav-custom">
                             <svg class="svg__icon svg__icon--color svg__icon--hover">
                                 <use xlink:href="./src/img/sprites.svg#icon-arrow-left2"></use>
                             </svg>
@@ -132,7 +160,7 @@
                         <use xlink:href="./src/img/sprites.svg#icon-cross"></use>
                     </svg>
                 </button>
-                <img> 
+                <img src="" alt="graphic design works"> 
             </div>
         </div>
 
