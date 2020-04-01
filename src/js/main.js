@@ -44,8 +44,8 @@ $(document).ready(function() {
 
     // open mobil menu and hamburger btn
     $(".botton-nav").on("click", function(e) {
-    //   $(".botton-nav, .navigation-box").toggleClass("active");
-      $(".botton-nav").toggleClass("active");
+      $(".botton-nav, .header-nav__container").toggleClass("active");
+    //   $(".botton-nav").toggleClass("active");
     });
 
 

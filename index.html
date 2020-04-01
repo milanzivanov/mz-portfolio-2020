@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>mz | personal-webpage</title>
+        <title>milan zivanov | Front-end Developer</title>
         <link rel="shortcut icon" type="image/ico" href="./../favicon.ico">
         <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet"> 
         
@@ -23,7 +23,8 @@
                         </a>
                     </div>
                     <nav class="header-nav">
-                        <ul>
+
+                        <ul class="header-nav__container">
                             <li><a href="#">Home</a></li>
                             <li><a href="#">Experience</a></li>
                             <li><a href="#">Gallery</a></li>
@@ -31,12 +32,14 @@
                             <li><a href="#">Work</a></li>
                             <li><a href="#">Contact</a></li>
                         </ul>
-                    </nav>
 
-                    <!-- hamburger menu -->
-                    <nav class="botton-nav">
-                        <div class="line"></div>
+                        <!-- hamburger menu -->
+                        <nav class="botton-nav">
+                            <div class="line"></div>
+                        </nav>
                     </nav>
+                    
+
                 </div>
             </header>
 
@@ -62,16 +65,8 @@
                 <div class="banner-box__bg-overlay">
                 </div>
                 
-                
             </section>
-            
-            <!-- navigation for mobile -->
-            <div class="navigation-box">
-                <ul class="navigation-box__container">
-                    <h5>Menu</h5>
-                </ul>
-            </div>
-            
+
         </div>
 
         <!-- ////////////// -->
@@ -569,9 +564,22 @@
         <!-- //////////////// -->
         <!-- App box END -->
 
-        <footer class="footer-box padding-tb">
+        <section class="contact-box">
             <div class="wrapper-inner">
-                <h2>Footer box</h2>
+                <h2>Contact</h2>
+                <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+        </section>
+
+
+        <footer class="footer-box padding-tb">
+            <div class="wrapper-inner footer-box__container">
+                <div class="footer--box">
+                    <a class="footer-logo" href="#">
+                        <img src="./src/img/mzLogo100X100.png" alt="header logo">
+                    </a>
+                    <small>© 2020 - Developed and Designed by <strong>Milan Zivanov</strong></small>
+                </div>
             </div>
         </footer>
 

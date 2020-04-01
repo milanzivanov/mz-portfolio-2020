@@ -12,6 +12,9 @@
         align-items: center;
         padding: 20px 0;
 
+        // navigation ***
+        overflow: hidden;
+
         .header-logo {
             a {
                 display: flex;
@@ -23,8 +26,19 @@
         }
 
         nav.header-nav {
-            ul {
+            position: relative;
+            display: flex;
+            align-items: center;
+            background-color: rebeccapurple;
+            ul.header-nav__container {
                 display: flex;
+                position: absolute;
+                background: #212020;
+                height: 100%;
+                align-items: center;
+                right: 60px;
+                transition: all 0.3s ease-in-out;
+                transform: translateX(9999px);
                 li {
                     a {
                         display: flex;
@@ -38,73 +52,78 @@
                     }
                 }
             }
-        }
 
-        .header-nav ul li a.nav-color {
-            color: $dkGray;
-        }
-
-        // mobil nav
-        .botton-nav {
-            position: relative;
-            width: 60px;
-            height: 60px;
-            background: $ltGray;
-            cursor: pointer;
-            padding: 5px;
-
-            @include breakpoint(tablet) {
-                // display: none;
-            }
-            @include breakpoint(mobile) {
-                // display: flex;
+            ul.header-nav__container.active {
+                transform: translateX(0px);
             }
 
-            .line {
-                height: 5px;
-                background: $dkGray;
+            // hamburger icon
+            .botton-nav {
                 position: relative;
-                top: 50%;
-                transform: translateY(-50%);
-                transition: all 1s ease-in-out;
-
-                &:before {
-                    content: "";
-                    position: absolute;
+                width: 60px;
+                height: 60px;
+                background: $ltGray;
+                cursor: pointer;
+                padding: 5px;
+    
+                @include breakpoint(tablet) {
+                    // display: none;
+                }
+                @include breakpoint(mobile) {
+                    // display: flex;
+                }
+    
+                .line {
                     height: 5px;
-                    width: 40px;
-                    top: 15px;
-                    z-index: 222;
                     background: $dkGray;
+                    position: relative;
+                    top: 50%;
+                    transform: translateY(-50%);
                     transition: all 1s ease-in-out;
-                    -webkit-transition: all 1s ease-in-out;
-                  }
-                  &:after {
-                    content: "";
-                    position: absolute;
-                    height: 5px;
-                    width: 40px;
-                    bottom: 15px;
-                    z-index: 222;
-                    background: $dkGray;
-                    transition: all 1s ease-in-out;
-                    -webkit-transition: all 1s ease-in-out;
-                  }
+    
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        height: 5px;
+                        width: 40px;
+                        top: 15px;
+                        z-index: 222;
+                        background: $dkGray;
+                        transition: all 1s ease-in-out;
+                        -webkit-transition: all 1s ease-in-out;
+                        }
+                        &:after {
+                        content: "";
+                        position: absolute;
+                        height: 5px;
+                        width: 40px;
+                        bottom: 15px;
+                        z-index: 222;
+                        background: $dkGray;
+                        transition: all 1s ease-in-out;
+                        -webkit-transition: all 1s ease-in-out;
+                        }
+                }
+    
+                
             }
-
             
+            // activate
+            .botton-nav.active > .line {
+                background: #14428f;
+            }
+            .botton-nav.active > .line:before,
+            .botton-nav.active > .line:after {
+                background: indianred;
+                right: 0;
+                width: 40px;
+            }
+    
+            .header-nav ul li a.nav-color {
+                color: $dkGray;
+            }
         }
-        
-        // activate
-        .botton-nav.active > .line {
-            background: indianred;
-        }
-        .botton-nav.active > .line:before,
-        .botton-nav.active > .line:after {
-            background: indianred;
-            right: 0;
-            width: 40px;
-        }
+
     }
 }
 
