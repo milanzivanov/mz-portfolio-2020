@@ -42,6 +42,12 @@ $(document).ready(function() {
           ]
     });
 
+    // open mobil menu and hamburger btn
+    $(".botton-nav").on("click", function(e) {
+    //   $(".botton-nav, .navigation-box").toggleClass("active");
+      $(".botton-nav").toggleClass("active");
+    });
+
 
     // adding shadow on scroll and sticky
     $(window).scroll(function() {

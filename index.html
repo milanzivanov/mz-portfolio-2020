@@ -32,6 +32,11 @@
                             <li><a href="#">Contact</a></li>
                         </ul>
                     </nav>
+
+                    <!-- hamburger menu -->
+                    <nav class="botton-nav">
+                        <div class="line"></div>
+                    </nav>
                 </div>
             </header>
 
@@ -56,44 +61,28 @@
 
                 <div class="banner-box__bg-overlay">
                 </div>
-
-            </section>            
-
-            <!-- <div class="arrow-down-box">
-                <a href="#">
-                    <svg class="svg__icon svg__icon--color">
-                        <use xlink:href="./src/img/sprites.svg#icon-circle-down"></use>
-                    </svg>
-                </a>  
-            </div> -->
-
+                
+                
+            </section>
+            
+            <!-- navigation for mobile -->
+            <div class="navigation-box">
+                <ul class="navigation-box__container">
+                    <h5>Menu</h5>
+                </ul>
+            </div>
+            
         </div>
-        
-        <!-- modal -->
+
+        <!-- ////////////// -->
+        <!-- modal banner START -->
         <div class="modal-box" id="simpleModalJs">
             <div class="modal-box__container">
                 <div class="modal-box__item">
                     <img src="./src/img/just_me3.jpg" alt="my picture">
                 </div>
                 <div class="modal-box__item">
-
-                    <pre class="html-cv">
-                        <code class="html-cv__content">
-&lt!DOCTYPE html&gt
-&lthead&gt
-    &ltname&gt<strong>Milan Zivanov</strong>&lt/name&gt
-    &lttitle&gt<strong>Junior Front End Developer</strong>&lt/title&gt
-    &ltbirth type="year"&gt<strong>1983 best year</strong>&lt/birth&gt
-    &ltplace type="birth"&gt<strong>Novi Knezevac, Serbia</strong>&lt/place&gt
-    &ltlink rel="stylesheet" href="style/male.css"&gt
-    &ltscript<em><strong> src="frontend-developer.js"</strong></em>&gt&lt/script&gt
-&lt/head&gt
-&lt body &gt
-    <span><ul><li>milan.zivanov@gmail.com</li></ul></span>
-&lt/body&gt
-                        </code>
-                    </pre>
-                    <!-- &lt’ and ‘&gt’  -->
+                    <p>milan z</p>
                 </div>
 
                 <span class="closeBtn">
@@ -257,50 +246,81 @@
             </div>
         </div>
 
+        <!-- //////////////// -->
+        <!-- links box START -->
         <section class="links-box padding-tb">
             <div class="wrapper-inner">
-                <div class="links-box_flex-container">
-                    <h2>Social Links</h2>
-                    <div class="links-box_content">
+                <h2>Social Links</h2>
+                <div class="links-box__container">
 
-                        <div class="links-item">
-                            <a href="#">
-                                <span>
-                                    <svg class="svg__icon svg__icon--color">
-                                        <use xlink:href="./src/img/sprites.svg#icon-github"></use>
-                                    </svg>
-                                </span>
-                                <span>Github</span>
-                            </a>
-                        </div>
+                    <a href="#" class="links-box__item">
+                        <svg class="svg__icon svg__icon--color">
+                            <use xlink:href="./src/img/sprites.svg#icon-codepen"></use>
+                        </svg>
 
-                        <div class="links-item">
-                            <a href="#">
-                                <span>
-                                    <svg class="svg__icon svg__icon--color">
-                                        <use xlink:href="./src/img/sprites.svg#icon-codepen"></use>
-                                    </svg>
-                                </span>
-                                <span>Codepan</span>
-                            </a>
+                        <div class="overlay-links">
+                            <div class="overlay-links__inner">
+                                <h2>Codepen</h2>
+                                <svg class="svg__icon svg__icon--color">
+                                    <use xlink:href="./src/img/sprites.svg#icon-share"></use>
+                                </svg>
+                            </div>
                         </div>
+                    </a>
 
-                        <div class="links-item">
-                            <a href="#">
-                                <span>
-                                    <svg class="svg__icon svg__icon--color">
-                                        <use xlink:href="./src/img/sprites.svg#icon-linkedin2"></use>
-                                    </svg>
-                                </span>
-                                <span>Linkedin</span>
-                            </a>
+                    <a href="#" class="links-box__item">
+                        <svg class="svg__icon svg__icon--color">
+                            <use xlink:href="./src/img/sprites.svg#icon-github"></use>
+                        </svg>
+
+                        <div class="overlay-links">
+                            <div class="overlay-links__inner">
+                                <h2>Github</h2>
+                                <svg class="svg__icon svg__icon--color">
+                                    <use xlink:href="./src/img/sprites.svg#icon-share"></use>
+                                </svg>
+                            </div>
                         </div>
-    
-                    </div>
+                    </a>
+
+                    <a href="#" class="links-box__item">
+                        <svg class="svg__icon svg__icon--color">
+                            <use xlink:href="./src/img/sprites.svg#icon-embed2"></use>
+                        </svg>
+
+                        <div class="overlay-links">
+                            <div class="overlay-links__inner">
+                                <h2>Github</h2>
+                                <svg class="svg__icon svg__icon--color">
+                                    <use xlink:href="./src/img/sprites.svg#icon-share"></use>
+                                </svg>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="links-box__item">
+                        <svg class="svg__icon svg__icon--color">
+                            <use xlink:href="./src/img/sprites.svg#icon-linkedin"></use>
+                        </svg>
+
+                        <div class="overlay-links">
+                            <div class="overlay-links__inner">
+                                <h2>Linkedin</h2>
+                                <svg class="svg__icon svg__icon--color">
+                                    <use xlink:href="./src/img/sprites.svg#icon-share"></use>
+                                </svg>
+                            </div>
+                        </div>
+                    </a>
+
                 </div>
             </div>
         </section>
+                <!-- //////////////// -->
+        <!-- links box END -->
 
+        <!-- //////////////// -->
+        <!-- App box START -->
         <section class="app-box padding-tb">
             <div class="wrapper-inner">
                 <h2>Apps and websites</h2>
@@ -314,7 +334,16 @@
                             href="http://milanzivanov.com/home"
                             target="_blank"
                             class="app-box--item_ht">
-                            <p>Personal Website</p>
+                            <div class="app__info">
+                                <h4>
+                                    <em>Personal Website</em>
+                                </h4>
+                                <em>
+                                    <span>Angular</span>
+                                    <span>SCSS/CSS3</span>
+                                    <span>TS</span>
+                                </em>
+                            </div>
                         </a>
                     </div>
 
@@ -326,7 +355,17 @@
                             href="http://fs2020.surge.sh" 
                             target="_blank" 
                             class="app-box--item_ht">
-                            <p>Forwardslash test</p>
+                            <div class="app__info">
+                                <h4>
+                                    <em>Forwardslash</em>
+                                </h4>
+                                <em>
+                                    <span>HTML</span>
+                                    <span>SCSS/CSS3</span>
+                                    <span>jQuery</span>
+                                    <span>RWD</span>
+                                </em>
+                            </div>
                         </a>
                     </div>
 
@@ -338,7 +377,17 @@
                             href="http://popart-fe-task.surge.sh/"
                             target="_blank"
                             class="app-box--item_ht">
-                            <p>Popart test</p>
+                            <div class="app__info">
+                                <h4>
+                                    <em>Popart</em>
+                                </h4>
+                                <em>
+                                    <span>HTML</span>
+                                    <span>SCSS/CSS3</span>
+                                    <span>jQuery</span>
+                                    <span>RWD</span>
+                                </em>
+                            </div>
                         </a>
                     </div>
 
@@ -350,7 +399,17 @@
                             href="http://purezeen-task.surge.sh/"
                             target="_blank" 
                             class="app-box--item_ht">
-                            <p>Purezeen task</p>
+                            <div class="app__info">
+                                <h4>
+                                    <em>Purezeen</em>
+                                </h4>
+                                <em>
+                                    <span>HTML</span>
+                                    <span>SCSS/CSS3</span>
+                                    <span>jQuery</span>
+                                    <span>RWD</span>
+                                </em>
+                            </div>
                         </a>
                     </div>
 
@@ -362,7 +421,16 @@
                             href="http://hideous-news.surge.sh/"
                             target="_blank" 
                             class="app-box--item_ht">
-                            <p>Weather App</p>
+                            <div class="app__info">
+                                <h4>
+                                    <em>Weather App</em>
+                                </h4>
+                                <em>
+                                    <span>Angular</span>
+                                    <span>SCSS/CSS3</span>
+                                    <span>RWD</span>
+                                </em>
+                            </div>
                         </a>
                     </div>
 
@@ -374,7 +442,17 @@
                             href="https://milanzivanov.github.io/webadriatic/"
                             target="_blank"
                             class="app-box--item_ht">
-                            <p>Oma Adriatic</p>
+                            <div class="app__info">
+                                <h4>
+                                    <em>Oma Adriatic</em>
+                                </h4>
+                                <em>
+                                    <span>HTML5</span>
+                                    <span>SCSS/CSS3</span>
+                                    <span>jQuery</span>
+                                    <span>RWD</span>
+                                </em>
+                            </div>
                         </a>
                     </div>
 
@@ -386,7 +464,16 @@
                             href="http://hnclone2019.surge.sh/"
                             target="_blank"
                             class="app-box--item_ht">
-                            <p>Hacker News Clone App</p>
+                            <div class="app__info">
+                                <h4>
+                                    <em>Hacker News Clone App</em>
+                                </h4>
+                                <em>
+                                    <span>Angular</span>
+                                    <span>SCSS/CSS3</span>
+                                    <span>RWD</span>
+                                </em>
+                            </div>
                         </a>
                     </div>
 
@@ -398,7 +485,17 @@
                             href="http://vega-fe-task.surge.sh/"
                             target="_blank"
                             class="app-box--item_ht">
-                            <p>Green Earth</p>
+                            <div class="app__info">
+                                <h4>
+                                    <em>Green Earth</em>
+                                </h4>
+                                <em>
+                                    <span>HTML5</span>
+                                    <span>SCSS/CSS3</span>
+                                    <span>jQuery</span>
+                                    <span>RWD</span>
+                                </em>
+                            </div>
                         </a>
                     </div>
 
@@ -410,7 +507,17 @@
                             href="https://careless-birds.surge.sh/"
                             target="_blank"
                             class="app-box--item_ht">
-                            <p>Front-end test</p>
+                            <div class="app__info">
+                                <h4>
+                                    <em>Cities Of East Serbia</em>
+                                </h4>
+                                <em>
+                                    <span>Angular</span>
+                                    <span>SCSS/CSS3</span>
+                                    <span>RWD</span>
+                                </em>
+                            </div>
+
                         </a>
                     </div>
                     
@@ -422,7 +529,17 @@
                             href="http://debonair-zinc.surge.sh/main.html"
                             target="_blank"
                             class="app-box--item_ht">
-                            <p>Intership work</p>
+                            <div class="app__info">
+                                <h4>
+                                    <em>Intership work</em>
+                                </h4>
+                                <em>
+                                    <span>HTML5</span>
+                                    <span>SCSS/CSS3</span>
+                                    <span>jQuery</span>
+                                    <span>RWD</span>
+                                </em>
+                            </div>
                         </a>
                     </div>
 
@@ -434,12 +551,23 @@
                             href="https://milanzivanov.github.io/milanzivanovcv-v2/"
                             target="_blank"
                             class="app-box--item_ht">
-                            <p>Milan Z web CV</p>
+                            <div class="app__info">
+                                <h4>
+                                    <em>Personal Website Old</em>
+                                </h4>
+                                <em>
+                                    <span>HTML5</span>
+                                    <span>SCSS/CSS3</span>
+                                    <span>jQuery</span>
+                                </em>
+                            </div>
                         </a>
                     </div>
                 </div>
             </div>
         </section>
+        <!-- //////////////// -->
+        <!-- App box END -->
 
         <footer class="footer-box padding-tb">
             <div class="wrapper-inner">

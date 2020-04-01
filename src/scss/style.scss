@@ -18,7 +18,6 @@ body {
     font-family: "Roboto" sans-serif;
 }
 
-// grid
 .grid-container {
     height: 100vh;
     display: grid;
@@ -48,13 +47,41 @@ body {
         right: 0;
         bottom: 0;
     }
+
+
+    // navigation
+    .navigation-box {
+        background-color: rgba(12, 12, 12, 0.9);
+        display: none;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        .navigation-box__container {
+            h5 {
+                color: yellow;
+            }
+        }
+    }
+
+    .navigation-box.active {
+        display: flex;
+    }
+
+    .navigation-box.open-nav {
+        display: flex;
+    }
 }
 
 ///////////////////
 // modal start
 .modal-box {
-    // 
-    display: flex;
+    // hide modal
+    display: none;
     position: fixed;
     z-index: 10;
     left: 0;
@@ -72,9 +99,7 @@ body {
         padding: 5px;
         background-color: $ltGray;     
         display: flex;
-        flex-direction: column;
-
-        max-width: 500px;
+        max-width: 800px;
     
         .modal-box__item {
             flex: 0 1 50%;
@@ -259,36 +284,60 @@ body {
 .links-box {
     background: url("../src/img/bg-pattern.jpg") center;
     .wrapper-inner {
-        display: flex;
-        align-items: center;
-        .links-box_flex-container {
+        .links-box__container {
+            display: flex;
+            margin: auto;
             width: 100%;
-            .links-box_content {
+
+            a.links-box__item {
+                background: $white url("./../src/img/bg-wire.svg");
+                overflow: hidden;
+                position: relative;
+                flex: 1;
+                margin: 5px;
                 display: flex;
-                flex-wrap: wrap;
-        
-                .links-item {
+                justify-content: center;
+                align-items: center;
+                padding: 20px;
+
+                transition: flex .4s;
+
+                .overlay-links {
+                    background:$white url("./../src/img/bg-wire.svg");
                     display: flex;
-                    justify-content: flex-start;
+                    padding: 0 10px;
+                    position: absolute;
+                    top: 0px;
+                    right: 0;
+                    bottom: 0;
+                    left: 0px;
+                    transform: translateY(-90px);
+                    transition: all 0.4s ease-in-out;
                     align-items: center;
+                    justify-content: center;
 
-                    flex: 1 1 33.333%;
-                    padding: 10px 0;
-                    
-                    @include breakpoint(mobile) {
-                        flex: 1 1 100%;
-                    }
-
-                    a {
+                    .overlay-links__inner {
                         display: flex;
                         align-items: center;
-                        span {
-                            font-family: ns;
-                            margin: 0 20px 0 0;
+                        justify-content: center;
+                        position: absolute;
+                        width: 100%;
+                        h2 {
+                            padding: 0 10px 0 0;
                             color: $ltGray;
                         }
                     }
+
                 }
+
+                &:hover {
+                    flex: 3;
+                }
+
+                &:hover .overlay-links {
+                    transform: translateY(0);
+                }
+
             }
         }
 
@@ -305,9 +354,10 @@ body {
             .app-box--item {
 
                 position: relative;
+                overflow: hidden;
                 display: flex;
                 justify-content: center;
-                flex: 1 1 calc(25% - 40px);
+                flex: 1 1 calc(50% - 40px);
                 align-items: center;
                 margin: 10px 10px 0 0;
                 padding: 25px;
@@ -323,17 +373,39 @@ body {
                 }
 
                 .app-box--item_ht {
-                    display: none;
                     position: absolute;
                     top: 0;
                     bottom: 0;
                     left: 0;
                     right: 0;
                     background-color: rgba(12,12,12,.5);
+                    transform: translate3d(-1000px, 1000px, 1000px);
+                    transition: all 0.3s ease-in-out;
                 }
 
                 &:hover > .app-box--item_ht {
                     @include flexCHV;
+                    transform: translate3d(0px, 0px, 0px);
+
+                    .app__info {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 100%;
+                        padding: 10px;
+                        background-color: #3ed3d1;
+                        h4 {
+                            color: $dkGray;
+                            padding: 5px;
+                        }
+                        em {
+                            span {
+                                background-color: $dkGray;
+                                color: yellow;
+                                padding: 5px;
+                            }
+                        }
+                    }
                 }
             }
         }
