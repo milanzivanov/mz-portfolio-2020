@@ -28,7 +28,7 @@ body {
         "banner-box banner-box banner-box banner-box"
         "banner-box banner-box banner-box banner-box"
         "banner-box banner-box banner-box banner-box"
-        "banner-box banner-box banner-box banner-box";
+        "arrow-down-box arrow-down-box arrow-down-box arrow-down-box";
 
     background: url("./../src/img/laptop-glasses.jpeg") center;
     background-size: cover;
@@ -36,6 +36,8 @@ body {
 
     position: relative;
     z-index: 4;
+
+    overflow: hidden;
 
     &::after {
         content: "";
@@ -73,6 +75,11 @@ body {
         background-color: $ltGray;     
         display: flex;
         max-width: 800px;
+
+        @include breakpoint(mobile) {
+            flex-wrap: wrap;
+            flex-direction: column;
+        }
     
         .modal-box__item {
             flex: 0 1 50%;
@@ -146,6 +153,10 @@ body {
                 font-family: ns, Montserrat, sans-serif;
                 overflow: hidden;
 
+                @include breakpoint(mobile) {
+                    font-size: 20px;
+                }
+
                 .svg__icon--color {
                     fill: #000;
                     padding: 0 0 0 10px;
@@ -167,6 +178,10 @@ body {
                 order: -1;
                 padding: 0 0 2px;
 
+                @include breakpoint(mobile) {
+                    font-size: 40px;
+                }
+
                 span {
                     color: #eee;
                     display: inline-block;
@@ -174,6 +189,10 @@ body {
                     margin-bottom: 5px;
                     padding: 0 .2em;
                     transition: all .1s ease-in-out;
+
+                    @include breakpoint(mobile) {
+                        width: 100%;
+                    }
                 }
             }
         }
@@ -249,150 +268,16 @@ body {
     }
 }
 
-// gallery box
-
-
-.links-box {
-    background: url("../src/img/bg-pattern.jpg") center;
-    .wrapper-inner {
-        .links-box__container {
-            display: flex;
-            margin: auto;
-            width: 100%;
-
-            a.links-box__item {
-                background: $white url("./../src/img/bg-wire.svg");
-                overflow: hidden;
-                position: relative;
-                flex: 1;
-                margin: 5px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                padding: 20px;
-
-                transition: flex .4s;
-
-                .overlay-links {
-                    background:$white url("./../src/img/bg-wire.svg");
-                    display: flex;
-                    padding: 0 10px;
-                    position: absolute;
-                    top: 0px;
-                    right: 0;
-                    bottom: 0;
-                    left: 0px;
-                    transform: translateY(-90px);
-                    transition: all 0.4s ease-in-out;
-                    align-items: center;
-                    justify-content: center;
-
-                    .overlay-links__inner {
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        position: absolute;
-                        width: 100%;
-                        h2 {
-                            padding: 0 10px 0 0;
-                            color: $ltGray;
-                        }
-                    }
-
-                }
-
-                &:hover {
-                    flex: 3;
-                }
-
-                &:hover .overlay-links {
-                    transform: translateY(0);
-                }
-
-            }
-        }
-
-    }
-}
-
-
-// app box
-.app-box {
-    .wrapper-inner {
-        .app-box__container {
-            display: flex;
-            flex-wrap: wrap;
-            .app-box--item {
-                // background: $ltGray url("./../src/img/bg-wire.svg");
-                position: relative;
-                overflow: hidden;
-                display: flex;
-                justify-content: center;
-                flex: 1 1 calc(50% - 40px);
-                align-items: center;
-                margin: 10px 10px 0 0;
-                padding: 10px;
-                background-color: $ltGray;
-                cursor: pointer;
-
-                a {
-                    color: $white;
-
-                    img {
-                        transition: all 0.2s ease-in;
-                    }
-                }
-
-                .app-box--item_ht {
-                    position: absolute;
-                    top: 0;
-                    bottom: 0;
-                    left: 0;
-                    right: 0;
-                    background-color: rgba(12,12,12,.5);
-                    transform: translate3d(-1000px, 1000px, 1000px);
-                    transition: all 0.3s ease-in-out;
-                }
-
-                &:hover > .app-box--item_ht {
-                    @include flexCHV;
-                    transform: translate3d(0px, 0px, 0px);
-
-                    .app__info {
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: center;
-                        align-items: flex-start;
-                        margin-right: 50px;
-                        width: 100%;
-                        padding: 10px;
-                        // background-color: #3ed3d1;
-                        background-color: $white;
-                        h4 {
-                            color: $ltGray;
-                            padding: 5px;
-                        }
-                        em {
-                            display: flex;
-                            span {
-                                background-color: $dkGray;
-                                color: yellow;
-                                padding: 5px;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
-
 ///////////////////////
-// app box 
+// gallery box 
 .gallery-box2 {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-gap: 5px;
+
+    @include breakpoint(mobile) {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
 
     .item-grid2 {
         position: relative;
@@ -455,6 +340,7 @@ body {
     background: aliceblue;
 }
 
+////////////////////
 // overlay box
 .overlay-box2 {
     position: fixed;
@@ -484,3 +370,151 @@ body {
 .overlay-box2 img {
     width: 100%;
 }
+
+/////////////////////
+// links box
+.links-box {
+    background: url("../src/img/bg-pattern.jpg") center;
+    .wrapper-inner {
+        .links-box__container {
+            display: flex;
+            margin: auto;
+            width: 100%;
+
+            @include breakpoint(mobile) {
+                flex-wrap: wrap;
+            }
+
+            a.links-box__item {
+                background: $white url("./../src/img/bg-wire.svg");
+                overflow: hidden;
+                position: relative;
+                flex: 1;
+                margin: 5px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 20px;
+                transition: flex .4s;
+
+                @include breakpoint(mobile) {
+                    flex: 1 1 calc(50% - 20px);
+                }
+
+                .overlay-links {
+                    background:$white url("./../src/img/bg-wire.svg");
+                    display: flex;
+                    padding: 0 10px;
+                    position: absolute;
+                    top: 0px;
+                    right: 0;
+                    bottom: 0;
+                    left: 0px;
+                    transform: translateY(-90px);
+                    transition: all 0.4s ease-in-out;
+                    align-items: center;
+                    justify-content: center;
+
+                    .overlay-links__inner {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        position: absolute;
+                        width: 100%;
+                        h2 {
+                            padding: 0 10px 0 0;
+                            color: $ltGray;
+                        }
+                    }
+
+                }
+
+                &:hover {
+                    flex: 3;
+                }
+
+                &:hover .overlay-links {
+                    transform: translateY(0);
+                }
+
+            }
+        }
+
+    }
+}
+
+///////////////////
+// app box
+.app-box {
+    .wrapper-inner {
+        .app-box__container {
+            display: flex;
+            flex-wrap: wrap;
+            .app-box--item {
+                // background: $ltGray url("./../src/img/bg-wire.svg");
+                position: relative;
+                overflow: hidden;
+                display: flex;
+                justify-content: center;
+                flex: 1 1 calc(50% - 40px);
+                align-items: center;
+                margin: 10px 10px 0 0;
+                padding: 10px;
+                background-color: $ltGray;
+                cursor: pointer;
+
+                @include breakpoint(mobile) {
+                    flex: 1 1 calc(100% - 40px);
+                }
+
+                a {
+                    color: $white;
+
+                    img {
+                        transition: all 0.2s ease-in;
+                    }
+                }
+
+                .app-box--item_ht {
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    background-color: rgba(12,12,12,.5);
+                    transform: translate3d(-1000px, 1000px, 1000px);
+                    transition: all 0.3s ease-in-out;
+                }
+
+                &:hover > .app-box--item_ht {
+                    @include flexCHV;
+                    transform: translate3d(0px, 0px, 0px);
+
+                    .app__info {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: flex-start;
+                        margin-right: 50px;
+                        width: 100%;
+                        padding: 10px;
+                        background-color: $white;
+                        h4 {
+                            color: $ltGray;
+                            padding: 5px;
+                        }
+                        em {
+                            display: flex;
+                            span {
+                                background-color: $dkGray;
+                                color: yellow;
+                                padding: 5px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
