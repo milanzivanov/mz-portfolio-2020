@@ -22,30 +22,13 @@ $(document).ready(function() {
             //     dots: true
             //   }
             // },
-            // {
-            //   breakpoint: 600,
-            //   settings: {
-            //     slidesToShow: 2,
-            //     slidesToScroll: 2
-            //   }
-            // },
-            // {
-            //   breakpoint: 480,
-            //   settings: {
-            //     slidesToShow: 1,
-            //     slidesToScroll: 1
-            //   }
-            // }
-            // You can unslick at a given breakpoint now by adding:
-            // settings: "unslick"
-            // instead of a settings object
           ]
     });
 
     // open mobil menu and hamburger btn
     $(".botton-nav").on("click", function(e) {
-      $(".botton-nav, .header-nav__container").toggleClass("active");
-    //   $(".botton-nav").toggleClass("active");
+        $(".botton-nav, .header-nav__container").toggleClass("active");
+        //   $(".botton-nav").toggleClass("active");
     });
 
 
@@ -120,3 +103,38 @@ function outsideClick(e) {
     }
 }
 
+// random bg on reload
+function randombg(){
+    let random = Math.floor(Math.random() * 2) + 0;
+    let bigSize = ["url('./../src/img/laptop-glasses.jpeg')",
+                   "url('./../src/img/bg-main.jpeg')"];
+    document.getElementById("random-bg-js").style.backgroundImage = bigSize[random];
+}
+
+
+// on click event on all anchors with a class of scrollTo
+$('a.scrollTo').on('click', function(){
+  
+    // data-scrollTo = section scrolling to name
+    var scrollTo = $(this).attr('data-scrollTo');
+    
+    
+    // toggle active class on and off. added 1/24/17
+    $( "a.scrollTo" ).each(function() {
+      if(scrollTo == $(this).attr('data-scrollTo')){
+        $(this).addClass('active');
+      }else{
+        $(this).removeClass('active');
+      }
+    });
+    
+    
+    // animate and scroll to the sectin 
+    $('body, html').animate({
+      
+      // the magic - scroll to section
+      "scrollTop": $('#'+scrollTo).offset().top
+    }, 1000 );
+    return false;
+    
+  })

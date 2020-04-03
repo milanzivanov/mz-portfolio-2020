@@ -12,9 +12,9 @@
 
         <link rel="stylesheet" href="./dist/style.css">
     </head>
-    <body>
+    <body onload="randombg()">
 
-        <div class="grid-container">
+        <div class="grid-container" id="random-bg-js">
             <header class="header-box">
                 <div class="wrapper-inner header-box__content">
                     <div class="header-logo">
@@ -83,7 +83,7 @@
                     <img src="./src/img/just_me3.jpg" alt="my picture">
                 </div>
                 <div class="modal-box__item">
-                    <p>milan.zivanov@gmail.com</p>
+                    <p>milan.zivanov<span>@</span>gmail.com</p>
                 </div>
 
                 <span class="closeBtn">
@@ -570,21 +570,63 @@
         <!-- //////////////// -->
         <!-- App box END -->
 
-        <section class="contact-box">
+        <section class="contact-box padding-tb">
             <div class="wrapper-inner">
                 <h2>Contact</h2>
-                <p>Lorem ipsum dolor sit amet.</p>
+                <div class="contact-box__container">
+
+                    <div class="contact-box__container--left contact-box__container--item">
+                        <!-- <img src="./src/img/mzLogo.png" alt="logo img"> -->
+                        <img src="./src/img/img-01.png" alt="logo img">
+                    </div>
+
+                    <div class="contact-box__container--right contact-box__container--item">
+
+                        <form class="contact-box-form" action="mailto:test@example.com">
+                            <span class="contact-box-form__title">
+                                Get in touch wit me
+                            </span>
+            
+                            <div class="contact-box-input">
+                                <input class="input1" type="text" name="name" placeholder="Name *" required>
+                            </div>
+            
+                            <div class="contact-box-input">
+                                <input class="input1" type="email" name="email" placeholder="Email *" required>
+                            </div>
+            
+                            <div class="contact-box-input">
+                                <input class="input1" type="text" name="subject" placeholder="Subject *" required>
+                            </div>
+            
+                            <div class="contact-box-input">
+                                <textarea class="input1" name="message" placeholder="Message *" required></textarea>
+                            </div>
+            
+                            <div class="contact-box-form__container">
+                                <button class="contact-box-form__btn" type="submit" value="Send">
+                                    <span>
+                                        <span>Send Email</span>
+                                        <svg class="svg__icon svg__icon--color">
+                                            <use xlink:href="./src/img/sprites.svg#icon-circle-right"></use>
+                                        </svg>
+                                    </span>
+                                </button>
+                            </div>
+
+                        </form>
+
+                    </div>
+                </div>
             </div>
         </section>
-
 
         <footer class="footer-box padding-tb">
             <div class="wrapper-inner footer-box__container">
                 <div class="footer--box">
-                    <a class="footer-logo" href="#">
-                        <img src="./src/img/mzLogo100X100.png" alt="header logo">
-                    </a>
-                    <small>© 2020 - Developed and Designed by <strong>Milan Zivanov</strong></small>
+                    <small>
+                        <span>© 2020 - Developed and Designed by <strong>milan.zivanov@gmail.com</strong></span>
+                    </small>
                 </div>
             </div>
         </footer>
