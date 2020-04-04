@@ -7,15 +7,21 @@
         <link rel="shortcut icon" type="image/ico" href="./../favicon.ico">
         <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet"> 
         
-        <link rel="stylesheet" href="./node_modules/slick-carousel/slick/slick.css">
-        <link rel="stylesheet" href="./node_modules/slick-carousel/slick/slick-theme.css">
+        <!-- <link rel="stylesheet" href="./node_modules/slick-carousel/slick/slick.css">
+        <link rel="stylesheet" href="./node_modules/slick-carousel/slick/slick-theme.css"> -->
+            
+        <!-- for surge purpuse -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css" integrity="sha256-3h45mwconzsKjTUULjY+EoEkoRhXcOIU4l5YAw2tSOU=" crossorigin="anonymous" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css" integrity="sha256-etrwgFLGpqD4oNAFW08ZH9Bzif5ByXK2lXNHKy7LQGo=" crossorigin="anonymous" />
 
         <link rel="stylesheet" href="./dist/style.css">
     </head>
-    <body onload="randombg()">
+    <body onload="randombg()" id="content1">
 
-        <div class="grid-container" id="random-bg-js">
-            <header class="header-box">
+        <div class="grid-container">
+
+            <!-- header box START -->
+            <header class="header-box" id="sectionHeader">
                 <div class="wrapper-inner header-box__content">
                     <div class="header-logo">
                         <a href="#">
@@ -24,19 +30,18 @@
                     </div>
                     <nav class="header-nav">
 
-                        <div class="header-logo__mobile">
+                        <div class="header-logo__mobile scrollTo">
                             <a href="#">
                                 <img src="./src/img/mzLogo100X100.png" alt="header logo">
                             </a>
                         </div>
 
                         <ul class="header-nav__container">
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">Experience</a></li>
-                            <li><a href="#">Gallery</a></li>
-                            <li><a href="#">Companies</a></li>
-                            <li><a href="#">Work</a></li>
-                            <li><a href="#">Contact</a></li>
+                            <li><a href="#sectionAbout">Experience</a></li>
+                            <li><a href="#sectionGallery">Gallery</a></li>
+                            <li><a href="#sectionLinks">Links</a></li>
+                            <li><a href="#sectionApp">Apps</a></li>
+                            <li><a href="#sectionContact">Contact</a></li>
                         </ul>
 
                         <!-- hamburger menu -->
@@ -45,11 +50,11 @@
                         </nav>
                     </nav>
                     
-
                 </div>
             </header>
 
-            <section class="banner-box">
+            <!-- banner box START -->
+            <section class="banner-box" id="random-bg-js">
                 <div class="wrapper-inner">
                     <div class="banner-box__content">
                         <a class="cta" id="modalBtnJs">
@@ -70,8 +75,14 @@
 
                 <div class="banner-box__bg-overlay">
                 </div>
-                
+
             </section>
+            
+            <div class="arrow-down-box bounce-animation">
+                <a href="#" class="bounce-animation">
+                    <i class="arrow down"></i>
+                </a>  
+            </div>
 
         </div>
 
@@ -94,7 +105,8 @@
             </div>
         </div>
 
-        <section class="about-box padding-tb">
+        <!-- about box START -->
+        <section class="about-box padding-tb " id="sectionAbout">
             <div class="wrapper-inner about-box__content">
                 <div class="about-box__content--items">
                     <h2>Obout me & Experience</h2>
@@ -154,7 +166,8 @@
             </div>
         </div>
 
-        <div class="gallery-box2 padding-tb">
+        <!-- gallery box start -->
+        <div class="gallery-box2 padding-tb" id="sectionGallery">
             <div class="item-grid2">
                 <img src="./src/img/grafic-design/1.jpg" alt="1">
                 <div class="item__overlay2">
@@ -249,7 +262,7 @@
 
         <!-- //////////////// -->
         <!-- links box START -->
-        <section class="links-box padding-tb">
+        <section class="links-box padding-tb" id="sectionLinks">
             <div class="wrapper-inner">
                 <h2>Social Links</h2>
                 <div class="links-box__container">
@@ -317,12 +330,12 @@
                 </div>
             </div>
         </section>
-                <!-- //////////////// -->
+        <!-- //////////////// -->
         <!-- links box END -->
 
         <!-- //////////////// -->
         <!-- App box START -->
-        <section class="app-box padding-tb">
+        <section class="app-box padding-tb" id="sectionApp">
             <div class="wrapper-inner">
                 <h2>Apps and websites</h2>
                 <div class="app-box__container">
@@ -570,7 +583,7 @@
         <!-- //////////////// -->
         <!-- App box END -->
 
-        <section class="contact-box padding-tb">
+        <section class="contact-box padding-tb" id="sectionContact">
             <div class="wrapper-inner">
                 <h2>Contact</h2>
                 <div class="contact-box__container">
@@ -584,7 +597,7 @@
 
                         <form class="contact-box-form" action="mailto:test@example.com">
                             <span class="contact-box-form__title">
-                                Get in touch wit me
+                                Get in touch with me
                             </span>
             
                             <div class="contact-box-input">
@@ -621,18 +634,32 @@
             </div>
         </section>
 
+        <!-- btt -->
+        <div class="back-to-top">
+            <a href="#sectionHeader" class="btn-to-top">
+                <svg class="svg__icon svg__icon--color">
+                    <use xlink:href="./src/img/sprites.svg#icon-circle-up"></use>
+                </svg>   
+            </a>
+        </div>
+
         <footer class="footer-box padding-tb">
+
+
             <div class="wrapper-inner footer-box__container">
-                <div class="footer--box">
-                    <small>
-                        <span>© 2020 - Developed and Designed by <strong>milan.zivanov@gmail.com</strong></span>
-                    </small>
-                </div>
+                <small>
+                    <span>© 2020 - Developed and Designed by <strong>milan.zivanov@gmail.com</strong></span>
+                </small>
             </div>
         </footer>
 
-        <script src="./node_modules/jquery/dist/jquery.min.js"></script>
-        <script src="./node_modules/slick-carousel/slick/slick.js"></script>
+        <!-- <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+        <script src="./node_modules/slick-carousel/slick/slick.js"></script> -->
+
+        <!-- for surge purpuse -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.js" integrity="sha256-zUQGihTEkA4nkrgfbbAM1f3pxvnWiznBND+TuJoUv3M=" crossorigin="anonymous"></script>
+
         <script src="./dist/main.js"></script>
     </body>
 </html>

@@ -28,41 +28,78 @@ $(document).ready(function() {
     // open mobil menu and hamburger btn
     $(".botton-nav").on("click", function(e) {
         $(".botton-nav, .header-nav__container").toggleClass("active");
-        //   $(".botton-nav").toggleClass("active");
     });
+
+
+    // scroll to section
+    $('a[href^="#"]').bind('click', function(e) {
+        e.preventDefault(); 
+
+        var target = $(this).attr("href");
+
+        $('html, body').stop().animate({
+            scrollTop: $(target).offset().top
+        }, 600, function() {
+            location.hash = target; 
+            $(".header-nav__container").removeClass("active");
+        });
+
+        return false;
+    });
+
+    // btt
+    if ($('.back-to-top').length) {
+        let scrollTrigger = 100, // px
+        backToTop = function () {
+            var scrollTop = $(window).scrollTop();
+            if (scrollTop > scrollTrigger) {
+                $('.back-to-top').addClass('show');
+            } else {
+                $('.back-to-top').removeClass('show');
+            }
+        };
+        backToTop();
+        $(window).on('scroll', function () {
+            backToTop();
+        });
+        $('.back-to-top').on('click', function (e) {
+            e.preventDefault();
+            $('html,body').animate({
+                scrollTop: 0
+            }, 500);
+        });
+    }
 
 
     // adding shadow on scroll and sticky
     $(window).scroll(function() {
  
         if ($(window).scrollTop() >= 100) { 
-            $('.header-box').addClass('sticky-active');
+            // $('.header-box').addClass('sticky-active');
             $('.header-nav ul li > a').addClass('nav-color');
         } else {
-            $('.header-box').removeClass('sticky-active');
+            // $('.header-box').removeClass('sticky-active');
             $('.header-nav ul li a').removeClass('nav-color');
         }
     });
 });
 
 // me
-////////// wes bos grif gallery
+////////// wes bos grid gallery
 const gallery = document.querySelector('.gallery-box2');
 const overlay = document.querySelector('.overlay-box2');
 const overlayImage = overlay.querySelector('img');
 const overlayClose = overlay.querySelector('.close');
 
 function handleClick(e) {
-    // console.log(e.curentTarget);
     const src = e.currentTarget.querySelector('img').src;
-    // console.log(src);
     overlayImage.src = src;
     overlay.classList.add('open');
-  }
+}
 
-  function close() {
+function close() {
     overlay.classList.remove('open');
-  }
+}
 
 
 const items = document.querySelectorAll('.item-grid2');
@@ -113,28 +150,29 @@ function randombg(){
 
 
 // on click event on all anchors with a class of scrollTo
-$('a.scrollTo').on('click', function(){
+// $('a.scrollTo').on('click', function() {
   
-    // data-scrollTo = section scrolling to name
-    var scrollTo = $(this).attr('data-scrollTo');
+//     // data-scrollTo = section scrolling to name
+//     let scrollTo = $(this).attr('data-scrollTo');
     
-    
-    // toggle active class on and off. added 1/24/17
-    $( "a.scrollTo" ).each(function() {
-      if(scrollTo == $(this).attr('data-scrollTo')){
-        $(this).addClass('active');
-      }else{
-        $(this).removeClass('active');
-      }
-    });
-    
-    
-    // animate and scroll to the sectin 
-    $('body, html').animate({
+//     // toggle active class on/off
+//     $( "a.scrollTo" ).each(function() {
+//       if (scrollTo == $(this).attr('data-scrollTo')){
+//         $(this).addClass('active');
+//         // 
+//         $(".add-sicky-h").addClass("active-test");
+//       } else{
+//         $(this).removeClass('active');
+//         $(".botton-nav, .header-nav__container").removeClass("active");
+
+//       }
+//     });
+
+//     // animate and scroll to the sectin 
+//     $('body, html').animate({
       
-      // the magic - scroll to section
-      "scrollTop": $('#'+scrollTo).offset().top
-    }, 1000 );
-    return false;
-    
-  })
+//       // the magic - scroll to section
+//       "scrollTop": $('#'+scrollTo).offset().top + $(".header-box").height()
+//     }, 1000 );
+//     return false;
+// })
