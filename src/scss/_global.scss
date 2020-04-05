@@ -41,18 +41,11 @@ img {
 .navigation-custom-container {
     position: absolute;
     width: 100%;
-    top: 110px;
+    bottom: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 5px;
-
-    @include breakpoint(tablet) {
-        display: none;
-    }
-    @include breakpoint(mobile) {
-        display: none;
-    }
 
     .right-nav-custom.slick-arrow, 
     .left-nav-custom.slick-arrow {
@@ -70,6 +63,10 @@ img {
     img {
         width: 100px;
         height: 100px;
+
+        @include breakpoint(mobile) {
+            display: none;
+        }
     }
 
     span {
