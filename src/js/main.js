@@ -41,8 +41,9 @@ $(document).ready(function() {
             scrollTop: $(target).offset().top
         }, 600, function() {
             location.hash = target; 
-            $(".header-nav__container").removeClass("active");
         });
+
+        $(".botton-nav, .header-nav__container").removeClass("active");
 
         return false;
     });
@@ -70,18 +71,51 @@ $(document).ready(function() {
         });
     }
 
+    // accordian ccs tricks
+    (function($) {
+    
+        let allPanels = $('.accordion > dd').hide();
+          
+        $('.accordion > dt > a').click(function() {
+          allPanels.slideUp();
+          $(this).parent().next().slideDown();
+          return false;
+        });
+      
+      })(jQuery);
+
+
+    // accordian education
+    $(function() {
+        $('.acc_ctrl').on('click', function(e) {
+          e.preventDefault();
+          if ($(this).hasClass('active')) {
+            $(this).removeClass('active');
+            $(this).next()
+            .stop()
+            .slideUp(300);
+          } else {
+            $(this).addClass('active');
+            $(this).next()
+            .stop()
+            .slideDown(300);
+          }
+        });
+      });
+
 
     // adding shadow on scroll and sticky
-    $(window).scroll(function() {
+    // try with padding-top!!!
+    // $(window).scroll(function() {
  
-        if ($(window).scrollTop() >= 100) { 
-            // $('.header-box').addClass('sticky-active');
-            $('.header-nav ul li > a').addClass('nav-color');
-        } else {
-            // $('.header-box').removeClass('sticky-active');
-            $('.header-nav ul li a').removeClass('nav-color');
-        }
-    });
+    //     if ($(window).scrollTop() >= 100) { 
+    //         // $('.header-box').addClass('sticky-active');
+    //         $('.header-nav ul li > a').addClass('nav-color');
+    //     } else {
+    //         // $('.header-box').removeClass('sticky-active');
+    //         $('.header-nav ul li a').removeClass('nav-color');
+    //     }
+    // });
 });
 
 // me

@@ -1,8 +1,8 @@
-@import "global";
 @import "colors";
 @import "mixins";
-@import "typography";
 @import "icons";
+@import "typography";
+@import "global";
 @import "fonts";
 @import "header";
 @import "footer";
@@ -19,10 +19,6 @@ body {
 }
 
 .grid-container {
-    // background: url("./../src/img/laptop-glasses.jpeg") center;
-    // background-size: cover;
-    // background-repeat: no-repeat;
-
     height: 100vh;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -75,7 +71,7 @@ body {
 
             p {
                 color: $dkGray;
-                font-size: 25px;
+                font-size: 35px;
                 &:hover span {
                     color: indianred;
                 }
@@ -87,24 +83,6 @@ body {
                 object-fit: cover;
             }
 
-            .html-cv {
-                overflow: hidden;
-                .html-cv__content {
-                    max-width: 100%;
-                    padding: 5px;
-                    display: block;
-                    font-size: 15px;
-                    background-color: #eee;
-
-                    &:hover > strong {
-                        color: lightseagreen;
-                    }
-
-                    strong {
-                        color: indianred;
-                    }
-                }
-            }
         }
 
         .closeBtn {
@@ -113,7 +91,11 @@ body {
             padding: 10px;
             right: 0;
             cursor: pointer;
-            background: aliceblue;
+            background: $white;
+
+            svg {
+                fill: #155799;
+            }
         }
     }
 }
@@ -219,6 +201,90 @@ body {
     }
 }
 
+
+////////////////////
+// education box
+section.education-box {
+    .wrapper-inner {
+
+        .container-education {
+
+            .acc {
+                overflow: hidden;
+                padding: 0;
+
+                li {
+                    // list-style-type: none;
+                    padding: 0;
+
+                    .acc_ctrl {
+                        display: flex;
+                        background: #FFFFFF;
+                        border: none;
+                        border-bottom: solid 1px #F2F2F2;
+                        cursor: pointer;
+                        outline: none;
+                        position: relative;
+                        text-align: center;
+                        width: 100%;
+                        
+                        h2 {
+                            color: #156a85;
+                        }
+                    }
+                      
+                    .acc_ctrl:before {
+                        background: #44596B;
+                        content: '';
+                        height: 2px;
+                        margin-right: 37px;
+                        position: absolute;
+                        right: 0;
+                        top: 50%;
+                        transform: rotate(90deg);
+                        transition: all 0.2s ease-in-out;
+                        width: 14px;
+                    }
+                      
+                    .acc_ctrl:after {
+                        background: #44596B;
+                        content: '';
+                        height: 2px;
+                        margin-right: 37px;
+                        position: absolute;
+                        right: 0;
+                        top: 50%;
+                        width: 14px;
+                    }
+
+                    .acc_ctrl.active:before {
+                        transform: rotate(0deg);
+                    }
+                      
+                    .acc_ctrl.active h2, .acc_ctrl:focus h2 {
+                        position: relative;
+                    }
+
+                    .acc_panel {
+                        position: relative;
+                        padding: 5px;
+                        background-color: #155799;
+                        background-image: linear-gradient(120deg,#155799,#159957);
+                        display: none;
+                        overflow: hidden;
+
+                        p {
+                            padding: 5px;
+                            background: white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
   
 .arrow-down-box { 
     grid-area: arrow-down-box;
@@ -292,61 +358,61 @@ body {
 
 /////////////////// 
 // obout box
-.about-box {
-    .about-box__content,
-    .wrraper-inner {
+// .about-box {
+//     .about-box__content,
+//     .wrraper-inner {
 
-        .about-box__content--items {
-            position: relative;
+//         .about-box__content--items {
+//             position: relative;
 
-            .navigation-custom-container {
-                position: absolute;
-                top: 115px;
-                right: -15px;
-                @include flexCHV;
-                transform: rotate(90deg);
-                background: #858585;
-                padding: 5px;
+//             .navigation-custom-container {
+//                 position: absolute;
+//                 top: 115px;
+//                 right: -15px;
+//                 @include flexCHV;
+//                 transform: rotate(90deg);
+//                 background: #858585;
+//                 padding: 5px;
 
-                @include breakpoint(tablet) {
-                    display: none;
-                }
-                @include breakpoint(mobile) {
-                    display: none;
-                }
+//                 @include breakpoint(tablet) {
+//                     display: none;
+//                 }
+//                 @include breakpoint(mobile) {
+//                     display: none;
+//                 }
 
-                .right-nav-custom.slick-arrow, 
-                .left-nav-custom.slick-arrow {
-                    @include flexCHV;
-                    cursor: pointer;
-                    background-color: $white;
-                }
-            }
+//                 .right-nav-custom.slick-arrow, 
+//                 .left-nav-custom.slick-arrow {
+//                     @include flexCHV;
+//                     cursor: pointer;
+//                     background-color: $white;
+//                 }
+//             }
 
-            .my-pagination {
-                .slick-dots  {
+//             .my-pagination {
+//                 .slick-dots  {
 
-                    p {
-                        margin: 20px 0;
-                    }
+//                     p {
+//                         margin: 20px 0;
+//                     }
 
-                    li button:before {
-                        color: #a0765b;
-                        font-size: 10px;
-                    }
+//                     li button:before {
+//                         color: #a0765b;
+//                         font-size: 10px;
+//                     }
 
-                    li.slick-active {
-                        button:before {
-                            color: $blue;
-                            font-size: 14px;
-                        }
-                    }
-                }
-            }
+//                     li.slick-active {
+//                         button:before {
+//                             color: $blue;
+//                             font-size: 14px;
+//                         }
+//                     }
+//                 }
+//             }
 
-        }
-    }
-}
+//         }
+//     }
+// }
 
 ///////////////////////
 // gallery box 
@@ -462,7 +528,8 @@ body {
 /////////////////////
 // links box
 .links-box {
-    background: url("../src/img/bg-pattern.jpg") center;
+    background-color: #155799;
+    background-image: linear-gradient(120deg,#155799,#159957);
     .wrapper-inner {
         .links-box__container {
             display: flex;
@@ -609,103 +676,104 @@ body {
 //////////////////////
 // contact box
 .contact-box {
-    background: $dkGray url("./../src/img/bg-pattern.jpg") center no-repeat;
+    background-color: #155799;
+    background-image: linear-gradient(120deg,#155799,#159957);
     .wrapper-inner {
 
-        .contact-box__container {
-            display: flex;
-            flex-wrap: wrap;
+            .contact-box__container {
+                display: flex;
+                flex-wrap: wrap;
 
-            @include breakpoint(mobile) {
-                flex-direction: column;
-            }
+                @include breakpoint(mobile) {
+                    flex-direction: column;
+                }
 
-            .contact-box__container--item {
-                flex: 1 1 calc(50% - 40px);
-                margin: 5px;
-                padding: 10px;
-                background-color: $ltGray;
-            }
+                .contact-box__container--item {
+                    flex: 1 1 calc(50% - 40px);
+                    margin: 5px;
+                    padding: 10px;
+                    background-color: $ltGray;
+                }
 
-            .contact-box__container--left {
-                @include flexCHV;
-            }
+                .contact-box__container--left {
+                    @include flexCHV;
+                }
 
-            .contact-box__container--right {
-                .contact-box-form {
-                    span.contact-box-form__title {
-                        display: flex;
-                        font-family: "ns", "Roboto", sans-serif;
-                        font-size: 24px;
-                        color: #144b8f;
-                        line-height: 1.2;
-                        padding: 20px 0px;
-                    }
-                    .contact-box-input {
-                        width: 100%;
-
-                        .input1 {
-                            width: 100%;
-                            padding: 15px;
-                            margin: 10px 0;
-                        }    
-        
-                        // textarea
-                        textarea.input1 {
-                            min-height: 150px;
-                        }
-                    }
-
-                    .contact-box-form__container {
-                        display: flex;
-                        width: 100%;
-                        justify-content: flex-end;
-                        padding: 20px;
-
-                        @include breakpoint(mobile) {
-                            padding: 20px 0;
-                        }
-
-                        button.contact-box-form__btn {
+                .contact-box__container--right {
+                    .contact-box-form {
+                        span.contact-box-form__title {
                             display: flex;
-                            justify-content: center;
-                            align-items: center;
-                            width: 40%;
-                            background-color: rgba(20, 75, 143, 0.7);
-                            color: $white;
-                            padding: 5px;
-                            transition: all 0.3s ease-in-out;
-                            
-                            @include breakpoint(mobile) {
+                            font-family: "ns", "Roboto", sans-serif;
+                            font-size: 24px;
+                            color: #144b8f;
+                            line-height: 1.2;
+                            padding: 20px 0px;
+                        }
+                        .contact-box-input {
+                            width: 100%;
+
+                            .input1 {
                                 width: 100%;
+                                padding: 15px;
+                                margin: 10px 0;
+                            }    
+            
+                            // textarea
+                            textarea.input1 {
+                                min-height: 150px;
                             }
-                            
-                            &:hover {
-                                background-color: #144b8f;
+                        }
+
+                        .contact-box-form__container {
+                            display: flex;
+                            width: 100%;
+                            justify-content: flex-end;
+                            padding: 20px;
+
+                            @include breakpoint(mobile) {
+                                padding: 20px 0;
                             }
 
-                            span {
-                                font-family: "Roboto", sans-serif;
+                            button.contact-box-form__btn {
                                 display: flex;
                                 justify-content: center;
                                 align-items: center;
-                                padding: 10px;
-                                span {
-                                    padding: 0 5px 0 0;
+                                width: 40%;
+                                background-color: rgba(20, 75, 143, 0.7);
+                                color: $white;
+                                padding: 5px;
+                                transition: all 0.3s ease-in-out;
+                                
+                                @include breakpoint(mobile) {
+                                    width: 100%;
+                                }
+                                
+                                &:hover {
+                                    background-color: #144b8f;
                                 }
 
-                                svg {
-                                    height: 25px;
-                                    height: 25px;
-                                    fill: $white;
+                                span {
+                                    font-family: "Roboto", sans-serif;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    padding: 10px;
+                                    span {
+                                        padding: 0 5px 0 0;
+                                    }
+
+                                    svg {
+                                        height: 25px;
+                                        height: 25px;
+                                        fill: $white;
+                                    }
                                 }
                             }
                         }
+                        
                     }
-                    
                 }
             }
-        }
     }
 }
 

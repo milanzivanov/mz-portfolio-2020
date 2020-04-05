@@ -36,3 +36,47 @@ img {
     max-width: 100%;
     height: auto;
 }
+
+// slider
+.navigation-custom-container {
+    position: absolute;
+    width: 100%;
+    top: 110px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+
+    @include breakpoint(tablet) {
+        display: none;
+    }
+    @include breakpoint(mobile) {
+        display: none;
+    }
+
+    .right-nav-custom.slick-arrow, 
+    .left-nav-custom.slick-arrow {
+        @include flexCHV;
+        cursor: pointer;
+        background-color: $white;
+    }
+}
+
+.slick-slider-box {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+
+    img {
+        width: 100px;
+        height: 100px;
+    }
+
+    span {
+        align-self: stretch;
+        font-size: 20px;
+        background-color: white;
+        color: $dkGray;
+        padding: 10px;
+    }
+}

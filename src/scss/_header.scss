@@ -24,6 +24,17 @@
         }
 
         .header-logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #155799;
+            // color: rgb(22, 160, 133);
+            font-family: ns;
+            
+            h1 {
+                padding: 0 0 0 5px;
+                // background-image: linear-gradient(120deg, #155799, #159957);
+            }
 
             @include breakpoint(tablet) {
                 padding: 0 5px;            
@@ -58,12 +69,26 @@
 
             // logo for mobile
             .header-logo__mobile {   
+
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: #155799;
+                font-family: ns;
+                
+                h1 {
+                    padding: 0 0 0 5px;
+                    // background-image: linear-gradient(120deg, #155799, #159957);
+                }
+
+
                 @include breakpoint(tablet) {
                     display: none;
                 }      
                 @include breakpoint(desktop) {
                     display: none;
-                }      
+                }   
                 a {
                     display: flex;
                     img {
@@ -71,6 +96,7 @@
                         height: 60px;
                     }
                 }
+
             }
 
             ul.header-nav__container {
