@@ -14,6 +14,7 @@ body {
 }
 
 body {
+    font-size: 100%;
     position: relative;
     font-family: "Roboto" sans-serif;
 }
@@ -211,92 +212,6 @@ body {
     }
 }
 
-
-////////////////////
-// education box
-section.education-box {
-    .wrapper-inner {
-
-        .container-education {
-
-            .acc {
-                overflow: hidden;
-                padding: 0;
-
-                @include breakpoint(mobile) {
-                    padding: 0 10px 0 10px;
-                }
-
-                li {
-                    .acc_ctrl {
-                        display: flex;
-                        background: #FFFFFF;
-                        border: none;
-                        border-bottom: solid 1px #F2F2F2;
-                        cursor: pointer;
-                        outline: none;
-                        position: relative;
-                        text-align: center;
-                        width: 100%;
-                        
-                        h2 {
-                            color: #156a85;
-                        }
-                    }
-                      
-                    .acc_ctrl:before {
-                        background: #44596B;
-                        content: '';
-                        height: 2px;
-                        margin-right: 37px;
-                        position: absolute;
-                        right: 0;
-                        top: 50%;
-                        transform: rotate(90deg);
-                        transition: all 0.2s ease-in-out;
-                        width: 14px;
-                    }
-                      
-                    .acc_ctrl:after {
-                        background: #44596B;
-                        content: '';
-                        height: 2px;
-                        margin-right: 37px;
-                        position: absolute;
-                        right: 0;
-                        top: 50%;
-                        width: 14px;
-                    }
-
-                    .acc_ctrl.active:before {
-                        transform: rotate(0deg);
-                    }
-                      
-                    .acc_ctrl.active h2, .acc_ctrl:focus h2 {
-                        position: relative;
-                    }
-
-                    .acc_panel {
-                        position: relative;
-                        padding: 5px;
-                        background-color: #155799;
-                        background-image: linear-gradient(120deg,#155799,#159957);
-                        display: none;
-                        overflow: hidden;
-
-                        p {
-                            padding: 5px;
-                            background: white;
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
-
-
-  
 .arrow-down-box { 
     grid-area: arrow-down-box;
 
@@ -315,8 +230,8 @@ section.education-box {
         align-items: center;
         height: 50px;
         width: 50px;
-        background-color: #c5c5c5;
-        border-radius: 3px;
+        background-color: $ltGray;
+        border-radius: 50%;
         padding: 10px;
         color: #fff;
         line-height: 50px;
@@ -324,15 +239,18 @@ section.education-box {
 
         animation: bounce 5s infinite;
         transition: 0.5s ease-in-out;
-      
+
+        &:hover {
+            background-color: #159957;
+        }
       
         i {
             border: solid $blue;
             border-width: 0 5px 5px 0;
             display: inline-block;
             padding: 3px;
-            width: 30px;
-            height: 30px;
+            width: 25px;
+            height: 25px;
         }
       
         .down {
@@ -367,11 +285,115 @@ section.education-box {
     }
   }
 
+
+////////////////////
+// education box
+section.education-box {
+    .wrapper-inner {
+
+        .container-education {
+
+            .acc {
+                overflow: hidden;
+                padding: 0;
+
+                @include breakpoint(mobile) {
+                    padding: 0 10px 0 10px;
+                }
+
+                li {
+                    .acc_ctrl {
+                        display: flex;
+                        background: #FFFFFF;
+                        border: none;
+                        border-bottom: solid 1px #F2F2F2;
+                        cursor: pointer;
+                        outline: none;
+                        position: relative;
+                        text-align: center;
+                        width: 100%;
+                        
+                        h2 {
+                            color: #156a85;
+                            display: flex;
+                            align-items: center;
+
+                            svg {
+                                height: 50px;
+                                width: 50px;
+                                padding: 0 10px 0 0;
+                            }
+                        }
+                    }
+                      
+                    .acc_ctrl:before {
+                        background: #156a85;
+                        content: '';
+                        height: 2px;
+                        margin-right: 10px;
+                        position: absolute;
+                        right: 0;
+                        top: 50%;
+                        transform: rotate(90deg);
+                        transition: all 0.2s ease-in-out;
+                        width: 14px;
+                    }
+                      
+                    .acc_ctrl:after {
+                        background: #156a85;
+                        content: '';
+                        height: 2px;
+                        margin-right: 10px;
+                        position: absolute;
+                        right: 0;
+                        top: 50%;
+                        width: 14px;
+                    }
+
+                    .acc_ctrl.active:before {
+                        transform: rotate(0deg);
+                    }
+                      
+                    .acc_ctrl.active h2, .acc_ctrl:focus h2 {
+                        position: relative;
+                    }
+
+                    .acc_panel {
+                        position: relative;
+                        padding: 5px;
+                        background-color: #155799;
+                        background-image: linear-gradient(120deg,#155799,#159957);
+                        display: none;
+                        overflow: hidden;
+
+                        p {
+                            padding: 5px;
+                            background: white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 ///////////////////////
 // gallery box 
 .gallery-box {
     display: flex;
     flex-wrap: wrap;
+
+    .wrapper-inner {
+        display: flex;
+        align-self: center;
+        width: 100%;
+        justify-content: flex-start;
+        @include breakpoint(mobile) {
+            justify-content: center;
+        }
+
+    }
+    
 
     .item-flex {
         position: relative;
@@ -406,7 +428,7 @@ section.education-box {
             right: 0;
 
             background-color: rgba(12,12,12,.5);
-      
+        
             transform: translateY(100%);
             transition: 0.2s;
 
@@ -429,7 +451,8 @@ section.education-box {
 
     .item-flex:hover .item__overlay {
         transform: translateY(0);
-      }
+    }
+
 }
 
 .close {
@@ -533,7 +556,7 @@ section.education-box {
                         width: 100%;
                         h2 {
                             padding: 0 10px 0 0;
-                            color: $ltGray;
+                            color: $blue;
                         }
                     }
 
