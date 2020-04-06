@@ -6,12 +6,17 @@
     stroke-width: 0;
     stroke: currentColor;
     fill: currentColor;
-  }
+}
 
-  .svg__icon--color {
-      fill: $dkGray;
-  }
+.svg__icon--color {
+    fill: $dkGray;
+}
 
-  .svg__icon--hover:hover {
-      fill: $blue;
-  }
+.svg__icon--hover:hover {
+    fill: $blue;
+}
+
+.svg__icon--cross {
+    fill: $blue;
+}
+

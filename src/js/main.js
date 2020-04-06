@@ -71,20 +71,6 @@ $(document).ready(function() {
         });
     }
 
-    // accordian ccs tricks
-    (function($) {
-    
-        let allPanels = $('.accordion > dd').hide();
-          
-        $('.accordion > dt > a').click(function() {
-          allPanels.slideUp();
-          $(this).parent().next().slideDown();
-          return false;
-        });
-      
-      })(jQuery);
-
-
     // accordian education
     $(function() {
         $('.acc_ctrl').on('click', function(e) {
@@ -120,8 +106,8 @@ $(document).ready(function() {
 
 // me
 ////////// wes bos grid gallery
-const gallery = document.querySelector('.gallery-box2');
-const overlay = document.querySelector('.overlay-box2');
+const gallery = document.querySelector('.gallery-box');
+const overlay = document.querySelector('.overlay-box');
 const overlayImage = overlay.querySelector('img');
 const overlayClose = overlay.querySelector('.close');
 
@@ -136,7 +122,7 @@ function close() {
 }
 
 
-const items = document.querySelectorAll('.item-grid2');
+const items = document.querySelectorAll('.item-flex');
 
 items.forEach(item => item.addEventListener('click', handleClick));
 
