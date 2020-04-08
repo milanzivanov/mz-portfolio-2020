@@ -317,11 +317,12 @@ section.education-box {
                             color: #156a85;
                             display: flex;
                             align-items: center;
+                            font-size: 31px;
 
                             svg {
-                                height: 50px;
-                                width: 50px;
-                                padding: 0 10px 0 0;
+                                height: 30px;
+                                width: 30px;
+                                margin: 0 30px 0 0;
                             }
                         }
                     }
@@ -448,6 +449,11 @@ section.education-box {
             }
         }
     }
+
+    // active mouseover out testing
+    // .item__overlay--active {
+    //     transform: translateY(0);
+    // }
 
     .item-flex:hover .item__overlay {
         transform: translateY(0);
@@ -677,6 +683,10 @@ section.education-box {
             .contact-box__container--left {
                 background: url("./../src/img/bg-wire.svg") center;
                 @include flexCHV;
+
+                @include breakpoint(mobile) {
+                    background: none;
+                }
             }
 
             .contact-box__container--right {

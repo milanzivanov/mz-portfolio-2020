@@ -3,7 +3,6 @@
     position: relative;
 
     background-color: #d8d8d8;
-    // background: #d8d8d8 url("./../src/img/bg-wire.svg");
     box-shadow: 0 10px 5px 0 rgba(169,131,107,.15);
 
     z-index: 6;
@@ -26,8 +25,7 @@
             justify-content: center;
             align-items: center;
             color: #155799;
-            // color: rgb(22, 160, 133);
-            font-family: ns;
+            font-family: "ns" sans-serif;
             
             h1 {
                 padding: 0 0 0 5px;
@@ -76,7 +74,6 @@
                 
                 h1 {
                     padding: 0 0 0 5px;
-                    // background-image: linear-gradient(120deg, #155799, #159957);
                 }
 
 
@@ -100,6 +97,8 @@
                 display: flex;
                 position: absolute;
 
+                min-width: 415px;
+
                 background-color: $dkGray;
                 background-color: #155799;
                 background-image: linear-gradient(120deg, #155799, #159957);
@@ -113,7 +112,7 @@
 
                 @include breakpoint(mobile) {
                     flex-direction: column;
-                    width: 100%;
+                    min-width: 100%;
                     bottom: auto;
                     right: 0;
                     top: 80px;
@@ -151,6 +150,11 @@
                 background: $ltGray;
                 cursor: pointer;
                 padding: 5px;
+                transition: box-shadow 0.3s ease-in-out;
+
+                &:hover {
+                    box-shadow: 2px 2px 2px 0 $dkGray;
+                }
     
                 .line {
                     height: 5px;
@@ -183,9 +187,12 @@
                         -webkit-transition: all 1s ease-in-out;
                         }
                 }
-    
             }
             
+            .botton-nav.hover-active {
+                box-shadow: 2px 2px 2px 0 $dkGray;
+            }
+
             // activate
             .botton-nav.active {
                 background: $ltGray;

@@ -7,14 +7,17 @@
         <link rel="shortcut icon" type="image/ico" href="./../favicon.ico">
         <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet"> 
         
-        <!-- <link rel="stylesheet" href="./node_modules/slick-carousel/slick/slick.css">
-        <link rel="stylesheet" href="./node_modules/slick-carousel/slick/slick-theme.css"> -->
+        <link rel="stylesheet" href="./node_modules/slick-carousel/slick/slick.css">
+        <link rel="stylesheet" href="./node_modules/slick-carousel/slick/slick-theme.css">
             
         <!-- for surge purpuse -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css" integrity="sha256-3h45mwconzsKjTUULjY+EoEkoRhXcOIU4l5YAw2tSOU=" crossorigin="anonymous" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css" integrity="sha256-etrwgFLGpqD4oNAFW08ZH9Bzif5ByXK2lXNHKy7LQGo=" crossorigin="anonymous" />
 
         <link rel="stylesheet" href="./dist/style.css">
+
+        <meta name="description" content="Milan Zivanov - Frontend Developer - This is my personal cv site and work that I did in the past. Check it and hire my frontend skills!">
+
     </head>
     <body onload="randombg()" id="content1">
 
@@ -24,22 +27,22 @@
             <header class="header-box" id="sectionHeader">
                 <div class="wrapper-inner header-box__content">
                     <div class="header-logo">
-                        <a href="#">
+                        <a href="./index.html">
                             <img src="./src/img/mzLogo100X100.png" alt="header logo">
                         </a>
                         <h1>ilan</h1>
                     </div>
                     <nav class="header-nav">
 
-                        <div class="header-logo__mobile scrollTo">
-                            <a href="#">
+                        <div class="header-logo__mobile">
+                            <a href="./index.html">
                                 <img src="./src/img/mzLogo100X100.png" alt="header logo">
                             </a>
                             <h1>ilan</h1>
                         </div>
 
                         <ul class="header-nav__container">
-                            <li><a href="#sectionAbout">Experience</a></li>
+                            <li><a href="#sectionAbout">About me</a></li>
                             <li><a href="#sectionGallery">Gallery</a></li>
                             <li><a href="#sectionLinks">Links</a></li>
                             <li><a href="#sectionApp">Apps</a></li>
@@ -83,19 +86,15 @@
 
                 <div class="arrow-down-box bounce-animation">
                     <a href="#sectionAbout" class="bounce-animation">
-                        <i class="arrow down"></i>
+                        <svg class="svg__icon svg__icon--color">
+                            <use xlink:href="./src/img/sprites.svg#icon-arrow-down2"></use>
+                        </svg> 
                     </a>  
                 </div>
                 
             </section>
             <!-- banner box END -->
             <!-- //////////////// -->
-            
-            <!-- <div class="arrow-down-box bounce-animation">
-                <a href="#sectionAbout" class="bounce-animation">
-                    <i class="arrow down"></i>
-                </a>  
-            </div> -->
             
         </div>
         
@@ -133,7 +132,7 @@
                             <button class="acc_ctrl">
                                 <h2>
                                     <svg class="svg__icon">
-                                        <use xlink:href="./src/img/sprites.svg#icon-book"></use>
+                                        <use xlink:href="./src/img/sprites.svg#icon-pencil2"></use>
                                     </svg>
                                     Obout me
                                 </h2>
@@ -164,7 +163,7 @@
                         <button class="acc_ctrl">
                             <h2>
                                 <svg class="svg__icon">
-                                    <use xlink:href="./src/img/sprites.svg#icon-briefcase"></use>
+                                    <use xlink:href="./src/img/sprites.svg#icon-switch"></use>
                                 </svg>
                                 Work Experience
                             </h2>
@@ -744,14 +743,14 @@
         <div class="back-to-top">
             <a href="#sectionHeader" class="btn-to-top">
                 <svg class="svg__icon svg__icon--color">
-                    <use xlink:href="./src/img/sprites.svg#icon-circle-up"></use>
+                    <use xlink:href="./src/img/sprites.svg#icon-btt"></use>
                 </svg>   
             </a>
         </div>
         <!-- BTT END -->
         <!-- //////////////// -->
-        <!-- <script src="./node_modules/jquery/dist/jquery.min.js"></script>
-        <script src="./node_modules/slick-carousel/slick/slick.js"></script> -->
+        <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+        <script src="./node_modules/slick-carousel/slick/slick.js"></script>
 
         <!-- for surge purpuse -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>

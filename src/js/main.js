@@ -9,19 +9,18 @@ $(document).ready(function() {
         autoplaySpeed: 10000,
         preconstrow: $(".left-nav-custom"),
         nextArrow: $(".right-nav-custom"),
-        appendDots: $(".my-pagination"),
         cssEase: 'ease-out',
 
         responsive: [
-            // {
-            //   breakpoint: 1024,
-            //   settings: {
-            //     slidesToShow: 3,
-            //     slidesToScroll: 3,
-            //     infinite: true,
-            //     dots: true
-            //   }
-            // },
+            {
+              breakpoint: 768,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                infinite: true,
+                dots: false
+              }
+            }
           ]
     });
 
@@ -102,6 +101,7 @@ $(document).ready(function() {
     //         $('.header-nav ul li a').removeClass('nav-color');
     //     }
     // });
+
 });
 
 // me
@@ -121,11 +121,8 @@ function close() {
     overlay.classList.remove('open');
 }
 
-
 const items = document.querySelectorAll('.item-flex');
-
 items.forEach(item => item.addEventListener('click', handleClick));
-
 overlayClose.addEventListener('click', close);
 
 // modal 
@@ -162,37 +159,35 @@ function outsideClick(e) {
 
 // random bg on reload
 function randombg(){
-    let random = Math.floor(Math.random() * 2) + 0;
+    let random = Math.floor(Math.random() * 3) + 0;
     let bigSize = ["url('./../src/img/laptop-glasses.jpeg')",
+                    "url('./../src/img/laptopOnTheTable.jpg')",
                    "url('./../src/img/bg-main.jpeg')"];
     document.getElementById("random-bg-js").style.backgroundImage = bigSize[random];
 }
 
 
-// on click event on all anchors with a class of scrollTo
-// $('a.scrollTo').on('click', function() {
-  
-//     // data-scrollTo = section scrolling to name
-//     let scrollTo = $(this).attr('data-scrollTo');
-    
-//     // toggle active class on/off
-//     $( "a.scrollTo" ).each(function() {
-//       if (scrollTo == $(this).attr('data-scrollTo')){
-//         $(this).addClass('active');
-//         // 
-//         $(".add-sicky-h").addClass("active-test");
-//       } else{
-//         $(this).removeClass('active');
-//         $(".botton-nav, .header-nav__container").removeClass("active");
+// mouse
 
-//       }
+const itemFlexActive = document.querySelectorAll(".item-flex");
+const btnActiveMenu = document.querySelector(".botton-nav");
+
+// hamburger btn hover with mouse over out
+btnActiveMenu.addEventListener("mouseover", () => {
+    btnActiveMenu.classList.add("hover-active");
+});
+btnActiveMenu.addEventListener("mouseout", () => {
+    btnActiveMenu.classList.remove("hover-active");
+});
+
+//
+// itemFlexActive.forEach(item => {
+//     // console.log(item);
+//     item.addEventListener("mouseover", () => {
+//         item.childNodes[1].classList.add("img-darken");
 //     });
 
-//     // animate and scroll to the sectin 
-//     $('body, html').animate({
-      
-//       // the magic - scroll to section
-//       "scrollTop": $('#'+scrollTo).offset().top + $(".header-box").height()
-//     }, 1000 );
-//     return false;
-// })
+//     item.addEventListener("mouseout", () => {
+//         item.childNodes[1].classList.remove("img-darken");
+//     });
+// });
