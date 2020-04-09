@@ -33,13 +33,9 @@ body {
         "banner-box banner-box banner-box banner-box"
         "banner-box banner-box banner-box banner-box";
 
-        // arrow-down-box arrow-down-box arrow-down-box arrow-down-box
-
     position: relative;
     z-index: 4;
-
     overflow: hidden;
-
 }
 
 ///////////////////
@@ -118,7 +114,7 @@ body {
 .banner-box { 
     grid-area: banner-box;
 
-    background: url("./../src/img/laptop-glasses.jpeg") center;
+    background: url("./../src/img/laptopOnTheTable.jpg") center;
     background-size: cover;
     background-repeat: no-repeat;
 
@@ -173,12 +169,16 @@ body {
             h1 {
                 font-family: ns, Roboto, sans-serif;
                 text-transform: uppercase;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
                 font-size: 60px;
                 order: -1;
                 padding: 0 0 2px;
 
                 @include breakpoint(mobile) {
-                    font-size: 40px;
+                    font-size: 41px;
                 }
 
                 span {
@@ -186,7 +186,7 @@ body {
                     display: inline-block;
                     background: rgba(0, 0, 0, 0.7);
                     margin-bottom: 5px;
-                    padding: 0 10px;
+                    padding: 10px;
                     transition: all .1s ease-in-out;
 
                     @include breakpoint(mobile) {
@@ -243,21 +243,16 @@ body {
         animation: bounce 5s infinite;
         transition: 0.5s ease-in-out;
       
-        i {
-            border: solid $dkGray;
-            border-width: 0 5px 5px 0;
-            display: inline-block;
-            padding: 3px;
-            width: 25px;
-            height: 25px;
+        svg {
+            fill: $blue;
+            width: 30px;
+            height: 30px;
         }
-      
-        .down {
-            transform: rotate(45deg);
-            -webkit-transform: rotate(45deg);
-        }
-
-    } 
+    }
+    
+    .bounce-animation:hover > svg {
+        fill: #21a648;
+    }
 }
 
 @keyframes bounce {
@@ -449,11 +444,6 @@ section.education-box {
             }
         }
     }
-
-    // active mouseover out testing
-    // .item__overlay--active {
-    //     transform: translateY(0);
-    // }
 
     .item-flex:hover .item__overlay {
         transform: translateY(0);
@@ -690,6 +680,9 @@ section.education-box {
             }
 
             .contact-box__container--right {
+
+                background: url("./../src/img/bg-wire.svg") center;
+
                 .contact-box-form {
                     span.contact-box-form__title {
                         display: flex;

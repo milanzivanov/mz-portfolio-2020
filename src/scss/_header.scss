@@ -132,9 +132,6 @@
                         }
                     }
 
-                    a.active {
-                        color: orange;
-                    }
                 }
             }
 
@@ -152,9 +149,9 @@
                 padding: 5px;
                 transition: box-shadow 0.3s ease-in-out;
 
-                &:hover {
-                    box-shadow: 2px 2px 2px 0 $dkGray;
-                }
+                // &:hover {
+                //     box-shadow: 2px 2px 2px 0 $dkGray;
+                // }
     
                 .line {
                     height: 5px;
@@ -189,9 +186,9 @@
                 }
             }
             
-            .botton-nav.hover-active {
-                box-shadow: 2px 2px 2px 0 $dkGray;
-            }
+            // .botton-nav.hover-active {
+            //     box-shadow: 2px 2px 2px 0 $dkGray;
+            // }
 
             // activate
             .botton-nav.active {

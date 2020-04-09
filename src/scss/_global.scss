@@ -24,13 +24,6 @@ html {
     padding: 20px 0;
 }
 
-.slick-slider {
-    .slick-list {
-        .slick-track {
-            margin: 0 0 30px 0;
-        }
-    }
-}
 
 img {
     max-width: 100%;
@@ -38,6 +31,13 @@ img {
 }
 
 // slider
+.slick-slider {
+    .slick-list {
+        .slick-track {
+            margin: 0 0 30px 0;
+        }
+    }
+}
 .navigation-custom-container {
     position: absolute;
     width: 100%;
@@ -75,5 +75,6 @@ img {
         background-color: white;
         color: $dkGray;
         padding: 10px;
+        display: block;
     }
 }

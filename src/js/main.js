@@ -7,7 +7,7 @@ $(document).ready(function() {
         dots: true,
         autoplay: true,
         autoplaySpeed: 10000,
-        preconstrow: $(".left-nav-custom"),
+        prevArrow: $(".left-nav-custom"),
         nextArrow: $(".right-nav-custom"),
         cssEase: 'ease-out',
 
@@ -27,6 +27,7 @@ $(document).ready(function() {
     // open mobil menu and hamburger btn
     $(".botton-nav").on("click", function(e) {
         $(".botton-nav, .header-nav__container").toggleClass("active");
+        // $(".botton-nav").toggleClass("hover-active");
     });
 
 
@@ -104,7 +105,15 @@ $(document).ready(function() {
 
 });
 
-// me
+// random bg on reload
+// function randombg(){
+//     let random = Math.floor(Math.random() * 3) + 0;
+//     let bigSize = ["url('./../src/img/laptop-glasses.jpeg')",
+//                     "url('./../src/img/laptopOnTheTable.jpg')",
+//                    "url('./../src/img/bg-main.jpeg')"];
+//     document.getElementById("random-bg-js").style.backgroundImage = bigSize[random];
+// }
+
 ////////// wes bos grid gallery
 const gallery = document.querySelector('.gallery-box');
 const overlay = document.querySelector('.overlay-box');
@@ -157,37 +166,7 @@ function outsideClick(e) {
     }
 }
 
-// random bg on reload
-function randombg(){
-    let random = Math.floor(Math.random() * 3) + 0;
-    let bigSize = ["url('./../src/img/laptop-glasses.jpeg')",
-                    "url('./../src/img/laptopOnTheTable.jpg')",
-                   "url('./../src/img/bg-main.jpeg')"];
-    document.getElementById("random-bg-js").style.backgroundImage = bigSize[random];
-}
 
 
-// mouse
 
-const itemFlexActive = document.querySelectorAll(".item-flex");
-const btnActiveMenu = document.querySelector(".botton-nav");
 
-// hamburger btn hover with mouse over out
-btnActiveMenu.addEventListener("mouseover", () => {
-    btnActiveMenu.classList.add("hover-active");
-});
-btnActiveMenu.addEventListener("mouseout", () => {
-    btnActiveMenu.classList.remove("hover-active");
-});
-
-//
-// itemFlexActive.forEach(item => {
-//     // console.log(item);
-//     item.addEventListener("mouseover", () => {
-//         item.childNodes[1].classList.add("img-darken");
-//     });
-
-//     item.addEventListener("mouseout", () => {
-//         item.childNodes[1].classList.remove("img-darken");
-//     });
-// });
