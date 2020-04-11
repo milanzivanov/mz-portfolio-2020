@@ -7,8 +7,8 @@
         <link rel="shortcut icon" type="image/ico" href="./../favicon.ico">
         <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet"> 
         
-        <link rel="stylesheet" href="./node_modules/slick-carousel/slick/slick.css">
-        <link rel="stylesheet" href="./node_modules/slick-carousel/slick/slick-theme.css">
+        <!-- <link rel="stylesheet" href="./node_modules/slick-carousel/slick/slick.css">
+        <link rel="stylesheet" href="./node_modules/slick-carousel/slick/slick-theme.css"> -->
             
         <!-- for surge purpuse -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css" integrity="sha256-3h45mwconzsKjTUULjY+EoEkoRhXcOIU4l5YAw2tSOU=" crossorigin="anonymous" />
@@ -19,8 +19,8 @@
         <meta name="description" content="Milan Zivanov - Frontend Developer - This is my personal cv site and work that I did in the past. Check it and hire my frontend skills!">
 
     </head>
-    <body onload="randombg()" id="content1">
-
+    <body>
+        <!-- onload="randombg()" -->
         <div class="grid-container">
             <!-- //////////////// -->
             <!-- header box START -->
@@ -30,7 +30,7 @@
                         <a href="./index.html">
                             <img src="./src/img/mzLogo100X100.png" alt="header logo">
                         </a>
-                        <h1>ilan</h1>
+                        <h1>ilan<span>Ž</span></h1>
                     </div>
                     <nav class="header-nav">
 
@@ -38,7 +38,7 @@
                             <a href="./index.html">
                                 <img src="./src/img/mzLogo100X100.png" alt="header logo">
                             </a>
-                            <h1>ilan</h1>
+                            <h1>ilan<span>Ž</span></h1>
                         </div>
 
                         <ul class="header-nav__container">
@@ -135,7 +135,7 @@
                                     <svg class="svg__icon">
                                         <use xlink:href="./src/img/sprites.svg#icon-pencil2"></use>
                                     </svg>
-                                    Obout me
+                                    About me
                                 </h2>
                             </button>
                             <div class="acc_panel">
@@ -686,29 +686,46 @@
 
                     <div class="contact-box__container--right contact-box__container--item">
 
-                        <form class="contact-box-form" action="mailto:milan.zivanov@gmail.com">
+                        <form 
+                            class="contact-box-form"  
+                            action="https://formspree.io/xjveenen"
+                            method="POST">
                             <span class="contact-box-form__title">
                                 Get in touch with me
                             </span>
             
                             <div class="contact-box-input">
-                                <input class="input1" type="text" name="name" placeholder="Name *" required>
+                                <input 
+                                    class="input1" 
+                                    type="email" 
+                                    name="_replyto" 
+                                    placeholder="Email *" 
+                                    required>
                             </div>
             
                             <div class="contact-box-input">
-                                <input class="input1" type="email" name="email" placeholder="Email *" required>
+                                <input 
+                                    class="input1" 
+                                    type="text" 
+                                    name="subject" 
+                                    placeholder="Subject *" 
+                                    required>
                             </div>
             
                             <div class="contact-box-input">
-                                <input class="input1" type="text" name="subject" placeholder="Subject *" required>
-                            </div>
-            
-                            <div class="contact-box-input">
-                                <textarea class="input1" name="message" placeholder="Message *" required></textarea>
+                                <textarea 
+                                    class="input1" 
+                                    name="message" 
+                                    placeholder="Message *" 
+                                    required>
+                                </textarea>
                             </div>
             
                             <div class="contact-box-form__container">
-                                <button class="contact-box-form__btn" type="submit" value="Send">
+                                <button 
+                                    class="contact-box-form__btn" 
+                                    type="submit" 
+                                    value="Send">
                                     <span>
                                         <span>Send Email</span>
                                         <svg class="svg__icon svg__icon--color">
@@ -750,8 +767,8 @@
         </div>
         <!-- BTT END -->
         <!-- //////////////// -->
-        <script src="./node_modules/jquery/dist/jquery.min.js"></script>
-        <script src="./node_modules/slick-carousel/slick/slick.js"></script>
+        <!-- <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+        <script src="./node_modules/slick-carousel/slick/slick.js"></script> -->
 
         <!-- for surge purpuse -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>

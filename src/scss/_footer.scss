@@ -42,5 +42,9 @@ footer.footer-box {
 
     svg {
         fill: $white;
+        @include breakpoint(mobile) {
+            width: 30px;
+            height: 30px;
+        }
     }
 }

@@ -18,17 +18,32 @@
 
         @include breakpoint(mobile) {
             flex-direction: column;
+            justify-content: center;
         }
 
         .header-logo {
             display: flex;
             justify-content: center;
             align-items: center;
-            color: #155799;
+            color: $blue;
             font-family: "ns" sans-serif;
-            
+            position: relative;
+            cursor: pointer;
+
             h1 {
                 padding: 0 0 0 5px;
+                span {
+                    position: absolute;
+                    @include flexCHV;
+                    font-size: 17px;
+                    top: 17px;
+                    right: -25px;
+                    color: #155799;
+                    background: #eee;
+                    width: 25px;
+                    height: 25px;
+                    border-radius: 50%;
+                }
             }
 
             @include breakpoint(tablet) {
@@ -45,6 +60,13 @@
                     height: 75px;
                 }
             }
+        }
+
+        .header-logo:hover span {
+            color: #fff;
+            background-color: #155799;
+            background-image: linear-gradient(120deg, #155799, #159957);
+
         }
 
         nav.header-nav {
@@ -64,18 +86,27 @@
 
             // logo for mobile
             .header-logo__mobile {   
-
-
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                color: #155799;
-                font-family: ns;
-                
+                @include flexCHV;
+                position: relative;
+                color: $blue;
+                font-family: "ns" "Roboto" sans-serif;
+                cursor: pointer;
                 h1 {
                     padding: 0 0 0 5px;
+                    span {
+                        position: absolute;
+                        @include flexCHV;
+                        font-size: 15px;
+                        top: 9px;
+                        right: -23px;
+                        color: $blue;
+                        background: #eee;
+                        width: 22px;
+                        height: 22px;
+                        border-radius: 50%;
+                        line-height: 15px;
+                    }
                 }
-
 
                 @include breakpoint(tablet) {
                     display: none;
@@ -93,13 +124,16 @@
 
             }
 
+            .header-logo__mobile:hover span {
+                color: #fff;
+                background-color: #155799;
+                background-image: linear-gradient(120deg, #155799, #159957);
+            }
+
             ul.header-nav__container {
                 display: flex;
                 position: absolute;
-
                 min-width: 415px;
-
-                background-color: $dkGray;
                 background-color: #155799;
                 background-image: linear-gradient(120deg, #155799, #159957);
 
@@ -115,7 +149,7 @@
                     min-width: 100%;
                     bottom: auto;
                     right: 0;
-                    top: 80px;
+                    top: 83px;
                     height: calc(100vh - 185px);
                     align-items: center;
                     justify-content: center;
@@ -130,6 +164,11 @@
                         &:hover {
                             color: $ltGray
                         }
+
+                        @include breakpoint(mobile) {
+                            font-size: 27px;
+                        } 
+
                     }
 
                 }
@@ -148,10 +187,6 @@
                 cursor: pointer;
                 padding: 5px;
                 transition: box-shadow 0.3s ease-in-out;
-
-                // &:hover {
-                //     box-shadow: 2px 2px 2px 0 $dkGray;
-                // }
     
                 .line {
                     height: 5px;
@@ -185,10 +220,7 @@
                         }
                 }
             }
-            
-            // .botton-nav.hover-active {
-            //     box-shadow: 2px 2px 2px 0 $dkGray;
-            // }
+        
 
             // activate
             .botton-nav.active {
@@ -196,7 +228,7 @@
             }
 
             .botton-nav.active > .line {
-                background: #14448f;
+                background: $blue;
             }
             .botton-nav.active > .line:before {
                 background: $white;
@@ -218,10 +250,11 @@
     }
 }
 
-.sticky-active {
-    position: fixed;
-    background: #f5f5f5;
-    color: $dkGray;
-    box-shadow: 0 10px 5px 0 rgba(169,131,107,.15);
-}
+// for now not in use
+// .sticky-active {
+//     position: fixed;
+//     background: #f5f5f5;
+//     color: $dkGray;
+//     box-shadow: 0 10px 5px 0 rgba(169,131,107,.15);
+// }
   

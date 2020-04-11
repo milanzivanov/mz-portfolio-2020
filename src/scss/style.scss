@@ -216,7 +216,7 @@ body {
 }
 
 .arrow-down-box { 
-    grid-area: arrow-down-box;
+    // grid-area: arrow-down-box;
 
     align-self: center;
     position: absolute;
@@ -292,6 +292,9 @@ section.education-box {
                 overflow: hidden;
                 padding: 0;
 
+                @include breakpoint(tablet) {
+                    padding: 0 10px 0 10px;
+                }
                 @include breakpoint(mobile) {
                     padding: 0 10px 0 10px;
                 }
@@ -309,10 +312,14 @@ section.education-box {
                         width: 100%;
                         
                         h2 {
-                            color: #156a85;
+                            color: $blue;
                             display: flex;
                             align-items: center;
                             font-size: 31px;
+
+                            @include breakpoint(mobile) {
+                                font-size: 20px;
+                            }
 
                             svg {
                                 height: 30px;
@@ -686,11 +693,13 @@ section.education-box {
                 .contact-box-form {
                     span.contact-box-form__title {
                         display: flex;
-                        font-family: "ns", "Roboto", sans-serif;
+                        background-color: $blue;
+                        text-transform: uppercase;
+                        color: #fff;
+                        font-family: ns,Roboto,sans-serif;
                         font-size: 24px;
-                        color: #144b8f;
                         line-height: 1.2;
-                        padding: 20px 0px;
+                        padding: 15px;
 
                         @include breakpoint(mobile) {
                             justify-content: center;
