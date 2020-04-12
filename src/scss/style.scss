@@ -702,6 +702,7 @@ section.education-box {
                         padding: 15px;
 
                         @include breakpoint(mobile) {
+                            font-size: 17px;
                             justify-content: center;
                             align-items: center;
                         }
@@ -744,10 +745,6 @@ section.education-box {
                             @include breakpoint(mobile) {
                                 width: 100%;
                             }
-                            
-                            &:hover {
-                                background-color: #144b8f;
-                            }
 
                             span {
                                 font-family: "Roboto", sans-serif;
@@ -756,7 +753,7 @@ section.education-box {
                                 align-items: center;
                                 padding: 10px;
                                 span {
-                                    padding: 0 5px 0 0;
+                                    padding: 0;
                                 }
 
                                 svg {
@@ -765,6 +762,10 @@ section.education-box {
                                     fill: $white;
                                 }
                             }
+                        }
+
+                        .hvr-sweep-to-right:before {
+                            background: #155799;
                         }
                     }
                     

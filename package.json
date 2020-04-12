@@ -23,6 +23,7 @@
     "node-sass": "^4.13.1"
   },
   "dependencies": {
+    "hover.css": "^2.3.2",
     "jquery": "^3.4.1",
     "slick-carousel": "^1.8.1"
   }
