@@ -384,77 +384,91 @@ section.education-box {
 // gallery box 
 .gallery-box {
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
 
-    .wrapper-inner {
-        display: flex;
-        align-self: center;
-        width: 100%;
-        justify-content: flex-start;
-        @include breakpoint(mobile) {
-            justify-content: center;
-        }
+    .gallery-box-heading {
 
-    }
-    
-
-    .item-flex {
-        position: relative;
-        overflow: hidden;
-        flex: 1 1 33.333%;   
-
-        @include breakpoint(tablet) {
-            flex: 1 1 50%;   
-            &:last-child {
-                display: flex;
-                width: 100%;
+        .wrapper-inner {
+            display: flex;
+            align-self: center;
+            width: 100%;
+            justify-content: flex-start;
+            @include breakpoint(mobile) {
                 justify-content: center;
             }
         }
+    }
 
-        @include breakpoint(mobile) {
-            flex: 1 1 50%;   
-        }      
-
-        img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .item__overlay {
-            position: absolute;
-            z-index: 2;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-
-            background-color: rgba(12,12,12,.5);
-        
-            transform: translateY(100%);
-            transition: 0.2s;
-
-            @include flexCHV;
-            cursor: pointer;
-
-            button {
-                border: 2px solid white;
-                color: white;
-                text-transform: uppercase;
-                background-image: linear-gradient(120deg,#155799,#159957);
-                padding: 5px;
-                cursor: pointer;
-                @include flexCHV;
-                outline: transparent;
-
+    .gallery-container {
+        background-color: #155799;
+        background-image: linear-gradient(120deg,#155799,#159957);
+        .wrapper-inner {
+            .gallery-item-container {
+                display: flex;
+                flex-wrap: wrap;
+                .item-flex {
+                    position: relative;
+                    overflow: hidden;
+                    flex: 1 1 33.333%;   
+            
+                    @include breakpoint(tablet) {
+                        flex: 1 1 50%;   
+                        &:last-child {
+                            display: flex;
+                            width: 100%;
+                            justify-content: center;
+                        }
+                    }
+            
+                    @include breakpoint(mobile) {
+                        flex: 1 1 50%;   
+                    }      
+            
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+            
+                    .item__overlay {
+                        position: absolute;
+                        z-index: 2;
+                        top: 0;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+            
+                        background-color: rgba(12,12,12,.5);
+                    
+                        transform: translateY(100%);
+                        transition: 0.2s;
+            
+                        @include flexCHV;
+                        cursor: pointer;
+            
+                        button {
+                            border: 2px solid white;
+                            color: white;
+                            text-transform: uppercase;
+                            background-image: linear-gradient(120deg,#155799,#159957);
+                            padding: 5px;
+                            cursor: pointer;
+                            @include flexCHV;
+                            outline: transparent;
+            
+                        }
+                    }
+                }
+            
+                .item-flex:hover .item__overlay {
+                    transform: translateY(0);
+                }
+            
             }
         }
     }
 
-    .item-flex:hover .item__overlay {
-        transform: translateY(0);
-    }
 
 }
 
@@ -504,6 +518,82 @@ section.education-box {
 
 .overlay-box img {
     width: 100%;
+}
+
+///////////////////
+// app box
+.app-box {
+    .wrapper-inner {
+        .app-box__container {
+            display: flex;
+            flex-wrap: wrap;
+            .app-box--item {
+                position: relative;
+                overflow: hidden;
+                display: flex;
+                justify-content: center;
+                flex: 1 1 calc(33.333% - 40px);
+                align-items: center;
+                margin: 10px 10px 0 0;
+                padding: 10px;
+                background-color: $ltGray;
+                cursor: pointer;
+
+                @include breakpoint(mobile) {
+                    flex: 1 1 calc(100% - 40px);
+                }
+
+                a {
+                    color: $white;
+
+                    img {
+                        transition: all 0.2s ease-in;
+                    }
+                }
+
+                .app-box--item_ht {
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    background-color: rgba(12,12,12,.5);
+                    transform: translate3d(-1000px, 1000px, 1000px);
+                    transition: all 0.3s ease-in-out;
+                }
+
+                &:hover > .app-box--item_ht {
+                    @include flexCHV;
+                    transform: translate3d(0px, 0px, 0px);
+
+                    .app__info {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: flex-start;
+                        margin-right: 50px;
+                        width: 100%;
+                        padding: 10px;
+                        background-color: $white;
+                        h4 {
+                            color: #155799;
+                            padding: 5px;
+                        }
+                        em {
+                            display: flex;
+                            span {
+                                background-color: $dkGray;
+                                background-color: #155799;
+                                background-image: linear-gradient(120deg,#155799,#159957);
+                                color: $white;
+                                padding: 5px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 /////////////////////
@@ -579,87 +669,11 @@ section.education-box {
     }
 }
 
-///////////////////
-// app box
-.app-box {
-    .wrapper-inner {
-        .app-box__container {
-            display: flex;
-            flex-wrap: wrap;
-            .app-box--item {
-                position: relative;
-                overflow: hidden;
-                display: flex;
-                justify-content: center;
-                flex: 1 1 calc(50% - 40px);
-                align-items: center;
-                margin: 10px 10px 0 0;
-                padding: 10px;
-                background-color: $ltGray;
-                cursor: pointer;
-
-                @include breakpoint(mobile) {
-                    flex: 1 1 calc(100% - 40px);
-                }
-
-                a {
-                    color: $white;
-
-                    img {
-                        transition: all 0.2s ease-in;
-                    }
-                }
-
-                .app-box--item_ht {
-                    position: absolute;
-                    top: 0;
-                    bottom: 0;
-                    left: 0;
-                    right: 0;
-                    background-color: rgba(12,12,12,.5);
-                    transform: translate3d(-1000px, 1000px, 1000px);
-                    transition: all 0.3s ease-in-out;
-                }
-
-                &:hover > .app-box--item_ht {
-                    @include flexCHV;
-                    transform: translate3d(0px, 0px, 0px);
-
-                    .app__info {
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: center;
-                        align-items: flex-start;
-                        margin-right: 50px;
-                        width: 100%;
-                        padding: 10px;
-                        background-color: $white;
-                        h4 {
-                            color: #155799;
-                            padding: 5px;
-                        }
-                        em {
-                            display: flex;
-                            span {
-                                background-color: $dkGray;
-                                background-color: #155799;
-                                background-image: linear-gradient(120deg,#155799,#159957);
-                                color: $white;
-                                padding: 5px;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
-
 //////////////////////
 // contact box
 .contact-box {
-    background-color: #155799;
-    background-image: linear-gradient(120deg,#155799,#159957);
+    // background-color: #155799;
+    // background-image: linear-gradient(120deg,#155799,#159957);
     .wrapper-inner {
 
         .contact-box__container {
@@ -678,7 +692,7 @@ section.education-box {
             }
 
             .contact-box__container--left {
-                background: url("./../src/img/bg-wire.svg") center;
+                // background: url("./../src/img/bg-wire.svg") center;
                 @include flexCHV;
 
                 @include breakpoint(mobile) {
@@ -688,7 +702,7 @@ section.education-box {
 
             .contact-box__container--right {
 
-                background: url("./../src/img/bg-wire.svg") center;
+                // background: url("./../src/img/bg-wire.svg") center;
 
                 .contact-box-form {
                     span.contact-box-form__title {
