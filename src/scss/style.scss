@@ -38,77 +38,6 @@ body {
     overflow: hidden;
 }
 
-///////////////////
-// modal start
-.modal-box {
-    // hide modal
-    display: none;
-    position: fixed;
-    z-index: 10;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    overflow: auto;
-    background-color: rgba(0,0,0,0.5);
-    cursor: pointer;
-
-    justify-content: center;
-    align-items: center;
-    .modal-box__container {
-        position: relative;
-        padding: 5px;
-        background-color: $ltGray;     
-        display: flex;
-        max-width: 500px;
-        flex-wrap: wrap;
-        flex-direction: column;
-    
-        .modal-box__item {
-            max-width: 500px;
-            flex: 0 1 50%;
-            @include flexCHV;
-
-            @include breakpoint(mobile) {
-                max-width: 300px;
-            }
-
-            p {
-                color: $dkGray;
-                font-size: 35px;
-
-                @include breakpoint(mobile) {
-                    font-size: 21px;
-                }
-
-                &:hover span {
-                    color: indianred;
-                }
-            }
-
-            img {
-                max-width: 100%;
-                height: auto;
-                object-fit: cover;
-            }
-
-        }
-
-        .closeBtn {
-            position: absolute;
-            top: 0;
-            padding: 10px;
-            right: 0;
-            cursor: pointer;
-            background: $white;
-
-            svg {
-                fill: #155799;
-            }
-        }
-    }
-}
-
 ////////////////////
 // banner section
 .banner-box { 
@@ -122,85 +51,175 @@ body {
     justify-content: center;
     align-items: center;
 
-    flex-direction: column;
     position: relative;
 
     .wrapper-inner {
-        .banner-box__content {
-            flex-direction: column;
+        width: 100%;
+
+        .banner-box__container {
             display: flex;
+            width: 100%;
             position: relative;
             z-index: 5;
-            color: $white;
 
-            .cta {
-                background: rgba(255, 255, 255, 0.7);
-                color: #000;
-                text-decoration: none;
-                font-size: 30px;
-                text-transform: uppercase;
-                padding: .4em;
-                transition: all .1s ease-in-out;
-                cursor: pointer;
-                display: flex;
-                justify-content: center;
+            transition: all 0.3s ease-in-out;
+
+            @include breakpoint(mobile) {
                 align-items: center;
-                font-family: ns, Roboto, Montserrat, sans-serif;
+                justify-content: center;
+            }
+
+            .banner-box__container--item {
+                z-index: 2;
+                flex: 1 1 calc(50% - 20px);
+                background-size: cover;
+                padding: 57px;
+
                 overflow: hidden;
 
+                @include flexCHV;
+
                 @include breakpoint(mobile) {
-                    font-size: 20px;
+                    max-width: 300px;
+                    padding: 120px;
                 }
 
-                .svg__icon--color {
-                    fill: #000;
-                    padding: 0 0 0 10px;
-                }
-
-                &:hover {
-                    color: $blue;
-                    background: #000;
-                    &:hover .svg__icon--color {
-                        fill: $blue;
-                    }
+                img {
+                    max-width: 100%;
+                    height: auto;
                 }
             }
 
-            h1 {
-                font-family: ns, Roboto, sans-serif;
-                text-transform: uppercase;
-                display: flex;
-                flex-direction: column;
-                justify-content: flex-start;
-                align-items: flex-start;
-                font-size: 60px;
-                order: -1;
-                padding: 0 0 2px;
+            .banner-box__container--left {
+                background-color: #cbcec3;
+                // background: #cbcec3 url("./../src/img/bg-wire.svg") center;
 
-                @include breakpoint(mobile) {
-                    font-size: 41px;
-                }
+                cursor: pointer;
+                position: relative;
 
-                span {
-                    color: #eee;
-                    display: inline-block;
-                    background: rgba(0, 0, 0, 0.7);
-                    margin-bottom: 5px;
-                    padding: 10px;
-                    transition: all .1s ease-in-out;
+                .mobile-img-top-left {
+                    position: absolute;
+                    right: 110px;
+                    top: 110px;
+
+                    display: none;
 
                     @include breakpoint(mobile) {
-                        padding: 10px
+                        display: flex;
+                    }
+                    
+                    img {
+                        max-width: 100px;
+                        height: 100px;
                     }
                 }
+
+                img {
+                    max-width: 50%;
+                    height: auto;
+
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                }
+
+                &:hover ~ .banner-box__container--right .hidden-code {
+                    background-color: $white;
+                    
+                    visibility: visible;
+                    opacity: 1;
+                    transition: 
+                        visibility 0s linear 0s,
+                        opacity .3s,padding .3s;
+                }
+
             }
+
+            .banner-box__container--right {
+                // background: $white url("./../src/img/bg-wire.svg") center; 
+                // background: $white url("./../src/img/mzLogo2020.svg") center no-repeat; 
+                background-color: $white;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                position: relative;
+
+                @include breakpoint(mobile) {
+                    display: none;
+                }
+
+                h1 {
+                    font-family: 'ns' 'Roboto' sans-serif;
+                    color: $blue;
+                    font-size: 45px;
+
+                    // background: #d8d8d8;
+                    // padding: 5px;
+                    // width: 100%;
+                }
+
+                h2 {
+                    color: $white;
+                    background-color: $dkGray;
+                    padding: 5px;
+                    font-size: 24px;
+                }
+
+                .hidden-code {
+                    visibility: hidden;
+                    opacity: 0;
+
+                    background-color: $white;
+                    // background: $white url("./../src/img/bg-wire.svg") center; 
+
+                    position: absolute;
+                    transition: 
+                        visibility 0s linear .3s,
+                        opacity .3s,padding .3s;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+
+                    p.hidden-code-content {
+                        position: relative;
+                        line-height: inherit;
+                        white-space: nowrap;
+                        border: none;
+                        padding: 1.6em;
+                        font-size: 1em;
+                        height: 100%;
+                        overflow-y: hidden;
+                        margin: auto;
+
+                        span, strong {
+                            color: $blue;
+                            font-weight: 700;
+                        }
+
+                        .hover-email {
+                            color: $ElectricRed;
+                        }
+
+
+                        &:hover .hover-email {
+                            color: $DeepGreen;
+                        }
+
+                    }
+                }
+
+                &:hover .hidden-code {
+                    visibility: visible;
+                    opacity: 1;
+                    transition: 
+                        visibility 0s linear 0s,
+                        opacity .3s,padding .3s;
+                }
+            }
+
         }
 
-        // banner text hover
-        .banner-box__content .cta:hover ~ h1 span {
-            color: #000;
-            background: #fff;
-        }
     }
 
     &::after {
@@ -261,24 +280,15 @@ body {
     50%,
     80%,
     100% {
-      -moz-transform: translateY(0);
-      -ms-transform: translateY(0);
-      -webkit-transform: translateY(0);
-      transform: translateY(0);
+        transform: translateY(0);
     }
     40% {
-      -moz-transform: translateY(-10px);
-      -ms-transform: translateY(-10px);
-      -webkit-transform: translateY(-10px);
-      transform: translateY(-10px);
+        transform: translateY(-10px);
     }
     60% {
-      -moz-transform: translateY(-5px);
-      -ms-transform: translateY(-5px);
-      -webkit-transform: translateY(-5px);
-      transform: translateY(-5px);
+        transform: translateY(-5px);
     }
-  }
+}
 
 
 ////////////////////
@@ -330,7 +340,7 @@ section.education-box {
                     }
                       
                     .acc_ctrl:before {
-                        background: #156a85;
+                        background: $blue;
                         content: '';
                         height: 2px;
                         margin-right: 10px;
@@ -343,7 +353,7 @@ section.education-box {
                     }
                       
                     .acc_ctrl:after {
-                        background: #156a85;
+                        background: $blue;
                         content: '';
                         height: 2px;
                         margin-right: 10px;
