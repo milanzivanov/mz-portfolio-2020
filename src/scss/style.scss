@@ -64,6 +64,11 @@ body {
 
             transition: all 0.3s ease-in-out;
 
+            @include breakpoint(tablet) {
+                max-width: 900px;
+                margin: auto;
+            }
+
             @include breakpoint(mobile) {
                 align-items: center;
                 justify-content: center;
@@ -92,10 +97,13 @@ body {
 
             .banner-box__container--left {
                 background-color: #cbcec3;
-                // background: #cbcec3 url("./../src/img/bg-wire.svg") center;
 
                 cursor: pointer;
                 position: relative;
+
+                @include breakpoint(mobile) {
+                    background: #cbcec3 url("./../src/img/bg-wire.svg") center;
+                }
 
                 .mobile-img-top-left {
                     position: absolute;
@@ -107,7 +115,7 @@ body {
                     @include breakpoint(mobile) {
                         display: flex;
                     }
-                    
+
                     img {
                         max-width: 100px;
                         height: 100px;
@@ -136,7 +144,7 @@ body {
             }
 
             .banner-box__container--right {
-                // background: $white url("./../src/img/bg-wire.svg") center; 
+                background: $white url("./../src/img/bg-wire.svg") center; 
                 // background: $white url("./../src/img/mzLogo2020.svg") center no-repeat; 
                 background-color: $white;
                 display: flex;
@@ -156,13 +164,29 @@ body {
                     // background: #d8d8d8;
                     // padding: 5px;
                     // width: 100%;
+
+                    @include breakpoint(tablet) {
+                        font-size: 35px;
+                    }
+
                 }
 
                 h2 {
                     color: $white;
                     background-color: $dkGray;
+
+                    background-color: #155799;
+                    background-image: linear-gradient(120deg, #155799, #159957);
+
                     padding: 5px;
                     font-size: 24px;
+                    line-height: 1.3;
+                    font-family: sans-serif;
+                    font-weight: 100;
+
+                    @include breakpoint(tablet) {
+                        font-size: 18px;
+                    }
                 }
 
                 .hidden-code {
@@ -171,6 +195,7 @@ body {
 
                     background-color: $white;
                     // background: $white url("./../src/img/bg-wire.svg") center; 
+                    // background: $white url("./../src/img/mzLogo2020.svg") center no-repeat; 
 
                     position: absolute;
                     transition: 
@@ -186,11 +211,16 @@ body {
                         line-height: inherit;
                         white-space: nowrap;
                         border: none;
-                        padding: 1.6em;
+                        padding: 1.7em;
                         font-size: 1em;
                         height: 100%;
                         overflow-y: hidden;
                         margin: auto;
+
+                        @include breakpoint(tablet) {
+                            font-size: 0.8em;
+                            padding: 35px 0 10px 10px;
+                        }
 
                         span, strong {
                             color: $blue;
@@ -312,7 +342,7 @@ section.education-box {
                 li {
                     .acc_ctrl {
                         display: flex;
-                        background: #FFFFFF;
+                        background: $white;
                         border: none;
                         border-bottom: solid 1px #F2F2F2;
                         cursor: pointer;
@@ -325,7 +355,8 @@ section.education-box {
                             color: $blue;
                             display: flex;
                             align-items: center;
-                            font-size: 31px;
+                            font-size: 27px;
+                            font-family: sans-serif;
 
                             @include breakpoint(mobile) {
                                 font-size: 20px;
@@ -682,8 +713,6 @@ section.education-box {
 //////////////////////
 // contact box
 .contact-box {
-    // background-color: #155799;
-    // background-image: linear-gradient(120deg,#155799,#159957);
     .wrapper-inner {
 
         .contact-box__container {
@@ -698,7 +727,9 @@ section.education-box {
                 flex: 1 1 calc(50% - 40px);
                 margin: 5px;
                 padding: 10px;
-                background-color: $ltGray;
+
+                background-color: #155799;
+                background-image: linear-gradient(120deg,#155799,#159957);
             }
 
             .contact-box__container--left {

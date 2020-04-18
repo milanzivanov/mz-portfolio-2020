@@ -92,13 +92,14 @@
                 font-family: "ns" "Roboto" sans-serif;
                 cursor: pointer;
                 h1 {
-                    padding: 0 0 0 5px;
+                    position: absolute;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
                     span {
                         position: absolute;
                         @include flexCHV;
                         font-size: 15px;
-                        top: 9px;
-                        right: -23px;
                         color: $blue;
                         background: #fff;
                         width: 22px;
@@ -149,7 +150,7 @@
                     min-width: 100%;
                     bottom: auto;
                     right: 0;
-                    top: 83px;
+                    top: 81px;
                     height: calc(100vh - 185px);
                     align-items: center;
                     justify-content: center;
