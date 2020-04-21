@@ -30,8 +30,10 @@ img {
     height: auto;
 }
 
+
 // slider
 .slick-slider {
+    margin-bottom: 60px;
     .slick-list {
         .slick-track {
             margin: 0 0 30px 0;
@@ -60,21 +62,62 @@ img {
     display: flex;
     align-items: center;
 
-    img {
-        width: 100px;
-        height: 100px;
+    .education-box--conteiner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
 
         @include breakpoint(mobile) {
-            display: none;
+            flex-direction: column;
+        }
+
+        background-color: #fff;
+        .education-box-left {
+            @include flexCHV;
+            padding: 10px;
+
+            img {
+                width: 150px;
+                height: 100px;
+            }
+        }
+
+        .education-box-right {
+            ul {
+                h4 {
+                    span {
+                        color: $blue;
+                    }
+                }
+    
+                h5 {
+                    color: $ElectricRed;
+                }
+    
+                p {
+                    a {
+                        color: $blue;
+                    }
+                }
+            }
         }
     }
 
-    span {
-        align-self: stretch;
-        font-size: 20px;
-        background-color: white;
-        color: $dkGray;
-        padding: 10px;
-        display: block;
-    }
+    // img {
+    //     width: 100px;
+    //     height: 100px;
+
+    //     @include breakpoint(mobile) {
+    //         display: none;
+    //     }
+    // }
+
+    // span {
+    //     align-self: stretch;
+    //     font-size: 20px;
+    //     background-color: white;
+    //     color: $dkGray;
+    //     padding: 10px;
+    //     display: block;
+    // }
 }

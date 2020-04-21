@@ -98,28 +98,37 @@ body {
             .banner-box__container--left {
                 background-color: #cbcec3;
 
+
                 cursor: pointer;
                 position: relative;
 
                 @include breakpoint(mobile) {
-                    background: #cbcec3 url("./../src/img/bg-wire.svg") center;
+                    background: transparent url("./../src/img/mzLogo2020.svg") center no-repeat;
+                    background-size: cover;
                 }
 
-                .mobile-img-top-left {
-                    position: absolute;
-                    right: 110px;
-                    top: 110px;
-
+                .mobile-fe-top-left {
                     display: none;
 
                     @include breakpoint(mobile) {
+                        position: absolute;
+                        left: 50%;
+                        top: 50%;
+                        width: 100%;
+                        transform: translate(-50%, -50%);
                         display: flex;
+                        justify-content: center;
+                        padding: 10px;
+
+                        background-color: #155799;
+                        background-image: linear-gradient(120deg, #155799, #159957);
+
                     }
 
-                    img {
-                        max-width: 100px;
-                        height: 100px;
+                    h3 {
+                        color: $white;
                     }
+
                 }
 
                 img {
@@ -129,6 +138,10 @@ body {
                     position: absolute;
                     left: 0;
                     bottom: 0;
+
+                    @include breakpoint(mobile) {
+                        @include displayHide;
+                    }
                 }
 
                 &:hover ~ .banner-box__container--right .hidden-code {
@@ -160,10 +173,6 @@ body {
                     font-family: 'ns' 'Roboto' sans-serif;
                     color: $blue;
                     font-size: 45px;
-
-                    // background: #d8d8d8;
-                    // padding: 5px;
-                    // width: 100%;
 
                     @include breakpoint(tablet) {
                         font-size: 35px;
@@ -413,6 +422,27 @@ section.education-box {
                         p {
                             padding: 5px;
                             background: white;
+                            line-height: 1.5;
+
+                            @include breakpoint(mobile) {
+                                text-align: center;
+                            }
+                        }
+
+                        ul {
+                            background-color: $white;
+                            padding: 5px;
+
+                            li {
+                                font-size: 20px;
+                                line-height: 1.5;
+                                padding: 5px 0;
+                                border-bottom: 1px solid #ccc;
+                            }
+
+                            li:last-child {
+                                border-bottom: none;
+                            }
                         }
                     }
                 }

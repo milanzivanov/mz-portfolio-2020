@@ -1,9 +1,9 @@
 'use strict';
 const gulp = require('gulp');
-const sourcemaps = require('gulp-sourcemaps');
-const sass = require('gulp-sass');
 const autoprefixer = require('autoprefixer');
+const sourcemaps = require('gulp-sourcemaps');
 const postcss = require('gulp-postcss');
+const sass = require('gulp-sass');
 const cssnano = require('cssnano');
 const terser = require('gulp-terser');
 const browserSync = require('browser-sync');
@@ -18,7 +18,10 @@ gulp.task("sassTask", function() {
         .src(path.src_sass)
         .pipe(sourcemaps.init()) // initialize sourcemaps first
         .pipe(sass().on('error', sass.logError))
-        .pipe(postcss([ autoprefixer(), cssnano() ])) // PostCSS plugins
+        .pipe(postcss([ autoprefixer({
+          overrideBrowserslist: ['last 2 versions'],
+          cascade: false
+        }), cssnano() ])) // PostCSS plugins
         .pipe(sourcemaps.write('.')) // write sourcemaps file in current directory
         .pipe(gulp.dest('./dist'))
         .pipe(browserSync.stream());
