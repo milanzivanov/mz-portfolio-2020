@@ -4,13 +4,24 @@ $(document).ready(function() {
     // Slick
     $('.slick-slider').slick({
         arrows: true,
-        dots: false,
+        dots: true,
         autoplay: true,
-        autoplaySpeed: 5000,
-        adaptiveHeight: true,
+        autoplaySpeed: 10000,
         prevArrow: $(".left-nav-custom"),
         nextArrow: $(".right-nav-custom"),
-        cssEase: 'ease-out'
+        cssEase: 'ease-out',
+
+        responsive: [
+            {
+              breakpoint: 768,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                infinite: true,
+                dots: false
+              }
+            }
+          ]
     });
 
     // open mobil menu and hamburger btn
