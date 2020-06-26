@@ -36,14 +36,17 @@ body {
     position: relative;
     z-index: 4;
     overflow: hidden;
+
 }
 
 ////////////////////
 // banner section
+
 .banner-box { 
+    background: url("./../src/img/laptopOnTheTable.jpeg") center;
+    background: url("./../src/img/laptopOnTheTable.webp") center;
     grid-area: banner-box;
 
-    background: url("./../src/img/laptopOnTheTable.jpg") center;
     background-size: cover;
     background-repeat: no-repeat;
 
@@ -102,33 +105,46 @@ body {
                 position: relative;
 
                 @include breakpoint(mobile) {
-                    background: #cbcec3 url("./../src/img/bg-wire.svg") center;
+                    background: transparent url("./../src/img/mzLogo2020.svg") center no-repeat;
+                    background-size: cover;
                 }
 
-                .mobile-img-top-left {
-                    position: absolute;
-                    right: 110px;
-                    top: 110px;
-
+                .mobile-fe-top-left {
                     display: none;
 
                     @include breakpoint(mobile) {
+                        position: absolute;
+                        left: 50%;
+                        top: 50%;
+                        width: 100%;
+                        transform: translate(-50%, -50%);
                         display: flex;
+                        justify-content: center;
+                        padding: 10px;
+
+                        background-color: #155799;
+                        background-image: linear-gradient(120deg, #155799, #159957);
+
                     }
 
-                    img {
-                        max-width: 100px;
-                        height: 100px;
+                    h3 {
+                        color: $white;
                     }
+
                 }
 
-                img {
+                picture {
                     max-width: 50%;
                     height: auto;
 
                     position: absolute;
                     left: 0;
-                    bottom: 0;
+                    bottom: -5px;
+                    img {
+                        @include breakpoint(mobile) {
+                            @include displayHide;
+                        }
+                    }
                 }
 
                 &:hover ~ .banner-box__container--right .hidden-code {
@@ -144,9 +160,7 @@ body {
             }
 
             .banner-box__container--right {
-                background: $white url("./../src/img/bg-wire.svg") center; 
-                // background: $white url("./../src/img/mzLogo2020.svg") center no-repeat; 
-                background-color: $white;
+                background: url("./../src/img/bg-wire.svg") center; 
                 display: flex;
                 flex-direction: column;
                 align-items: flex-start;
@@ -158,12 +172,8 @@ body {
 
                 h1 {
                     font-family: 'ns' 'Roboto' sans-serif;
-                    color: $blue;
+                    color: $dkGray;
                     font-size: 45px;
-
-                    // background: #d8d8d8;
-                    // padding: 5px;
-                    // width: 100%;
 
                     @include breakpoint(tablet) {
                         font-size: 35px;
@@ -192,11 +202,7 @@ body {
                 .hidden-code {
                     visibility: hidden;
                     opacity: 0;
-
                     background-color: $white;
-                    // background: $white url("./../src/img/bg-wire.svg") center; 
-                    // background: $white url("./../src/img/mzLogo2020.svg") center no-repeat; 
-
                     position: absolute;
                     transition: 
                         visibility 0s linear .3s,
@@ -411,8 +417,33 @@ section.education-box {
                         overflow: hidden;
 
                         p {
+                            margin: 5px;
+                            background: #ffffff;
+                            line-height: 1.5;
                             padding: 5px;
-                            background: white;
+                        }
+
+                        p:first-child {
+                            margin: 0 0 5px 0;
+                        }
+                        p:last-child {
+                            margin: 0 0 0 0;
+                        }
+
+                        ul {
+                            background-color: $white;
+                            padding: 5px;
+
+                            li {
+                                font-size: 20px;
+                                line-height: 1.5;
+                                padding: 5px 0;
+                                border-bottom: 1px solid #ccc;
+                            }
+
+                            li:last-child {
+                                border-bottom: none;
+                            }
                         }
                     }
                 }
@@ -733,7 +764,6 @@ section.education-box {
             }
 
             .contact-box__container--left {
-                // background: url("./../src/img/bg-wire.svg") center;
                 @include flexCHV;
 
                 @include breakpoint(mobile) {
@@ -742,8 +772,6 @@ section.education-box {
             }
 
             .contact-box__container--right {
-
-                // background: url("./../src/img/bg-wire.svg") center;
 
                 .contact-box-form {
                     span.contact-box-form__title {

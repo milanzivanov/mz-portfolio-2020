@@ -1,33 +1,28 @@
 $(document).ready(function() {
     'use strict';
 
+    // loader
+    // window.onload = function () {
+    //     $('.loader').fadeOut(500, function() { 
+    //         $('.is-active').remove();
+    //     });
+    // }
+
     // Slick
     $('.slick-slider').slick({
         arrows: true,
-        dots: true,
+        dots: false,
         autoplay: true,
-        autoplaySpeed: 10000,
+        autoplaySpeed: 5000,
+        adaptiveHeight: true,
         prevArrow: $(".left-nav-custom"),
         nextArrow: $(".right-nav-custom"),
-        cssEase: 'ease-out',
-
-        responsive: [
-            {
-              breakpoint: 768,
-              settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                infinite: true,
-                dots: false
-              }
-            }
-          ]
+        cssEase: 'ease-out'
     });
 
     // open mobil menu and hamburger btn
     $(".botton-nav").on("click", function(e) {
         $(".botton-nav, .header-nav__container").toggleClass("active");
-        // $(".botton-nav").toggleClass("hover-active");
     });
 
 
@@ -89,30 +84,7 @@ $(document).ready(function() {
         });
       });
 
-
-    // adding shadow on scroll and sticky
-    // try with padding-top!!!
-    // $(window).scroll(function() {
- 
-    //     if ($(window).scrollTop() >= 100) { 
-    //         // $('.header-box').addClass('sticky-active');
-    //         $('.header-nav ul li > a').addClass('nav-color');
-    //     } else {
-    //         // $('.header-box').removeClass('sticky-active');
-    //         $('.header-nav ul li a').removeClass('nav-color');
-    //     }
-    // });
-
 });
-
-// random bg on reload
-// function randombg(){
-//     let random = Math.floor(Math.random() * 3) + 0;
-//     let bigSize = ["url('./../src/img/laptop-glasses.jpeg')",
-//                     "url('./../src/img/laptopOnTheTable.jpg')",
-//                    "url('./../src/img/bg-main.jpeg')"];
-//     document.getElementById("random-bg-js").style.backgroundImage = bigSize[random];
-// }
 
 ////////// wes bos grid gallery
 const gallery = document.querySelector('.gallery-box');
