@@ -2,9 +2,6 @@
     grid-area: header-box;
     position: relative;
 
-    background-color: #d8d8d8;
-    box-shadow: 0 10px 5px 0 rgba(169,131,107,.15);
-
     z-index: 6;
     width: 100%;
     display: flex;
@@ -200,7 +197,7 @@
                 position: relative;
                 width: 60px;
                 height: 60px;
-                background: $ltGray;
+                // background: $ltGray;
                 cursor: pointer;
                 padding: 5px;
                 transition: box-shadow 0.3s ease-in-out;
