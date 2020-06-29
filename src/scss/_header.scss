@@ -149,7 +149,7 @@
                     bottom: auto;
                     right: 0;
                     top: 81px;
-                    height: calc(100vh - 185px);
+                    height: calc(100vh - 100px);
                     align-items: center;
                     justify-content: center;
                 }
@@ -197,7 +197,6 @@
                 position: relative;
                 width: 60px;
                 height: 60px;
-                // background: $ltGray;
                 cursor: pointer;
                 padding: 5px;
                 transition: box-shadow 0.3s ease-in-out;
@@ -237,21 +236,12 @@
         
 
             // activate
-            .botton-nav.active {
-                background: $ltGray;
-            }
-
-            .botton-nav.active > .line {
-                background: $blue;
-            }
             .botton-nav.active > .line:before {
-                background: $white;
                 right: 0;
                 width: 40px;
             }
             
             .botton-nav.active > .line:after {
-                background: indianred;
                 right: 0;
                 width: 40px;
             }
