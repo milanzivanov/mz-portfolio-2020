@@ -141,6 +141,9 @@ body {
 
                     h3 {
                         color: $white;
+                        font-size: 25px;
+                        font-family: 'gt', 'ns', sans-serif;
+                        letter-spacing: 1px;
                     }
 
                 }
@@ -183,7 +186,7 @@ body {
                 }
 
                 h1 {
-                    font-family: 'ns' 'Roboto' sans-serif;
+                    font-family: 'gt', 'ns' 'Roboto' sans-serif;
                     color: $dkGray;
                     font-size: 45px;
 
@@ -284,31 +287,32 @@ body {
 
     z-index: 5;
 
-    .bounce-animation {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 50px;
-        width: 50px;
-        background-color: $ltGray;
-        border-radius: 50%;
-        padding: 10px;
-        line-height: 50px;
-        margin: 5px;
+    // not in use for now
+    // .bounce-animation {
+    //     display: flex;
+    //     justify-content: center;
+    //     align-items: center;
+    //     height: 50px;
+    //     width: 50px;
+    //     background-color: $ltGray;
+    //     border-radius: 50%;
+    //     padding: 10px;
+    //     line-height: 50px;
+    //     margin: 5px;
 
-        animation: bounce 5s infinite;
-        transition: 0.5s ease-in-out;
+    //     animation: bounce 5s infinite;
+    //     transition: 0.5s ease-in-out;
       
-        svg {
-            fill: $blue;
-            width: 30px;
-            height: 30px;
-        }
-    }
+    //     svg {
+    //         fill: $blue;
+    //         width: 30px;
+    //         height: 30px;
+    //     }
+    // }
     
-    .bounce-animation:hover > svg {
-        fill: #21a648;
-    }
+    // .bounce-animation:hover > svg {
+    //     fill: #21a648;
+    // }
 }
 
 // @keyframes bounce {

@@ -10,3 +10,17 @@
     font-style: normal;
     font-display: swap;
 }
+
+@font-face {
+    font-family: 'gt';
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+
+    src: url('/src/fonts/Gotham\ Black\ Regular.eot');
+    src: 
+        url('/src/fonts/Gotham\ Black\ Regular.eot /Gotham\ Black\ Regular.eot?#iefix') format('embedded-opentype'), 
+        url('/src/fonts/Gotham\ Black\ Regular.woff') format('woff'), 
+        url('/src/fonts/Gotham\ Black\ Regular.ttf') format('truetype'), 
+        url('/src/fonts/Gotham\ Black\ Regular.svg#gt') format('svg');
+}
