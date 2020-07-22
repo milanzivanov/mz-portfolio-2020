@@ -1,6 +1,18 @@
 $(document).ready(function() {
     'use strict';
 
+
+    // add remove class on scroll
+    // $(window).scroll(function() {    
+    //     let scroll = $(window).scrollTop();
+    
+    //     if (scroll >= 500) {
+    //         $(".clearHeader").addClass("darkHeader");
+    //     } else {
+    //         $(".clearHeader").removeClass("darkHeader");
+    //     }
+    // });
+
     // loader
     // window.onload = function () {
     //     $('.loader').fadeOut(500, function() { 
