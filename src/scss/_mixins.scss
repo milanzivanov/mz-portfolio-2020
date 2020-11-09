@@ -8,23 +8,101 @@
     display: none;
 }
 
-/* ----------------- Media queris
+/* ----------------- Media queris desktop first
 ----------------------------------------------------------------------- */
+// @mixin breakpoint ($point) {
+//     @if $point == 'mobile' {
+//         @media only screen and (min-width: 120px) and (max-width : 767px) { @content; }
+//     }
 
+//     @else if $point == 'tablet' {
+//         @media only screen and (min-width: 768px) and (max-width : 1399px) { @content; }
+//     }
+
+//     @else if $point == 'desktop' {
+//         @media only screen and (min-width: 1400px) { @content; }
+//     }
+
+//     @else {
+//         @media only screen and (min-width: $point) { @content; }
+//     }
+// }
+
+/* ----------------- Media queris mobile first
+----------------------------------------------------------------------- */
 @mixin breakpoint ($point) {
-    @if $point == 'mobile' {
-        @media only screen and (min-width: 120px) and (max-width : 767px) { @content; }
+    @if $point == 'for-tablet-up' {
+        @media (min-width: 768px) { @content; }    }
+
+    @else if $point == 'for-desktop-up' {
+        @media (min-width: 1024px) { @content; }
     }
 
-    @else if $point == 'tablet' {
-        @media only screen and (min-width: 768px) and (max-width : 1399px) { @content; }
+    @else if $point == 'for-big-desktop-up' {
+        @media (min-width: 1366px) { @content; }
     }
 
-    @else if $point == 'desktop' {
-        @media only screen and (min-width: 1400px) { @content; }
-    }
-
-    @else {
-        @media only screen and (min-width: $point) { @content; }
-    }
 }
+
+////////////////////
+// @mixin for-size($size) {
+//     @if $size == phone-only {
+//         @media (max-width: 599px) { 
+//             @content; 
+//         }
+//     } 
+//     @else if $size == tablet-portrait-up {
+//         @media (min-width: 600px) { 
+//             @content; 
+//         }
+//     } 
+//     @else if $size == tablet-landscape-up {
+//         @media (min-width: 900px) { 
+//             @content; 
+//         }
+//     } 
+//     @else if $size == desktop-up {
+//         @media (min-width: 1200px) { 
+//             @content; 
+//         }
+//     } 
+//     @else if $size == big-desktop-up {
+//         @media (min-width: 1800px) { 
+//             @content; 
+//         }
+//     }
+// }
+
+// usage
+// .my-box {
+//     padding: 10px;
+        // @include for-size(phone-only) {
+        //     background-color: red;
+        // }
+//  }
+
+
+// @mixin for-phone-only {
+//     @media (max-width: 599px) { @content; }
+//   }
+//   @mixin for-tablet-portrait-up {
+//     @media (min-width: 600px) { @content; }
+//   }
+//   @mixin for-tablet-landscape-up {
+//     @media (min-width: 900px) { @content; }
+//   }
+//   @mixin for-desktop-up {
+//     @media (min-width: 1200px) { @content; }
+//   }
+//   @mixin for-big-desktop-up {
+//     @media (min-width: 1800px) { @content; }
+//   }
+  
+//   // usage
+//   .my-box {
+//     padding: 10px;
+    
+//     @include for-desktop-up {
+//       padding: 20px;
+//     }
+//   }

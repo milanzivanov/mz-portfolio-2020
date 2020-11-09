@@ -13,19 +13,22 @@
         align-items: center;
         padding: 20px 0;
 
-        @include breakpoint(mobile) {
-            flex-direction: column;
-            justify-content: center;
-        }
+        flex-direction: column;
+
+        // @include breakpoint(mobile) {
+        //     flex-direction: column;
+        //     justify-content: center;
+        // }
 
         .header-logo {
-            display: flex;
             justify-content: center;
             align-items: center;
             color: $blue;
             font-family: "ns" sans-serif;
             position: relative;
             cursor: pointer;
+
+            display: none;
 
             h1 {
                 padding: 0 0 0 5px;
@@ -44,13 +47,13 @@
                 }
             }
 
-            @include breakpoint(tablet) {
-                padding: 0 5px;            
-            } 
+            // @include breakpoint(tablet) {
+            //     padding: 0 5px;            
+            // } 
 
-            @include breakpoint(mobile) {
-                display: none;
-            }          
+            // @include breakpoint(mobile) {
+            //     display: none;
+            // }          
             a {
                 display: flex;
                 img {
@@ -72,15 +75,19 @@
             display: flex;
             align-items: center;
 
-            @include breakpoint(tablet) {
-                padding: 0 5px;            
-            } 
+            justify-content: space-between;
+            padding: 0 5px;
+            width: 100%;
 
-            @include breakpoint(mobile) {
-                justify-content: space-between;
-                width: 100%;
-                padding: 0 5px;
-            }
+            // @include breakpoint(for-tablet-up) {
+            //     padding: 0 5px;            
+            // } 
+
+            // @include breakpoint(mobile) {
+            //     justify-content: space-between;
+            //     width: 100%;
+            //     padding: 0 5px;
+            // }
 
             // logo for mobile
             .header-logo__mobile {   
@@ -90,9 +97,11 @@
                 font-family: "ns" "Roboto" sans-serif;
                 cursor: pointer;
 
-                @include breakpoint(mobile) {
-                    padding-left: 5px;
-                }
+                // padding-left: 5px;
+
+                // @include breakpoint(mobile) {
+                //     padding-left: 5px;
+                // }
 
                 h1 {
                     position: absolute;
@@ -113,12 +122,12 @@
                     }
                 }
 
-                @include breakpoint(tablet) {
-                    display: none;
-                }      
-                @include breakpoint(desktop) {
-                    display: none;
-                }   
+                // @include breakpoint(tablet) {
+                //     display: none;
+                // }      
+                // @include breakpoint(desktop) {
+                //     display: none;
+                // }   
                 a {
                     display: flex;
                     img {
@@ -138,56 +147,64 @@
             ul.header-nav__container {
                 display: flex;
                 position: absolute;
-                min-width: 415px;
                 background-color: #155799;
                 background-image: linear-gradient(120deg, #155799, #159957);
-
-                align-items: center;
-                right: 60px;
-                top: 0;
-                bottom: 0;
+            
                 transition: all 0.3s ease-in-out;
                 transform: translateX(9999px);
 
-                @include breakpoint(mobile) {
-                    flex-direction: column;
-                    min-width: 100%;
-                    bottom: auto;
-                    right: 0;
-                    top: 81px;
-                    height: calc(100vh - 100px);
-                    align-items: center;
-                    justify-content: center;
-                }
+                flex-direction: column;
+                min-width: 100%;
+                bottom: auto;
+                right: 0;
+                top: 81px;
+                height: calc(100vh - 100px);
+                align-items: center;
+                justify-content: center;
+
+                // @include breakpoint(mobile) {
+                //     flex-direction: column;
+                //     min-width: 100%;
+                //     bottom: auto;
+                //     right: 0;
+                //     top: 81px;
+                //     height: calc(100vh - 100px);
+                //     align-items: center;
+                //     justify-content: center;
+                // }
+
                 li {
                     height: 100%;
                     display: flex;
                     align-items: center;
+                    height: auto;
 
-                    @include breakpoint(mobile) {
-                        height: auto;
-                    }
+                    // @include breakpoint(mobile) {
+                    //     height: auto;
+                    // }
 
                     a {
                         display: flex;
-                        font-size: 20px;
                         padding: 10px;
                         color: $white;
                         transition: 0.3s ease-in-out;
                         height: 100%;
                         align-items: center;
+
+                        height: auto;
+                        font-size: 27px;
                         
-                        @include breakpoint(mobile) {
-                            height: auto;
-                        }
+                        // @include breakpoint(mobile) {
+                        //     height: auto;
+                        // }
 
                         &:hover {
                             color: $ltGray;
                         }
 
-                        @include breakpoint(mobile) {
-                            font-size: 27px;
-                        } 
+                        // @include breakpoint(mobile) {
+                        //     font-size: 27px;
+                        // } 
 
                     }
 
@@ -207,9 +224,10 @@
                 padding: 5px;
                 transition: box-shadow 0.3s ease-in-out;
 
-                @include breakpoint(mobile) {
-                    background-color: transparent;
-                }
+                background-color: transparent;
+
+                // @include breakpoint(mobile) {
+                // }
     
                 .line {
                     height: 5px;
@@ -269,6 +287,55 @@
 
     }
 }
+
+
+@include breakpoint(for-tablet-up) {
+
+    .header-box {
+        .header-box__content {
+            justify-content: space-between;
+            flex-direction: row;
+            .header-logo {
+                display: flex;
+            }
+
+            nav.header-nav {
+                width: auto;
+                ul.header-nav__container {
+                    min-width: 415px;
+                    align-items: center;
+                    right: 65px;
+                    top: 0;
+                    bottom: 0;
+                    flex-direction: row;
+                    height: auto;
+
+                    li {
+                        a {
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .header-logo {
+        display: flex;
+        padding: 0 0 0 5px;
+    }
+
+    .header-box {
+        .header-box__content {
+            nav.header-nav {
+                // padding: 0 5px;
+                .header-logo__mobile {
+                    display: none;
+                }
+            }
+        }
+    }
+} 
 
 // for now not in use
 // .sticky-active {
