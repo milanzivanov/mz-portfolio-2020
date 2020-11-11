@@ -73,30 +73,27 @@ body {
 
             transition: all 0.3s ease-in-out;
 
-            @include breakpoint(tablet) {
-                max-width: 900px;
-                margin: auto;
-            }
-
-            @include breakpoint(mobile) {
-                align-items: center;
-                justify-content: center;
-            }
+            align-items: center;
+            justify-content: center;
 
             .banner-box__container--item {
                 z-index: 2;
-                flex: 1 1 calc(50% - 20px);
-                background-size: cover;
-                padding: 57px;
-
                 overflow: hidden;
-
                 @include flexCHV;
+                max-width: 300px;
+                padding: 150px;
 
-                @include breakpoint(mobile) {
-                    max-width: 300px;
-                    padding: 120px;
+                @include breakpoint(for-tablet-up) {
+                    max-width: 700px;
+                    padding: 85px;
                 }
+
+                @include breakpoint(for-desktop-up) {
+                    flex: 1;
+                    background-size: cover;
+                    padding: 57px;
+                    max-width: 700px;
+                    min-height: 450px;                }
 
                 img {
                     max-width: 100%;
@@ -105,32 +102,40 @@ body {
             }
 
             .banner-box__container--left {
-                background-color: #cbcec3;
+                background: transparent url("./../src/img/mzLogo2020.svg") center no-repeat;
+                background-size: cover;
 
                 cursor: pointer;
                 position: relative;
 
-                @include breakpoint(mobile) {
-                    background: transparent url("./../src/img/mzLogo2020.svg") center no-repeat;
-                    background-size: cover;
+                @include breakpoint(for-tablet-up) {
+                    display: none;
+                }
+
+                @include breakpoint(for-desktop-up) {
+                    background: #cbcec3;
+                    display: flex;
                 }
 
                 .mobile-fe-top-left {
-                    display: none;
+                    display: flex;
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    width: 100%;
+                    transform: translate(-50%, -50%);
+                    justify-content: center;
+                    padding: 10px;
 
-                    @include breakpoint(mobile) {
-                        position: absolute;
-                        left: 50%;
-                        top: 50%;
-                        width: 100%;
-                        transform: translate(-50%, -50%);
-                        display: flex;
-                        justify-content: center;
-                        padding: 10px;
+                    background-color: #155799;
+                    background-image: linear-gradient(120deg, #155799, #159957);
+                    
+                    @include breakpoint(for-tablet-up) {
+                        display: none;
+                    }
 
-                        background-color: #155799;
-                        background-image: linear-gradient(120deg, #155799, #159957);
-
+                    @include breakpoint(for-desktop-up) {
+                        display: none;
                     }
 
                     h3 {
@@ -143,51 +148,47 @@ body {
                 }
 
                 picture {
-                    max-width: 50%;
-                    height: auto;
-
-                    position: absolute;
-                    left: 0;
-                    bottom: -5px;
+                    
                     img {
-                        @include breakpoint(mobile) {
-                            @include displayHide;
+                        @include displayHide;
+                        @include breakpoint(for-desktop-up) {
+                            display: flex;
+                            max-width: 50%;
+                            height: auto;
+                            position: absolute;
+                            left: 0;
+                            bottom: -5px;
                         }
                     }
                 }
 
                 &:hover ~ .banner-box__container--right .hidden-code {
                     background-color: $white;
-                    
                     visibility: visible;
                     opacity: 1;
                     transition: 
-                        visibility 0s linear 0s,
-                        opacity .3s,padding .3s;
+                        visibility .3s linear 0s,
+                        opacity linear .3s,
+                        padding linear .3s;
                 }
 
             }
 
             .banner-box__container--right {
-                background: url("./../src/img/bg-wire.svg") center; 
-                display: flex;
-                flex-direction: column;
-                align-items: flex-start;
-                position: relative;
-
-                @include breakpoint(mobile) {
-                    display: none;
+                @include displayHide;
+                
+                @include breakpoint(for-tablet-up) {
+                    display: flex;
+                    background: url("./../src/img/bg-wire.svg") center; 
+                    flex-direction: column;
+                    align-items: flex-start;
+                    position: relative;
                 }
 
                 h1 {
                     font-family: 'gt', 'ns' 'Roboto' sans-serif;
                     color: $dkGray;
                     font-size: 45px;
-
-                    @include breakpoint(tablet) {
-                        font-size: 35px;
-                    }
-
                 }
 
                 h2 {
@@ -203,14 +204,12 @@ body {
                     font-family: sans-serif;
                     font-weight: 100;
 
-                    @include breakpoint(tablet) {
-                        font-size: 18px;
-                    }
                 }
 
                 .hidden-code {
                     visibility: hidden;
                     opacity: 0;
+
                     background-color: $white;
                     position: absolute;
                     transition: 
@@ -226,15 +225,16 @@ body {
                         line-height: inherit;
                         white-space: nowrap;
                         border: none;
-                        padding: 1.4em;
-                        font-size: 1em;
                         height: 100%;
                         overflow-y: hidden;
                         margin: auto;
+                        font-size: 1rem;
 
-                        @include breakpoint(tablet) {
-                            font-size: 0.8em;
-                            padding: 35px 0 10px 10px;
+                        @include breakpoint(for-tablet-up) {
+                            padding: 3em 1em;
+                        }
+                        @include breakpoint(for-desktop-up) {
+                            padding: 4em 1em;
                         }
 
                         span, strong {
@@ -246,20 +246,32 @@ body {
                             color: $ElectricRed;
                         }
 
-
                         &:hover .hover-email {
                             color: $DeepGreen;
                         }
 
                     }
+
+                    @include breakpoint(for-tablet-up) {
+                        background:#cbcec3 url("./../src/img/bg-wire.svg") center;
+                        visibility: visible;
+                        opacity: 1;
+                    }
+                    @include breakpoint(for-desktop-up) {
+                        background: none;
+                        visibility: hidden;
+                        opacity: 0;
+                    }
                 }
 
                 &:hover .hidden-code {
+                    background-color: $white;
                     visibility: visible;
                     opacity: 1;
                     transition: 
-                        visibility 0s linear 0s,
-                        opacity .3s,padding .3s;
+                        visibility .3ms linear,
+                        opacity .3ms linear, 
+                        padding .3ms linear;
                 }
             }
 
@@ -269,8 +281,7 @@ body {
 }
 
 .arrow-down-box { 
-    // grid-area: arrow-down-box;
-
+    // grid-area: arrow-down-box; // not in use!!!
     align-self: center;
     position: absolute;
     bottom: 10px;
