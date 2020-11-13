@@ -214,7 +214,8 @@ body {
                     position: absolute;
                     transition: 
                         visibility 0s linear .3s,
-                        opacity .3s,padding .3s;
+                        opacity .3s,
+                        padding .3s;
                     top: 0;
                     left: 0;
                     right: 0;
@@ -231,10 +232,12 @@ body {
                         font-size: 1rem;
 
                         @include breakpoint(for-tablet-up) {
-                            padding: 3em 1em;
+                            padding: 1.8em 1em;
+                            font-size: 1.1rem;
                         }
                         @include breakpoint(for-desktop-up) {
                             padding: 4em 1em;
+                            font-size: 1rem;
                         }
 
                         span, strong {
@@ -253,25 +256,26 @@ body {
                     }
 
                     @include breakpoint(for-tablet-up) {
-                        background:#cbcec3 url("./../src/img/bg-wire.svg") center;
+                        background: $white url("./../src/img/bg-wire.svg") center;
                         visibility: visible;
                         opacity: 1;
                     }
                     @include breakpoint(for-desktop-up) {
-                        background: none;
+                        background: $white;
                         visibility: hidden;
                         opacity: 0;
                     }
                 }
 
                 &:hover .hidden-code {
+                    cursor: pointer;
                     background-color: $white;
                     visibility: visible;
                     opacity: 1;
                     transition: 
-                        visibility .3ms linear,
-                        opacity .3ms linear, 
-                        padding .3ms linear;
+                        visibility 0s linear .3s,
+                        opacity .3s,
+                        padding .3s;
                 }
             }
 
@@ -347,13 +351,7 @@ section.education-box {
             .acc {
                 overflow: hidden;
                 padding: 0;
-
-                @include breakpoint(tablet) {
-                    padding: 0 10px 0 10px;
-                }
-                @include breakpoint(mobile) {
-                    padding: 0 10px 0 10px;
-                }
+                padding: 0 10px 0 10px;
 
                 li {
                     .acc_ctrl {
@@ -371,12 +369,8 @@ section.education-box {
                             color: $blue;
                             display: flex;
                             align-items: center;
-                            font-size: 27px;
                             font-family: sans-serif;
-
-                            @include breakpoint(mobile) {
-                                font-size: 20px;
-                            }
+                            font-size: 20px;
 
                             svg {
                                 height: 30px;
@@ -425,41 +419,105 @@ section.education-box {
                         background-image: linear-gradient(120deg,#155799,#159957);
                         display: none;
                         overflow: hidden;
-
-                        p {
-                            margin: 5px;
-                            background: #ffffff;
-                            line-height: 1.8;
-                            padding: 5px;
-                        }
-
-                        p:first-child {
-                            margin: 0 0 5px 0;
-                        }
-                        p:last-child {
-                            margin: 0 0 0 0;
-                        }
-
-                        ul {
-                            background-color: $white;
-                            padding: 5px;
-
-                            li {
-                                font-size: 20px;
-                                line-height: 1.5;
-                                padding: 5px 0;
-                                border-bottom: 1px solid #ccc;
-                            }
-
-                            li:last-child {
-                                border-bottom: none;
-                            }
-                        }
                     }
                 }
             }
         }
     }
+}
+
+.info-box {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+    @include breakpoint(for-tablet-up) {
+        flex-direction: row;
+    }
+
+    .info-box__item {
+        flex: 1 1 calc(50% - 20px);
+        background: white;
+        
+        p {
+            line-height: 1.8;
+            text-align: justify;
+        }
+
+    }
+}
+
+.experience-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+
+    .experience-box__item {
+        flex: 1 1 calc(50% - 40px);
+        gap: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background: white;
+        text-align: center;
+
+        img.education-box-left {
+            width: 150px;
+            height: 150px;
+            padding-top: 20px;
+        }
+
+        .education-box-right {
+            ul {
+                h4 {
+                    span {
+                        color: $blue;
+                    }
+                }
+    
+                h5 {
+                    color: $DeepGreen;
+                    padding-bottom: 2.5rem;
+                }
+                
+                p {
+                    text-align: justify;
+                    a {
+                        color: $blue;
+                    }
+                }
+            }
+        }
+    }
+
+    // .experience-box__item + .experience-box__item {
+    //     margin-left: 5px;
+    // }
+}
+
+.love-box {
+    background-color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    // gap: 5px;
+
+    .love-box__item {
+        font-size: 1rem;
+        line-height: 1.5;
+        padding: 5px;
+        flex: 1;
+        background: #cecece;
+        margin: 5px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
 }
 
 ///////////////////////
