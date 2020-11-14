@@ -543,28 +543,25 @@ section.education-box {
     .gallery-container {
         background-color: #155799;
         background-image: linear-gradient(120deg,#155799,#159957);
-        .wrapper-inner {
+        .wrapper-inner-full {
             .gallery-item-container {
                 display: flex;
                 flex-wrap: wrap;
                 .item-flex {
                     position: relative;
                     overflow: hidden;
-                    flex: 1 1 33.333%;   
-            
-                    @include breakpoint(tablet) {
-                        flex: 1 1 50%;   
-                        &:last-child {
-                            display: flex;
-                            width: 100%;
-                            justify-content: center;
-                        }
+                    flex: 1 1 50%;
+                    
+                    &:last-child {
+                        display: flex;
+                        width: 100%;
+                        justify-content: center;
                     }
-            
-                    @include breakpoint(mobile) {
-                        flex: 1 1 100%; 
-                    }      
-            
+                    
+                    @include breakpoint(for-desktop-up) {
+                        flex: 1 1 33.333%;   
+                    }
+           
                     img {
                         width: 100%;
                         height: 100%;
@@ -609,7 +606,6 @@ section.education-box {
         }
     }
 
-
 }
 
 .close {
@@ -652,8 +648,14 @@ section.education-box {
 .overlay-inner {
     background: white;
     width: 700px;
+    height: auto;
     padding: 5px;
     position: relative;
+    display: flex;
+
+    @include breakpoint(for-desktop-up) {
+        height: 600px;
+    }
 }
 
 .overlay-box img {
@@ -672,15 +674,15 @@ section.education-box {
                 overflow: hidden;
                 display: flex;
                 justify-content: center;
-                flex: 1 1 calc(33.333% - 40px);
+                flex: 1 1 calc(100% - 40px);
                 align-items: center;
                 margin: 10px 10px 0 0;
                 padding: 10px;
                 background-color: $ltGray;
                 cursor: pointer;
-
-                @include breakpoint(mobile) {
-                    flex: 1 1 calc(100% - 40px);
+                
+                @include breakpoint(for-tablet-up) {
+                    flex: 1 1 calc(33.333% - 40px);
                 }
 
                 a {
@@ -746,25 +748,22 @@ section.education-box {
             display: flex;
             margin: auto;
             width: 100%;
-
-            @include breakpoint(mobile) {
-                flex-wrap: wrap;
-            }
+            flex-wrap: wrap;
 
             a.links-box__item {
                 background: $white url("./../src/img/bg-wire.svg");
                 overflow: hidden;
                 position: relative;
-                flex: 1;
                 margin: 5px;
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 padding: 20px;
                 transition: flex .4s;
-
-                @include breakpoint(mobile) {
-                    flex: 1 1 calc(50% - 20px);
+                flex: 1 1 calc(50% - 20px);
+                
+                @include breakpoint(for-tablet-up) {
+                    flex: 1;
                 }
 
                 .overlay-links {
@@ -817,9 +816,10 @@ section.education-box {
         .contact-box__container {
             display: flex;
             flex-wrap: wrap;
-
-            @include breakpoint(mobile) {
-                flex-direction: column;
+            flex-direction: column;
+            
+            @include breakpoint(for-tablet-up) {
+                flex-direction: row;
             }
 
             .contact-box__container--item {
@@ -832,10 +832,11 @@ section.education-box {
             }
 
             .contact-box__container--left {
-                @include flexCHV;
-
-                @include breakpoint(mobile) {
-                    background: none;
+                display: none;
+                
+                @include breakpoint(for-tablet-up) {
+                    background: #ffffff;
+                    @include flexCHV;
                 }
             }
 
@@ -848,14 +849,14 @@ section.education-box {
                         text-transform: uppercase;
                         color: #fff;
                         font-family: ns,Roboto,sans-serif;
-                        font-size: 24px;
                         line-height: 1.2;
                         padding: 15px;
+                        font-size: 17px;
+                        justify-content: center;
+                        align-items: center;
 
-                        @include breakpoint(mobile) {
-                            font-size: 17px;
-                            justify-content: center;
-                            align-items: center;
+                        @include breakpoint(for-tablet-up) {
+                            font-size: 24px;
                         }
                     }
                     .contact-box-input {
@@ -877,24 +878,24 @@ section.education-box {
                         display: flex;
                         width: 100%;
                         justify-content: flex-end;
-                        padding: 20px 0 20px 20px;
-
-                        @include breakpoint(mobile) {
-                            padding: 20px 0;
+                        padding: 20px 0;
+                        
+                        @include breakpoint(for-tablet-up) {
+                            padding: 20px 0 20px 20px;
                         }
 
                         button.contact-box-form__btn {
                             display: flex;
                             justify-content: center;
                             align-items: center;
-                            width: 40%;
+                            width: 100%;
                             background-color: rgba(20, 75, 143, 0.7);
                             color: $white;
                             padding: 5px;
                             transition: all 0.3s ease-in-out;
                             
-                            @include breakpoint(mobile) {
-                                width: 100%;
+                            @include breakpoint(for-tablet-up) {
+                                width: 40%;
                             }
 
                             span {

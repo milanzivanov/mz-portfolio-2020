@@ -9,16 +9,14 @@ footer.footer-box {
         display: flex;
         justify-content: center;
         align-items: center;
+        flex-direction: column;
 
         small {
             padding: 10px;
 
             span {
-                @include breakpoint(mobile) {
+                @include breakpoint(for-tablet-up) {
                     flex-direction: column;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
                 }
             }
         }

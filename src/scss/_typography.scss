@@ -8,10 +8,10 @@ h2 {
     padding: 20px 0;
     padding: 20px 10px;
 
-    @include breakpoint(for-tablet-up) {
-    }
+    // @include breakpoint(for-tablet-up) {
+    // }
     @include breakpoint(for-desktop-up) {
-        text-align: center;
+        // text-align: center;
         font-size: 40px;
     }
 }
