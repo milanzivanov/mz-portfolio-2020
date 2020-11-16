@@ -4,6 +4,22 @@ $(document).ready(function() {
     'use strict';
 
 
+    // change bg image on page refres
+    let images = [
+        'https://ik.imagekit.io/milanz/src/img/laptopOnTheTable.jpg', 
+        'https://ik.imagekit.io/milanz/src/img/bg-main.jpeg', 
+        'https://ik.imagekit.io/milanz/src/img/laptopOnTheTable.jpg', 
+        'https://ik.imagekit.io/milanz/src/img/bg-main.jpeg', 
+        'https://ik.imagekit.io/milanz/src/img/laptopOnTheTable.jpg', 
+        'https://ik.imagekit.io/milanz/src/img/bg-main.jpeg'
+    ];
+
+    $('.grid-container').css(
+        {
+            'background-image': 'url(' + images[Math.floor(Math.random() * images.length)] + ')'
+        }
+    );
+
     // add remove class on scroll
     // $(window).scroll(function() {    
     //     let scroll = $(window).scrollTop();

@@ -31,9 +31,11 @@ body {
     z-index: 4;
     overflow: hidden;
 
-    background: #cecece url("https://ik.imagekit.io/milanz/src/img/laptopOnTheTable.jpg") center;
-    background: #cecece url("https://ik.imagekit.io/milanz/src/img/laptopOnTheTable.webp") center;
+    // background: #cecece url("https://ik.imagekit.io/milanz/src/img/laptopOnTheTable.jpg") center;
+    // background: #cecece url("https://ik.imagekit.io/milanz/src/img/laptopOnTheTable.webp") center;
 
+    background-color: #cecece;
+    background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 
@@ -162,7 +164,8 @@ body {
                     }
                 }
 
-                &:hover ~ .banner-box__container--right .hidden-code {
+                &:hover ~ .banner-box__container--right .hidden-code,
+                &:focus ~ .banner-box__container--right .hidden-code {
                     background-color: $white;
                     visibility: visible;
                     opacity: 1;
@@ -249,7 +252,8 @@ body {
                             color: $ElectricRed;
                         }
 
-                        &:hover .hover-email {
+                        &:hover .hover-email,
+                        &:focus .hover-email {
                             color: $DeepGreen;
                         }
 
@@ -267,7 +271,8 @@ body {
                     }
                 }
 
-                &:hover .hidden-code {
+                &:hover .hidden-code,
+                &:focus .hidden-code {
                     cursor: pointer;
                     background-color: $white;
                     visibility: visible;
@@ -492,6 +497,7 @@ section.education-box {
         }
     }
 
+    // not in use for now
     // .experience-box__item + .experience-box__item {
     //     margin-left: 5px;
     // }
@@ -598,7 +604,8 @@ section.education-box {
                     }
                 }
             
-                .item-flex:hover .item__overlay {
+                .item-flex:hover .item__overlay,
+                .item-flex:focus .item__overlay {
                     transform: translateY(0);
                 }
             
@@ -665,7 +672,7 @@ section.education-box {
 ///////////////////
 // app box
 .app-box {
-    .wrapper-inner {
+    .wrapper-inner-full {
         .app-box__container {
             display: flex;
             flex-wrap: wrap;
@@ -682,6 +689,9 @@ section.education-box {
                 cursor: pointer;
                 
                 @include breakpoint(for-tablet-up) {
+                    flex: 1 1 calc(50% - 40px);
+                }
+                @include breakpoint(for-desktop-up) {
                     flex: 1 1 calc(33.333% - 40px);
                 }
 
@@ -704,7 +714,8 @@ section.education-box {
                     transition: all 0.3s ease-in-out;
                 }
 
-                &:hover > .app-box--item_ht {
+                &:hover > .app-box--item_ht,
+                &:focus > .app-box--item_ht {
                     @include flexCHV;
                     transform: translate3d(0px, 0px, 0px);
 
@@ -794,11 +805,13 @@ section.education-box {
 
                 }
 
-                &:hover {
+                &:hover, 
+                &:focus {
                     flex: 3;
                 }
 
-                &:hover .overlay-links {
+                &:hover .overlay-links,
+                &:focus .overlay-links {
                     transform: translateY(0);
                 }
 
@@ -835,12 +848,17 @@ section.education-box {
                 display: none;
                 
                 @include breakpoint(for-tablet-up) {
+                    flex: 1;
                     background: #ffffff;
                     @include flexCHV;
                 }
             }
 
             .contact-box__container--right {
+
+                @include breakpoint(for-tablet-up) {
+                    flex: 2;
+                }
 
                 .contact-box-form {
                     span.contact-box-form__title {
