@@ -54,7 +54,6 @@ body {
 
 ////////////////////
 // banner section
-
 .banner-box { 
     grid-area: banner-box;
     position: relative;
@@ -214,6 +213,7 @@ body {
                     opacity: 0;
 
                     background-color: $white;
+
                     position: absolute;
                     transition: 
                         visibility 0s linear .3s,

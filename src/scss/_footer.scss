@@ -6,10 +6,10 @@ footer.footer-box {
     .footer-box__container {
         display: flex;
         width: 100%;
-        display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        text-align: center;
 
         small {
             padding: 10px;

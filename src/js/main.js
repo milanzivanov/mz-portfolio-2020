@@ -1,8 +1,5 @@
-// jQuery(function() { });
-
-$(document).ready(function() {
+jQuery(function() {
     'use strict';
-
 
     // change bg image on page refres
     let images = [
@@ -134,6 +131,23 @@ function close() {
 const items = document.querySelectorAll('.item-flex');
 items.forEach(item => item.addEventListener('click', handleClick));
 overlayClose.addEventListener('click', close);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
