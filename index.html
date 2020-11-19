@@ -20,42 +20,13 @@
             rel="stylesheet preload prefetch"
             href="https://fonts.googleapis.com/css?family=Roboto:400,700"
             crossorigin="anonymous" />
-        
-        <!-- <link 
-            as="style"
-            rel="stylesheet preload prefetch"
-            href="./node_modules/slick-carousel/slick/slick.css"
+
+        <link 
+            href="https://unpkg.com/aos@2.3.1/dist/aos.css" 
+            rel="stylesheet"
+            type="text/css" 
             crossorigin="anonymous" />
 
-        <link 
-            as="style"
-            rel="stylesheet preload prefetch"
-            href="./node_modules/slick-carousel/slick/slick-theme.css"
-            crossorigin="anonymous" /> -->
-            
-        <!-- <link 
-            as="style"
-            rel="preload stylesheet prefetch" 
-            href="./src/assets/slick/slick.css" 
-            crossorigin="anonymous" /> -->
-
-        <link 
-            rel="stylesheet" 
-            href="./src/assets/slick/slick.theme.css"/>
-
-        <!-- <link 
-            as="style"
-            async
-            rel="preload stylesheet prefetch" 
-            href="./src/assets/loader-bar-ping-pong.css" 
-            crossorigin="anonymous" /> -->
-
-        <!-- <link 
-            as="style"
-            rel="preload stylesheet prefetch" 
-            href="./dist/style.css"
-            type="text/css" 
-            crossorigin="anonymous" /> -->
         <link 
             rel="stylesheet" 
             href="./dist/style.css"
@@ -125,14 +96,20 @@
             
             <!-- //////////////// -->
             <!-- banner box START -->
-            <section class="banner-box" id="random-bg-js">
+            <section class="banner-box">
                 <div class="wrapper-inner">
 
                     <div class="banner-box__container">
-                        <div class="banner-box__container--item banner-box__container--left">
+                        <div 
+                            class="banner-box__container--item 
+                            banner-box__container--left" 
+                            data-aos="fade-up-right">
 
-                            <div class="mobile-fe-top-left">
-                                <h3>Frontend Developer</h3>
+                            <div 
+                                class="mobile-fe-top-left">
+                                <h3>
+                                    Frontend Developer
+                                </h3>
                             </div>
                             
                             <picture>
@@ -185,7 +162,7 @@
                 <div class="banner-box__bg-overlay">
                 </div>
 
-                <!-- animation arrow down not in use now -->
+                <!-- animation arrow down not in use for now -->
                 <!-- <div class="arrow-down-box bounce-animation">
                     <a href="#sectionAbout" class="bounce-animation">
                         <svg class="svg__icon svg__icon--color">
@@ -1037,15 +1014,6 @@
             src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js">
         </script>
 
-        <!-- <script 
-            rel="preload" 
-            as="script" 
-            src="./node_modules/jquery/dist/jquery.min.js"></script>
-        <script 
-            rel="preload" 
-            as="script" 
-            src="./node_modules/slick-carousel/slick/slick.js"></script> -->
-
         <!-- for publishing purpuse -->
         <script
             rel="preload"
@@ -1054,11 +1022,11 @@
             crossorigin="anonymous">
         </script>
 
+
         <script 
             rel="preload"
-            async 
             as="script" 
-            src="./src/assets/slick/slick.min.js"
+            src="https://unpkg.com/aos@2.3.1/dist/aos.js"            
             crossorigin="anonymous">
         </script>
 

@@ -28,25 +28,6 @@ jQuery(function() {
     //     }
     // });
 
-    // loader
-    // window.onload = function () {
-    //     $('.loader').fadeOut(500, function() { 
-    //         $('.is-active').remove();
-    //     });
-    // }
-
-    // Slick
-    // $('.slick-slider').slick({
-    //     arrows: true,
-    //     dots: false,
-    //     autoplay: true,
-    //     autoplaySpeed: 5000,
-    //     adaptiveHeight: true,
-    //     prevArrow: $(".left-nav-custom"),
-    //     nextArrow: $(".right-nav-custom"),
-    //     cssEase: 'ease-out'
-    // });
-
     // open mobil menu and hamburger btn
     $(".botton-nav").on("click", function(e) {
         $(".botton-nav, .header-nav__container").toggleClass("active");
@@ -132,6 +113,13 @@ const items = document.querySelectorAll('.item-flex');
 items.forEach(item => item.addEventListener('click', handleClick));
 overlayClose.addEventListener('click', close);
 
+
+// animation on scroll
+AOS.init({
+    delay: 100,
+    duration: 300,
+    once: false
+});
 
 
 
