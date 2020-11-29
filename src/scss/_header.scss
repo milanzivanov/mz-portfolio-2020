@@ -22,24 +22,6 @@
             font-family: "ns" sans-serif;
             position: relative;
             cursor: pointer;
-
-
-            h1 {
-                padding: 0 0 0 5px;
-                font-family: 'gt', 'ns', sans-serif;
-                span {
-                    position: absolute;
-                    @include flexCHV;
-                    font-size: 17px;
-                    top: 17px;
-                    right: -25px;
-                    color: $blue;
-                    background: #fff;
-                    width: 25px;
-                    height: 25px;
-                    border-radius: 50%;
-                }
-            }
         
             a {
                 display: flex;
@@ -103,13 +85,6 @@
                     }
                 }
 
-            }
-
-            .header-logo__mobile:hover span,
-            .header-logo__mobile:focus span {
-                color: #fff;
-                background-color: #155799;
-                background-image: linear-gradient(120deg, #155799, #159957);
             }
 
             ul.header-nav__container {

@@ -41,7 +41,6 @@
     @else if $point == 'for-big-desktop-up' {
         @media (min-width: 1366px) { @content; }
     }
-
 }
 
 ////////////////////
