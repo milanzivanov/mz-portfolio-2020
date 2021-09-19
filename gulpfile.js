@@ -1,11 +1,11 @@
 'use strict';
 const gulp = require('gulp');
 const sourcemaps = require('gulp-sourcemaps');
-const sass = require('gulp-sass');
+const sass = require('gulp-dart-sass');
 const autoprefixer = require('autoprefixer');
 const postcss = require('gulp-postcss');
 const cssnano = require('cssnano');
-const terser = require('gulp-terser');
+let terser = require('gulp-terser-js');
 const browserSync = require('browser-sync');
 
 let path = {
@@ -28,7 +28,19 @@ gulp.task("sassTask", function() {
 gulp.task('jsTask', function() {
     return gulp
       .src(path.src_js)
-      .pipe(terser())
+      .pipe(sourcemaps.init())
+      .pipe(terser({
+          mangle: {
+              toplevel: true
+          }
+      }))
+      .on('error', function (error) {
+          if (error.plugin !== "gulp-terser-js") {
+              console.log(error.message)
+          }
+        this.emit('end')
+      })
+      .pipe(sourcemaps.write()) // Inline source maps.
       .pipe(gulp.dest('./dist'))
       .pipe(browserSync.stream());
   });
@@ -36,7 +48,7 @@ gulp.task('jsTask', function() {
 // Static Server & watching scss/js/html files
 gulp.task('serve', gulp.series('sassTask', function() {
     browserSync.init({
-        server: "."   
+        server: "./"   
     });
   
     gulp.watch(path.src_sass,
