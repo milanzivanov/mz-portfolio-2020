@@ -17,17 +17,6 @@ jQuery(function() {
         }
     );
 
-    // add remove class on scroll
-    // $(window).scroll(function() {    
-    //     let scroll = $(window).scrollTop();
-    
-    //     if (scroll >= 500) {
-    //         $(".clearHeader").addClass("darkHeader");
-    //     } else {
-    //         $(".clearHeader").removeClass("darkHeader");
-    //     }
-    // });
-
     // open mobil menu and hamburger btn
     $(".botton-nav").on("click", function(e) {
         $(".botton-nav, .header-nav__container").toggleClass("active");

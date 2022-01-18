@@ -1,1097 +1,1165 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-163332015-1"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>milan zivanov | Front-end Developer</title>
+    <link rel="shortcut icon" type="image/ico" href="./../favicon.ico" />
+    <link
+      as="style"
+      rel="stylesheet preload prefetch"
+      href="https://fonts.googleapis.com/css?family=Roboto:400,700"
+      crossorigin="anonymous"
+    />
 
-            gtag('config', 'UA-163332015-1');
-        </script>
+    <link
+      href="https://unpkg.com/aos@2.3.1/dist/aos.css"
+      rel="stylesheet"
+      type="text/css"
+      crossorigin="anonymous"
+    />
 
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>milan zivanov | Front-end Developer</title>
-        <link rel="shortcut icon" type="image/ico" href="./../favicon.ico">
-        <link 
-            as="style"
-            rel="stylesheet preload prefetch"
-            href="https://fonts.googleapis.com/css?family=Roboto:400,700"
-            crossorigin="anonymous" />
+    <link
+      rel="stylesheet"
+      href="./dist/style.css"
+      type="text/css"
+      crossorigin="anonymous"
+    />
 
-        <link 
-            href="https://unpkg.com/aos@2.3.1/dist/aos.css" 
-            rel="stylesheet"
-            type="text/css" 
-            crossorigin="anonymous" />
+    <meta
+      name="description"
+      content="Milan Zivanov - Frontend Developer - This is my personal cv site and work that I did in the past. Check it and hire my frontend skills!"
+    />
+  </head>
+  <body>
+    <div class="grid-container">
+      <!-- //////////////// -->
+      <!-- header box START -->
+      <header class="header-box" id="sectionHeader">
+        <div class="wrapper-inner header-box__content">
+          <div class="header-logo">
+            <a href="./index.html">
+              <img
+                src="https://ik.imagekit.io/milanz/src/img/newMyLogoDesign2020-2.png"
+                alt="personal logo"
+              />
+            </a>
+          </div>
+          <nav class="header-nav">
+            <div class="header-logo__mobile">
+              <a href="./index.html" alt="mobile logo">
+                <picture>
+                  <source
+                    srcset="
+                      https://ik.imagekit.io/milanz/src/img/mzLogo2020.svg
+                    "
+                    type="image/webp"
+                  />
+                  <img
+                    src="https://ik.imagekit.io/milanz/src/img/mzLogo100X100.png"
+                    alt="header logo"
+                  />
+                </picture>
 
-        <link 
-            rel="stylesheet" 
-            href="./dist/style.css"
-            type="text/css" 
-            crossorigin="anonymous" />
+                <img src="./src/img/footer.png" />
+              </a>
+              <h1><span>Ž</span></h1>
+            </div>
 
-        <meta 
-            name="description" 
-            content="Milan Zivanov - Frontend Developer - This is my personal cv site and work that I did in the past. Check it and hire my frontend skills!">
-    </head>
-    <body>
+            <ul class="header-nav__container">
+              <li><a href="#sectionAbout">About me</a></li>
+              <li><a href="#sectionGallery">Gallery</a></li>
+              <li><a href="#sectionApp">Apps</a></li>
+              <li><a href="#sectionLinks">Links</a></li>
+              <li><a href="#sectionContact">Contact</a></li>
+            </ul>
 
-        <div class="grid-container">
-            <!-- //////////////// -->
-            <!-- header box START -->
-            <header class="header-box" id="sectionHeader">
-                <div class="wrapper-inner header-box__content">
-                    <div class="header-logo">
-                        <a href="./index.html">
-                            <img 
-                                src="https://ik.imagekit.io/milanz/src/img/newMyLogoDesign2020-2.png"
-                                alt="personal logo">
-                        </a>
-                    </div>
-                    <nav class="header-nav">
+            <!-- hamburger menu -->
+            <nav class="botton-nav">
+              <div class="line"></div>
+            </nav>
+          </nav>
+        </div>
+      </header>
+      <!-- header box END -->
+      <!-- ////////////// -->
 
-                        <div class="header-logo__mobile">
-                            <a href="./index.html" alt="mobile logo">
+      <!-- //////////////// -->
+      <!-- banner box START -->
+      <section class="banner-box">
+        <div class="wrapper-inner">
+          <div class="banner-box__container">
+            <div
+              class="banner-box__container--item banner-box__container--left"
+              data-aos="fade-left"
+            >
+              <div class="mobile-fe-top-left">
+                <h3>Frontend Developer</h3>
+              </div>
 
-                                <picture>
-                                    <source 
-                                        srcset="https://ik.imagekit.io/milanz/src/img/mzLogo2020.svg"
-                                        type="image/webp">
-                                    <img 
-                                        src="https://ik.imagekit.io/milanz/src/img/mzLogo100X100.png"
-                                        alt="header logo">
-                                </picture> 
+              <picture class="desktop-img">
+                <source
+                  srcset="https://ik.imagekit.io/milanz/milanzivanov_com/Milan_Dark_ZgJv2XIZy.webp?tr=w:393,h:320"
+                  type="image/webp"
+                />
 
-                                <img src="./src/img/footer.png" />
+                <img
+                  src="https://ik.imagekit.io/milanz/milanzivanov_com/Milan_Dark_V97I7vpFx.png?tr=w:393,h:320"
+                  alt="my picture"
+                />
+              </picture>
+            </div>
+            <div
+              class="banner-box__container--item banner-box__container--right"
+              data-aos="fade-right"
+            >
+              <h1>
+                <span>Milan Živanov</span><br />
+                <span>Frontend Developer</span>
+              </h1>
+              ​
+              <h2>
+                In life you need to be consistent in everything that you want to
+                accomplish & because that challenge yourself. The magic is all
+                around you! Experiment.
+              </h2>
 
-                            </a>
-                            <h1><span>Ž</span></h1>
-                        </div>
+              <div class="hidden-code">
+                <p class="hidden-code-content">
+                  &lt;head&gt;<br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;&lt;meta charset="Serbia"&gt;<br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;<strong
+                    >Personal site</strong
+                  >&lt;/title&gt;<br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;&lt;link rel="stylesheet"
+                  href="junior.css"&gt;&lt;/link&gt;<br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;&lt;name="description" content="Milan
+                  Živanov - Frontend Developer<br />&nbsp;&nbsp;&nbsp;&nbsp;This
+                  is my personal cv site. Check it and hire my frontend
+                  skills!"&gt;<br />
 
-                        <ul class="header-nav__container">
-                            <li><a href="#sectionAbout">About me</a></li>
-                            <li><a href="#sectionGallery">Gallery</a></li>
-                            <li><a href="#sectionApp">Apps</a></li>
-                            <li><a href="#sectionLinks">Links</a></li>
-                            <li><a href="#sectionContact">Contact</a></li>
-                        </ul>
+                  &lt;/head&gt;<br />
 
-                        <!-- hamburger menu -->
-                        <nav class="botton-nav">
-                            <div class="line"></div>
-                        </nav>
-                    </nav>
-                    
-                </div>
-            </header>
-            <!-- header box END -->
-            <!-- ////////////// -->
-            
-            <!-- //////////////// -->
-            <!-- banner box START -->
-            <section class="banner-box">
-                <div class="wrapper-inner">
-
-                    <div class="banner-box__container">
-                        <div 
-                            class="banner-box__container--item 
-                            banner-box__container--left" 
-                            data-aos="fade-left">
-
-                            <div 
-                                class="mobile-fe-top-left">
-                                <h3>
-                                    Frontend Developer
-                                </h3>
-                            </div>
-                            
-                            <picture>
-                                <source 
-                                    srcset="https://ik.imagekit.io/milanz/src/img/just_me_right2.webp" 
-                                    type="image/webp">
-
-                                <img 
-                                    src="https://ik.imagekit.io/milanz/src/img/just_me_right2.png" 
-                                    alt="my picture">
-                            </picture>
-        
-                        </div>
-                        <div 
-                            class="banner-box__container--item banner-box__container--right"
-                            data-aos="fade-right">
-                            <h1>
-                                <span>Milan Živanov</span><br>
-                                <span>Frontend Developer</span>
-                            </h1>
-                            ​<h2>
-                                In life you need to be consistent in everything that you want to accomplish & because that challenge yourself. The magic is all around you! Experiment.                            
-                            </h2>
-        
-                            <div class="hidden-code">
-                                <p class="hidden-code-content">
-                                    &lt;head&gt;<br>
-                                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;meta charset="Serbia"&gt;<br>
-                                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;<strong>Personal site</strong>&lt;/title&gt;<br>
-                                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;link rel="stylesheet" href="junior.css"&gt;&lt;/link&gt;<br>
-                                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;name="description" content="Milan Živanov - Frontend Developer<br>&nbsp;&nbsp;&nbsp;&nbsp;This is my personal cv site. Check it and hire my frontend skills!"&gt;<br>
-        
-                                    &lt;/head&gt;<br>
-        
-                                    &lt;body&gt;<br>
-                                    &nbsp;&nbsp;&lt;header&gt;<br>
-                                    &nbsp;&nbsp;&lt;h1&gt;<strong>Main info</strong>&lt;/h1&gt;<br>
-                                    &nbsp;&nbsp;&nbsp;&lt;ul&gt;<br>
-                                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;li><strong class='hover-email'>Milan Živanov</strong>&lt;/li&gt;<br>
-                                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;li><strong>Frontend Developer</strong>&lt;/li&gt;<br>
-                                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;li><em>milan.zivanov<span class='hover-email'>@</span>gmail.com</em>&lt;/li&gt;<br>
-                                    &nbsp;&nbsp;&nbsp;&lt;/ul&gt;<br>
-                                    &nbsp;&nbsp;&lt;/header&gt;<br>
-                                    &lt;/body&gt;<br>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="banner-box__bg-overlay">
-                </div>
-
-                <!-- animation arrow down not in use for now -->
-                <!-- <div class="arrow-down-box bounce-animation">
-                    <a href="#sectionAbout" class="bounce-animation">
-                        <svg class="svg__icon svg__icon--color">
-                            <use xlink:href="./src/img/sprites.svg#icon-arrow-down-sign-to-navigate"></use>
-                        </svg> 
-                    </a>  
-                </div> -->
-                
-            </section>
-            <!-- banner box END -->
-            <!-- //////////////// -->
-            
+                  &lt;body&gt;<br />
+                  &nbsp;&nbsp;&lt;header&gt;<br />
+                  &nbsp;&nbsp;&lt;h1&gt;<strong>Main info</strong
+                  >&lt;/h1&gt;<br />
+                  &nbsp;&nbsp;&nbsp;&lt;ul&gt;<br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;&lt;li><strong class="hover-email"
+                    >Milan Živanov</strong
+                  >&lt;/li&gt;<br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;&lt;li><strong
+                    >Frontend Developer</strong
+                  >&lt;/li&gt;<br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;&lt;li><em
+                    >milan.zivanov<span class="hover-email">@</span
+                    >gmail.com</em
+                  >&lt;/li&gt;<br />
+                  &nbsp;&nbsp;&nbsp;&lt;/ul&gt;<br />
+                  &nbsp;&nbsp;&lt;/header&gt;<br />
+                  &lt;/body&gt;<br />
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <!-- /////////////////// -->
-        <!-- education box START -->
-        <section class="education-box" id="sectionAbout">
-            <div class="wrapper-inner padding-tb">
-                
-                <h2>Info & Experience</h2>
-                
-                <div class="container-education">
-                    <ul class="acc">
-                        <li>
-                            <button 
-                                class="acc_ctrl" 
-                                aria-label="info icon">
-                                <h2>
-                                    <svg class="svg__icon">
-                                        <use xlink:href="./src/img/sprites.svg#icon-pencil2"></use>
-                                    </svg>
-                                    Info
-                                </h2>
-                            </button>
-                            <div class="acc_panel">
-                                <div class="info-box">
+        <div class="banner-box__bg-overlay"></div>
 
-                                    <div class="info-box__item">
-                                        <p>
-                                            Hello, my name is <strong>Milan Živanov</strong> and I graduated in Higher Education Technical School of Professional Studies of Novi Sad(Serbia) with a Bachelor of Graphic Engineering and Design.<br>
-                                            I've been in the printing business for a long time and I mastered the knowledge of prepress and CTP work on printers. 
-                                        </p>
-                                    </div>
-                                    <div class="info-box__item">
-                                        <p>
-                                            Over time I have developed an interest in web development , so I educated myself in <strong>HTML5/CSS3, JS, jQuery, Git, SCSS, RWD, Bootstrap, Gulp, Ts, Flexbox, Css Grid... which led me to more advanced technology - Angular.</strong>
-                                            I am particularly interested in Frontend.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
+      </section>
+      <!-- banner box END -->
+      <!-- //////////////// -->
+    </div>
+
+    <!-- /////////////////// -->
+    <!-- education box START -->
+    <section class="education-box" id="sectionAbout">
+      <div class="wrapper-inner padding-tb">
+        <h2>Info & Experience</h2>
+
+        <div class="container-education">
+          <ul class="acc">
+            <li>
+              <button class="acc_ctrl" aria-label="info icon">
+                <h2>
+                  <svg class="svg__icon">
+                    <use xlink:href="./src/img/sprites.svg#icon-pencil2"></use>
+                  </svg>
+                  Info
+                </h2>
+              </button>
+              <div class="acc_panel">
+                <div class="info-box">
+                  <div class="info-box__item">
+                    <p>
+                      Hello, my name is <strong>Milan Živanov</strong> and I
+                      graduated in Higher Education Technical School of
+                      Professional Studies of Novi Sad(Serbia) with a Bachelor
+                      of Graphic Engineering and Design.<br />
+                      I've been in the printing business for a long time and I
+                      mastered the knowledge of prepress and CTP work on
+                      printers.
+                    </p>
+                  </div>
+                  <div class="info-box__item">
+                    <p>
+                      Over time I have developed an interest in web development
+                      , so I educated myself in
+                      <strong
+                        >HTML5/CSS3, JS, jQuery, Git, SCSS, RWD, Bootstrap,
+                        Gulp, Ts, Flexbox, Css Grid... which led me to more
+                        advanced technology - Angular.</strong
+                      >
+                      I am particularly interested in Frontend.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <button class="acc_ctrl" aria-label="Work Experience Icon">
+                <h2>
+                  <svg class="svg__icon">
+                    <use xlink:href="./src/img/sprites.svg#icon-switch"></use>
+                  </svg>
+                  Work Experience
+                </h2>
+              </button>
+              <div class="acc_panel">
+                <div class="experience-box">
+                  <div class="experience-box__item">
+                    <img
+                      class="education-box-left"
+                      src="https://ik.imagekit.io/milanz/milanzivanov_com/htec-logo_tZqCZq2M8.png"
+                      alt="htec logo"
+                    />
+                    <div class="education-box-right">
+                      <ul>
+                        <li>
+                          <h4>Company:&nbsp;<span>HTEC</span></h4>
                         </li>
                         <li>
-                            <button 
-                                class="acc_ctrl" 
-                                aria-label="Work Experience Icon">
-                                <h2>
-                                    <svg class="svg__icon">
-                                        <use xlink:href="./src/img/sprites.svg#icon-switch"></use>
-                                    </svg>
-                                    Work Experience
-                                </h2>
-                            </button>
-                            <div class="acc_panel">
-                                <div class="experience-box">
-                                        <div class="experience-box__item">
-                                            <img class="education-box-left" src="https://ik.imagekit.io/milanz/src/img/htec.webp" alt="htec logo"/>   
-                                            <div class="education-box-right">
-
-                                                <ul>
-                                                    <li>
-                                                        <h4>Company:&nbsp;<span>HTEC</span></h4>
-                                                    </li>
-                                                    <li>
-                                                        <h5>September 2016 - June 2017 - 10 months</h5>
-                                                    </li>
-                                                    <li>
-                                                        <p>
-                                                            At HTEC I worked on Verso enterprise aplication 
-                                                            <a href="https://verso-stage.htec.co.rs/admin/#/login" target="_blank">link</a>. 
-                                                            I was fixing bugs, inserting new pages(<strong>html5/css3/angular-material</strong>), 
-                                                            and also spent some time working on <strong>angularjs...</strong>
-                                                        </p>
-                                                    </li>
-                                                </ul>
-
-                                            </div>
-                                        </div>
-
-                                        <div class="experience-box__item">
-
-                                            <img class="education-box-left" src="https://ik.imagekit.io/milanz/src/img/oma-adriatic.webp" alt="oma addriatic logo"/>   
-
-                                            <div class="education-box-right">
-
-                                                <ul>
-                                                    <li>
-                                                        <h4>Company:&nbsp;<span>Oma Adriatic</span></h4>
-                                                    </li>
-                                                    <li>
-                                                        <h5>October 2015 - March 2016 - 6 months</h5>
-                                                    </li>
-                                                    <li>
-                                                        <p>
-                                                            My task was to redesign and semanticaly edit the following company websites: 
-                                                            <strong>
-                                                                Lilly Intranet, Oma Adriatic Site, Gomex Partnerski B2B, Gomex Loyalty B2B. Other work included some graphic design(creation of Omega cards).
-                                                            </strong>.
-                                                        </p>
-                                                    </li>
-                                                </ul>
-
-                                            </div>
-
-                                        </div>
-
-                                        <div class="experience-box__item">
-                                            <img class="education-box-left" src="https://ik.imagekit.io/milanz/src/img/vegait.webp" alt="vega it logo"/>   
-
-                                            <div class="education-box-right">
-                                                <ul>
-                                                    <li>
-                                                        <h4>Company:&nbsp;<span>Vega It Sourcing</span></h4>
-                                                    </li>
-                                                    <li>
-                                                        <h5>Vega - February 2015</h5>
-                                                    </li>
-                                                    <li>
-                                                        <p>
-                                                            I did  an internship at Vega It Sourcing over the course of 3 weeks. Tasks included transferring
-                                                            <strong>
-                                                                Photoshop templates in html5 / css3 / jQuery / Responsive / pixel perfect.
-                                                            </strong>.
-                                                        </p>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                </div>
-            
-                                <!-- not in the use for now -->
-                                <!-- <div class="navigation-custom-container">
-                                    <div class="right-nav-custom">
-                                        <svg class="svg__icon svg__icon--color svg__icon--hover">
-                                            <use xlink:href="./src/img/sprites.svg#icon-arrow-left2"></use>
-                                        </svg>
-                                    </div>
-                                    <div class="right-nav-custom">
-                                        <svg class="svg__icon svg__icon--color svg__icon--hover">
-                                            <use xlink:href="./src/img/sprites.svg#icon-arrow-right2"></use>
-                                        </svg>
-                                    </div>
-                                </div> -->
-                        
-                            </div>
+                          <h5>September 2016 - June 2017 - 10 months</h5>
                         </li>
                         <li>
-                            <button 
-                                class="acc_ctrl"
-                                aria-label="Things I love">
-                                <h2>
-                                    <svg class="svg__icon">
-                                        <use xlink:href="./src/img/sprites.svg#icon-heart"></use>
-                                    </svg>
-                                    Things I love
-                                </h2>
-                            </button>
-                            <div class="acc_panel">
-                                <ul class="love-box">
-                                    <li class="love-box__item">
-                                        <em>Fitness lover (indoor/outdoor)</em>
-                                    </li>
-                                    <li class="love-box__item"><em>Nature lover</em></li>
-                                    <li class="love-box__item"><em>Cycling in all weather conditions</em></li>
-                                    <li class="love-box__item"><em>Books(Currently "Besnilo" by Borislav Pekic)</em></li>
-                                    <li class="love-box__item">Learning new technologies</li>
-                                    <li class="love-box__item"><em>Craft beer...</em></li>
-                                </ul>
-                            </div>
+                          <p>
+                            At HTEC I worked on Verso enterprise aplication. I was fixing bugs, inserting new
+                            pages(<strong>html5/css3/angular-material</strong>),
+                            and also spent some time working on
+                            <strong>angularjs...</strong>
+                          </p>
                         </li>
-                    </ul>
+                      </ul>
+                    </div>
                   </div>
 
-            </div>
-        </section>
+                  <div class="experience-box__item">
+                    <img
+                      class="education-box-left"
+                      src="https://ik.imagekit.io/milanz/milanzivanov_com/oma-adriatic_WCqN77dzImJ.png"
+                      alt="oma addriatic logo"
+                    />
 
-        <div class="overlay-box">
-            <div class="overlay-inner">
-                <button 
-                    class="close" 
-                    aria-label="close">
-                    <svg class="svg__icon svg__icon--cross">
-                        <use xlink:href="./src/img/sprites.svg#icon-cross"></use>
-                    </svg>
+                    <div class="education-box-right">
+                      <ul>
+                        <li>
+                          <h4>Company:&nbsp;<span>Oma Adriatic</span></h4>
+                        </li>
+                        <li>
+                          <h5>October 2015 - March 2016 - 6 months</h5>
+                        </li>
+                        <li>
+                          <p>
+                            My task was to redesign and semanticaly edit the
+                            following company websites:
+                            <strong>
+                              Lilly Intranet, Oma Adriatic Site, Gomex
+                              Partnerski B2B, Gomex Loyalty B2B. Other work
+                              included some graphic design(creation of Omega
+                              cards). </strong
+                            >.
+                          </p>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="experience-box__item">
+                    <img
+                      class="education-box-left"
+                      src="https://ik.imagekit.io/milanz/src/img/vegait.webp"
+                      alt="vega it logo"
+                    />
+
+                    <div class="education-box-right">
+                      <ul>
+                        <li>
+                          <h4>Company:&nbsp;<span>Vega It Sourcing</span></h4>
+                        </li>
+                        <li>
+                          <h5>Vega - February 2015</h5>
+                        </li>
+                        <li>
+                          <p>
+                            I did an internship at Vega It Sourcing over the
+                            course of 3 weeks. Tasks included transferring
+                            <strong>
+                              Photoshop templates in html5 / css3 / jQuery /
+                              Responsive / pixel perfect. </strong
+                            >.
+                          </p>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </li>
+            <li>
+              <button class="acc_ctrl" aria-label="Things I love">
+                <h2>
+                  <svg class="svg__icon">
+                    <use xlink:href="./src/img/sprites.svg#icon-heart"></use>
+                  </svg>
+                  Things I love
+                </h2>
+              </button>
+              <div class="acc_panel">
+                <ul class="love-box">
+                  <li class="love-box__item">
+                    <em>Fitness lover (indoor/outdoor)</em>
+                  </li>
+                  <li class="love-box__item"><em>Nature lover</em></li>
+                  <li class="love-box__item">
+                    <em>Cycling in all weather conditions</em>
+                  </li>
+                  <li class="love-box__item">
+                    <em>Books(Currently "Besnilo" by Borislav Pekic)</em>
+                  </li>
+                  <li class="love-box__item">Learning new technologies</li>
+                  <li class="love-box__item"><em>Craft beer...</em></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <div class="overlay-box">
+      <div class="overlay-inner">
+        <button class="close" aria-label="close">
+          <svg class="svg__icon svg__icon--cross">
+            <use xlink:href="./src/img/sprites.svg#icon-cross"></use>
+          </svg>
+        </button>
+        <img src="" alt="graphic design works" />
+      </div>
+    </div>
+    <!-- education box END -->
+    <!-- /////////////////// -->
+
+    <!-- ////////////////// -->
+    <!-- gallery box START -->
+    <div class="gallery-box" id="sectionGallery">
+      <div class="gallery-box-heading">
+        <div class="wrapper-inner padding-tb">
+          <h2>Graphic design gallery</h2>
+        </div>
+      </div>
+
+      <div class="gallery-container">
+        <div class="wrapper-inner-full">
+          <div class="gallery-item-container">
+            <div class="item-flex">
+              <img
+                class="lazyload"
+                data-src="https://ik.imagekit.io/milanz/src/img/grafic-design/14.webp?tr=h-390,w-394"
+                alt="tde mobile"
+              />
+              <div class="item__overlay">
+                <button aria-label="arrow right">
+                  <svg class="svg__icon">
+                    <use
+                      xlink:href="./src/img/sprites.svg#icon-arrow-right2"
+                    ></use>
+                  </svg>
                 </button>
-                <img src="" alt="graphic design works"> 
+              </div>
             </div>
+
+            <div class="item-flex">
+              <img
+                class="lazyload"
+                data-src="https://ik.imagekit.io/milanz/src/img/grafic-design/3.webp?tr=h-390,w-394"
+                alt="3"
+              />
+              <div class="item__overlay">
+                <button aria-label="arrow right">
+                  <svg class="svg__icon">
+                    <use
+                      xlink:href="./src/img/sprites.svg#icon-arrow-right2"
+                    ></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <div class="item-flex">
+              <img
+                class="lazyload"
+                data-src="https://ik.imagekit.io/milanz/src/img/grafic-design/5.webp?tr=h-390,w-394"
+                alt="5"
+              />
+              <div class="item__overlay">
+                <button aria-label="arrow right">
+                  <svg class="svg__icon">
+                    <use
+                      xlink:href="./src/img/sprites.svg#icon-arrow-right2"
+                    ></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <div class="item-flex">
+              <img
+                class="lazyload"
+                data-src="https://ik.imagekit.io/milanz/src/img/grafic-design/1.webp?tr=h-390,w-394"
+                alt="1"
+              />
+              <div class="item__overlay">
+                <button aria-label="arrow right">
+                  <svg class="svg__icon">
+                    <use
+                      xlink:href="./src/img/sprites.svg#icon-arrow-right2"
+                    ></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <div class="item-flex">
+              <img
+                class="lazyload"
+                data-src="https://ik.imagekit.io/milanz/src/img/grafic-design/2.webp?tr=h-390,w-394"
+                alt="altec logo"
+              />
+              <div class="item__overlay">
+                <button aria-label="arrow right">
+                  <svg class="svg__icon">
+                    <use
+                      xlink:href="./src/img/sprites.svg#icon-arrow-right2"
+                    ></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <div class="item-flex">
+              <img
+                class="lazyload"
+                data-src="https://ik.imagekit.io/milanz/src/img/grafic-design/4.webp?tr=h-390,w-394"
+                alt="4"
+              />
+              <div class="item__overlay">
+                <button aria-label="arrow right">
+                  <svg class="svg__icon">
+                    <use
+                      xlink:href="./src/img/sprites.svg#icon-arrow-right2"
+                    ></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <div class="item-flex">
+              <img
+                class="lazyload"
+                data-src="https://ik.imagekit.io/milanz/src/img/grafic-design/6.webp?tr=h-400,w-400"
+                alt="informa logo"
+              />
+              <div class="item__overlay">
+                <button aria-label="arrow right">
+                  <svg class="svg__icon">
+                    <use
+                      xlink:href="./src/img/sprites.svg#icon-arrow-right2"
+                    ></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="item-flex">
+              <img
+                class="lazyload"
+                data-src="https://ik.imagekit.io/milanz/src/img/grafic-design/8.webp?tr=h-390,w-394"
+                alt="8"
+              />
+              <div class="item__overlay">
+                <button aria-label="arrow right">
+                  <svg class="svg__icon">
+                    <use
+                      xlink:href="./src/img/sprites.svg#icon-arrow-right2"
+                    ></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="item-flex">
+              <img
+                class="lazyload"
+                data-src="https://ik.imagekit.io/milanz/src/img/grafic-design/9.webp?tr=h-390,w-394"
+                alt="9"
+              />
+              <div class="item__overlay">
+                <button aria-label="arrow right">
+                  <svg class="svg__icon">
+                    <use
+                      xlink:href="./src/img/sprites.svg#icon-arrow-right2"
+                    ></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
-        <!-- education box END -->
-        <!-- /////////////////// -->
+      </div>
+    </div>
+    <!-- gallery box END -->
+    <!-- ////////////////// -->
 
-        <!-- ////////////////// -->
-        <!-- gallery box START -->
-        <div class="gallery-box" id="sectionGallery">
-
-            <div class="gallery-box-heading">
-                <div class="wrapper-inner padding-tb">
-                    <h2>Graphic design gallery</h2>
-                </div>
-            </div>
-
-            <div class="gallery-container">
-                <div class="wrapper-inner-full">
-                    <div class="gallery-item-container">
-
-                        <div class="item-flex">
-                            <img 
-                                class="lazyload" 
-                                data-src="https://ik.imagekit.io/milanz/src/img/grafic-design/14.webp?tr=h-390,w-394" 
-                                alt="tde mobile" >
-                            <div class="item__overlay">
-                                <button aria-label="arrow right">
-                                    <svg class="svg__icon">
-                                        <use xlink:href="./src/img/sprites.svg#icon-arrow-right2"></use>
-                                    </svg>
-                                </button>
-                            </div>
-                        </div>
-
-                        <div class="item-flex">
-                            <img 
-                                class="lazyload" 
-                                data-src="https://ik.imagekit.io/milanz/src/img/grafic-design/3.webp?tr=h-390,w-394" 
-                                alt="3" >
-                            <div class="item__overlay">
-                                <button aria-label="arrow right">
-                                    <svg class="svg__icon">
-                                        <use xlink:href="./src/img/sprites.svg#icon-arrow-right2"></use>
-                                    </svg>
-                                </button>
-                            </div>
-                        </div>
-
-                        <div class="item-flex">
-                            <img 
-                                class="lazyload" 
-                                data-src="https://ik.imagekit.io/milanz/src/img/grafic-design/5.webp?tr=h-390,w-394" 
-                                alt="5">
-                            <div class="item__overlay">
-                                <button aria-label="arrow right">
-                                    <svg class="svg__icon">
-                                        <use xlink:href="./src/img/sprites.svg#icon-arrow-right2"></use>
-                                    </svg>
-                                </button>
-                            </div>
-                        </div>
-
-                        <div class="item-flex">
-                            <img 
-                                class="lazyload" 
-                                data-src="https://ik.imagekit.io/milanz/src/img/grafic-design/1.webp?tr=h-390,w-394" 
-                                alt="1" >
-                            <div class="item__overlay">
-                                <button aria-label="arrow right">
-                                    <svg class="svg__icon">
-                                        <use xlink:href="./src/img/sprites.svg#icon-arrow-right2"></use>
-                                    </svg>
-                                </button>
-                            </div>
-                        </div>
-
-                        <div class="item-flex">
-                            <img 
-                                class="lazyload" 
-                                data-src="https://ik.imagekit.io/milanz/src/img/grafic-design/2.webp?tr=h-390,w-394" 
-                                alt="altec logo" >
-                            <div class="item__overlay">
-                                <button aria-label="arrow right">
-                                    <svg class="svg__icon">
-                                        <use xlink:href="./src/img/sprites.svg#icon-arrow-right2"></use>
-                                    </svg>
-                                </button>
-                            </div>
-                        </div>
-
-                        <div class="item-flex">
-                            <img 
-                                class="lazyload" 
-                                data-src="https://ik.imagekit.io/milanz/src/img/grafic-design/4.webp?tr=h-390,w-394" 
-                                alt="4" >
-                            <div class="item__overlay">
-                                <button aria-label="arrow right">
-                                    <svg class="svg__icon">
-                                        <use xlink:href="./src/img/sprites.svg#icon-arrow-right2"></use>
-                                    </svg>
-                                </button>
-                            </div>
-                        </div>
-
-                        <div class="item-flex">
-                            <img 
-                                class="lazyload" 
-                                data-src="https://ik.imagekit.io/milanz/src/img/grafic-design/6.webp?tr=h-400,w-400" 
-                                alt="informa logo" >
-                            <div class="item__overlay">
-                                <button aria-label="arrow right">
-                                    <svg class="svg__icon">
-                                        <use xlink:href="./src/img/sprites.svg#icon-arrow-right2"></use>
-                                    </svg>
-                                </button>
-                            </div>
-                        </div>
-                        <div class="item-flex">
-                            <img 
-                                class="lazyload" 
-                                data-src="https://ik.imagekit.io/milanz/src/img/grafic-design/8.webp?tr=h-390,w-394" 
-                                alt="8" >
-                            <div class="item__overlay">
-                                <button aria-label="arrow right">
-                                    <svg class="svg__icon">
-                                        <use xlink:href="./src/img/sprites.svg#icon-arrow-right2"></use>
-                                    </svg>
-                                </button>
-                            </div>
-                        </div>
-                        <div class="item-flex">
-                            <img 
-                                class="lazyload"
-                                data-src="https://ik.imagekit.io/milanz/src/img/grafic-design/9.webp?tr=h-390,w-394" 
-                                alt="9" >
-                            <div class="item__overlay">
-                                <button aria-label="arrow right">
-                                    <svg class="svg__icon">
-                                        <use xlink:href="./src/img/sprites.svg#icon-arrow-right2"></use>
-                                    </svg>
-                                </button>
-                            </div>
-                        </div>
-                    </div>  
-                </div>
-            </div>
-        </div>
-        <!-- gallery box END -->
-        <!-- ////////////////// -->
-
-        <!-- //////////////// -->
-        <!-- App box START -->
-        <section class="app-box padding-tb" id="sectionApp">
-            <div class="wrapper-inner">
-                <h2>Apps and websites</h2>
-            </div>
-            <div class="wrapper-inner-full">
-                <div class="app-box__container">
-
-                    <div class="app-box--item">
-                        <a href="#">
-                            <img
-                                class="lazyload"  
-                                data-src="https://ik.imagekit.io/milanz/src/img/app-images/drg4.webp?tr=h-300,w-600"
-                                alt="Website for drg">
-                        </a>
-                        <a 
-                            href="http://drg4.surge.sh"
-                            target="_blank" 
-                            rel="noopener noreferrer"
-                            class="app-box--item_ht">
-                            <div class="app__info">
-                                <h4>
-                                    <em>DrG Website</em>
-                                </h4>
-                                <em>
-                                    <span>Flexbox</span>
-                                    <span>CSS-Grid</span>
-                                    <span>SCSS/CSS3</span>
-                                    <span>jQuery</span>
-                                </em>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="app-box--item">
-                        <a href="#">
-                            <img
-                                class="lazyload"  
-                                data-src="https://ik.imagekit.io/milanz/src/img/app-images/Milanz.webp?tr=h-300,w-600"
-                                alt="Website for drg">
-                        </a>
-                        <a 
-                            href="http://milanzivanovng.surge.sh/"
-                            target="_blank" 
-                            rel="noopener noreferrer"
-                            class="app-box--item_ht">
-                            <div class="app__info">
-                                <h4>
-                                    <em>Milanz Website</em>
-                                </h4>
-                                <em>
-                                    <span>Flexbox</span>
-                                    <span>Angular</span>
-                                    <span>SCSS/CSS3</span>
-                                </em>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="app-box--item">
-                        <a href="#">
-                            <img
-                                class="lazyload"  
-                                data-src="https://ik.imagekit.io/milanz/src/img/app-images/milanzivanov.webp?tr=h-300,w-600" 
-                                alt="My personal web site">
-                        </a>
-                        <a 
-                            href="http://milanzivanov.com/"
-                            target="_blank" 
-                            rel="noopener noreferrer"
-                            class="app-box--item_ht">
-                            <div class="app__info">
-                                <h4>
-                                    <em>Personal Website</em>
-                                </h4>
-                                <em>
-                                    <span>Angular</span>
-                                    <span>SCSS/CSS3</span>
-                                    <span>TS</span>
-                                </em>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="app-box--item">
-                        <a href="#">
-                            <img
-                                class="lazyload"
-                                data-src="https://ik.imagekit.io/milanz/src/img/app-images/fs-test.webp?tr=h-300,w-600" 
-                                alt="Fe Test in 2020">
-                        </a>
-                        <a 
-                            href="http://fs2020.surge.sh" 
-                            target="_blank" 
-                            rel="noopener noreferrer" 
-                            class="app-box--item_ht">
-                            <div class="app__info">
-                                <h4>
-                                    <em>Forwardslash</em>
-                                </h4>
-                                <em>
-                                    <span>HTML</span>
-                                    <span>SCSS/CSS3</span>
-                                    <span>jQuery</span>
-                                    <span>RWD</span>
-                                </em>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="app-box--item">
-                        <a href="#">
-                            <img 
-                                class="lazyload" 
-                                data-src="https://ik.imagekit.io/milanz/src/img/app-images/popart2019.webp?tr=h-300,w-600" 
-                                alt="Popart Test">
-                        </a>
-                        <a 
-                            href="http://popart-fe-task.surge.sh/"
-                            target="_blank" 
-                            rel="noopener noreferrer"
-                            class="app-box--item_ht">
-                            <div class="app__info">
-                                <h4>
-                                    <em>Popart</em>
-                                </h4>
-                                <em>
-                                    <span>HTML</span>
-                                    <span>SCSS/CSS3</span>
-                                    <span>jQuery</span>
-                                    <span>RWD</span>
-                                </em>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="app-box--item">
-                        <a href="#">
-                            <img
-                                class="lazyload"
-                                data-src="https://ik.imagekit.io/milanz/src/img/app-images/Purezeen-test.webp?tr=h-300,w-600" 
-                                alt="Perezeen test">
-                        </a>
-                        <a 
-                            href="http://purezeen-task.surge.sh/"
-                            target="_blank" 
-                            rel="noopener noreferrer" 
-                            class="app-box--item_ht">
-                            <div class="app__info">
-                                <h4>
-                                    <em>Purezeen</em>
-                                </h4>
-                                <em>
-                                    <span>HTML</span>
-                                    <span>SCSS/CSS3</span>
-                                    <span>jQuery</span>
-                                    <span>RWD</span>
-                                </em>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="app-box--item">
-                        <a href="#">
-                            <img
-                                class="lazyload" 
-                                data-src="https://ik.imagekit.io/milanz/src/img/app-images/Gtw2.webp?tr=h-300,w-600" 
-                                alt="Get the Wather App">
-                        </a>
-                        <a 
-                            href="http://hideous-news.surge.sh/"
-                            target="_blank" 
-                            rel="noopener noreferrer" 
-                            class="app-box--item_ht">
-                            <div class="app__info">
-                                <h4>
-                                    <em>Weather App</em>
-                                </h4>
-                                <em>
-                                    <span>Angular</span>
-                                    <span>SCSS/CSS3</span>
-                                    <span>RWD</span>
-                                </em>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="app-box--item">
-                        <a href="#">
-                            <img
-                                class="lazyload" 
-                                data-src="https://ik.imagekit.io/milanz/src/img/app-images/OMA-Adriatic.webp?tr=h-300,w-600" 
-                                alt="Oma Adriatic Website">
-                        </a>
-                        <a 
-                            href="https://milanzivanov.github.io/webadriatic/"
-                            target="_blank" 
-                            rel="noopener noreferrer"
-                            class="app-box--item_ht">
-                            <div class="app__info">
-                                <h4>
-                                    <em>Oma Adriatic</em>
-                                </h4>
-                                <em>
-                                    <span>HTML5</span>
-                                    <span>SCSS/CSS3</span>
-                                    <span>jQuery</span>
-                                    <span>RWD</span>
-                                </em>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="app-box--item">
-                        <a href="#">
-                            <img
-                                class="lazyload"
-                                data-src="https://ik.imagekit.io/milanz/src/img/app-images/HnNg5V2.webp?tr=h-300,w-600" 
-                                alt="Hacker News Clone in Angular">
-                        </a>
-                        <a 
-                            href="http://hnclone2019.surge.sh/"
-                            target="_blank" 
-                            rel="noopener noreferrer"
-                            class="app-box--item_ht">
-                            <div class="app__info">
-                                <h4>
-                                    <em>Hacker News Clone App</em>
-                                </h4>
-                                <em>
-                                    <span>Angular</span>
-                                    <span>SCSS/CSS3</span>
-                                    <span>RWD</span>
-                                </em>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="app-box--item">
-                        <a href="#">
-                            <img
-                                class="lazyload" 
-                                data-src="https://ik.imagekit.io/milanz/src/img/app-images/vega-fe-task.webp?tr=h-300,w-600" 
-                                alt="Vega It Sourcing Test">
-                        </a>
-                        <a 
-                            href="http://vega-fe-task.surge.sh/"
-                            target="_blank" 
-                            rel="noopener noreferrer"
-                            class="app-box--item_ht">
-                            <div class="app__info">
-                                <h4>
-                                    <em>Green Earth</em>
-                                </h4>
-                                <em>
-                                    <span>HTML5</span>
-                                    <span>SCSS/CSS3</span>
-                                    <span>jQuery</span>
-                                    <span>RWD</span>
-                                </em>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="app-box--item">
-                        <a href="#">
-                            <img
-                                class="lazyload"
-                                data-src="https://ik.imagekit.io/milanz/src/img/app-images/citiesOfEstSerbia.webp?tr=h-300,w-600"
-                                alt="Cities Of East Serbia">
-                        </a>
-                        <a 
-                            href="https://careless-birds.surge.sh/"
-                            target="_blank" 
-                            rel="noopener noreferrer"
-                            class="app-box--item_ht">
-                            <div class="app__info">
-                                <h4>
-                                    <em>Cities Of East Serbia</em>
-                                </h4>
-                                <em>
-                                    <span>Angular</span>
-                                    <span>SCSS/CSS3</span>
-                                    <span>RWD</span>
-                                </em>
-                            </div>
-
-                        </a>
-                    </div>
-                    
-                    <div class="app-box--item">
-                        <a href="#">
-                            <img
-                                class="lazyload"
-                                data-src="https://ik.imagekit.io/milanz/src/img/app-images/gptw.webp?tr=h-300,w-600" 
-                                alt="Great Place To Work Intership Work">
-                        </a>
-                        <a 
-                            href="http://debonair-zinc.surge.sh/main.html"
-                            target="_blank" 
-                            rel="noopener noreferrer"
-                            class="app-box--item_ht">
-                            <div class="app__info">
-                                <h4>
-                                    <em>Intership work</em>
-                                </h4>
-                                <em>
-                                    <span>HTML5</span>
-                                    <span>SCSS/CSS3</span>
-                                    <span>jQuery</span>
-                                    <span>RWD</span>
-                                </em>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="app-box--item">
-                        <a href="#">
-                            <img
-                                class="lazyload"
-                                data-src="https://ik.imagekit.io/milanz/src/img/app-images/milanzivanovcv-v2.webp?tr=h-300,w-600" 
-                                alt="My first personal website">
-                        </a>
-                        <a 
-                            href="https://milanzivanov.github.io/milanzivanovcv-v2/"
-                            target="_blank" 
-                            rel="noopener noreferrer"
-                            class="app-box--item_ht">
-                            <div class="app__info">
-                                <h4>
-                                    <em>Personal Website Old</em>
-                                </h4>
-                                <em>
-                                    <span>HTML5</span>
-                                    <span>SCSS/CSS3</span>
-                                    <span>jQuery</span>
-                                </em>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="app-box--item">
-                        <a href="#">
-                            <img
-                                class="lazyload"
-                                data-src="https://ik.imagekit.io/milanz/src/img/app-images/lf-fe-test2020.webp?tr=h-300,w-600"
-                                alt="Frontend test">
-                        </a>
-                        <a 
-                            href="http://lftest2020.surge.sh"
-                            target="_blank" 
-                            rel="noopener noreferrer"
-                            class="app-box--item_ht">
-                            <div class="app__info">
-                                <h4>
-                                    <em>Harpoon ventures</em>
-                                </h4>
-                                <em>
-                                    <span>HTML5/CSS3</span>
-                                    <span>SCSS</span>
-                                    <span>jQuery</span>
-                                </em>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- App box END -->
-        <!-- //////////////// -->
-
-        <!-- //////////////// -->
-        <!-- links box START -->
-        <section class="links-box padding-tb" id="sectionLinks">
-            <div class="wrapper-inner">
-                <h2>Social Links</h2>
-                <div class="links-box__container">
-
-                    <a href="https://codepen.io/milanodituti" class="links-box__item" target="_blank" 
-                    rel="noopener noreferrer">
-                        <svg class="svg__icon svg__icon--color">
-                            <use xlink:href="./src/img/sprites.svg#icon-codepen"></use>
-                        </svg>
-
-                        <div class="overlay-links">
-                            <div class="overlay-links__inner">
-                                <h2>Codepen</h2>
-                                <svg class="svg__icon svg__icon--color">
-                                    <use xlink:href="./src/img/sprites.svg#icon-enter"></use>
-                                </svg>
-                            </div>
-                        </div>
-                    </a>
-
-                    <a href="https://github.com/milanzivanov" class="links-box__item" target="_blank">
-                        <svg class="svg__icon svg__icon--color">
-                            <use xlink:href="./src/img/sprites.svg#icon-github"></use>
-                        </svg>
-
-                        <div class="overlay-links">
-                            <div class="overlay-links__inner">
-                                <h2>Github</h2>
-                                <svg class="svg__icon svg__icon--color">
-                                    <use xlink:href="./src/img/sprites.svg#icon-enter"></use>
-                                </svg>
-                            </div>
-                        </div>
-                    </a>
-
-                    <a href="https://www.instagram.com/fit_fit_milan/" class="links-box__item" target="_blank">
-                        <svg class="svg__icon svg__icon--color">
-                            <use xlink:href="./src/img/sprites.svg#icon-instagram"></use>
-                        </svg>
-
-                        <div class="overlay-links">
-                            <div class="overlay-links__inner">
-                                <h2>Instagram</h2>
-                                <svg class="svg__icon svg__icon--color">
-                                    <use xlink:href="./src/img/sprites.svg#icon-enter"></use>
-                                </svg>
-                            </div>
-                        </div>
-                    </a>
-
-                    <a href="https://www.linkedin.com/in/milan-%C5%BEivanov1983/" class="links-box__item" target="_blank">
-                        <svg class="svg__icon svg__icon--color">
-                            <use xlink:href="./src/img/sprites.svg#icon-linkedin"></use>
-                        </svg>
-
-                        <div class="overlay-links">
-                            <div class="overlay-links__inner">
-                                <h2>Linkedin</h2>
-                                <svg class="svg__icon svg__icon--color">
-                                    <use xlink:href="./src/img/sprites.svg#icon-enter"></use>
-                                </svg>
-                            </div>
-                        </div>
-                    </a>
-
-                </div>
-            </div>
-        </section>
-        <!-- links box END -->
-        <!-- //////////////// -->
-
-        <!-- //////////////// -->
-        <!-- Contact box START -->
-        <section class="contact-box padding-tb" id="sectionContact">
-            <div class="wrapper-inner">
-                <h2>Contact</h2>
-                <div class="contact-box__container">
-
-                    <div class="contact-box__container--left contact-box__container--item">
-                        <picture>
-                            <source 
-                                srcset="./src/img/mzLogo.webp"
-                                type="image/webp">
-                            <img 
-                                src="./src/img/mzLogo.png" 
-                                alt="My logo img">
-                        </picture>
-                    </div>
-
-                    <div class="contact-box__container--right contact-box__container--item">
-
-                        <form 
-                            class="contact-box-form"  
-                            action="https://formspree.io/xjveenen"
-                            method="POST">
-                            <span class="contact-box-form__title">
-                                Get in touch with me
-                            </span>
-            
-                            <div class="contact-box-input">
-                                <input 
-                                    class="input1" 
-                                    type="email" 
-                                    name="_replyto" 
-                                    placeholder="Email *" 
-                                    required>
-                            </div>
-            
-                            <div class="contact-box-input">
-                                <input 
-                                    class="input1" 
-                                    type="text" 
-                                    name="subject" 
-                                    placeholder="Subject *" 
-                                    required>
-                            </div>
-            
-                            <div class="contact-box-input">
-                                <textarea 
-                                    class="input1" 
-                                    name="message" 
-                                    placeholder="Message *" 
-                                    required>
-                                </textarea>
-                            </div>
-            
-                            <div class="contact-box-form__container">
-                                <button 
-                                    class="contact-box-form__btn hvr-sweep-to-right" 
-                                    type="submit" 
-                                    value="Send"
-                                    aria-label="send text">
-                                    <span>
-                                        <span>Send</span>
-                                        <svg class="svg__icon svg__icon--color">
-                                            <use xlink:href="./src/img/sprites.svg#icon-arrow-right2"></use>
-                                        </svg>
-                                    </span>
-                                </button>
-                            </div>
-
-                        </form>
-
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Contact box END -->
-        <!-- //////////////// -->
-
-        <!-- //////////////// -->
-        <!-- footer START -->
-        <footer class="footer-box padding-tb">
-            <div class="wrapper-inner footer-box__container">
-                <small>
-                    <span>© 2020 - Developed and Designed by <strong>milan.zivanov@gmail.com</strong></span>
-                </small>
-            </div>
-        </footer>
-        <!-- footer END -->
-        <!-- //////////////// -->
-        
-        <!-- //////////////// -->
-        <!-- BTT START -->
-        <div class="back-to-top">
-            <a href="#sectionHeader" class="btn-to-top">
-                <svg class="svg__icon svg__icon--color">
-                    <use xlink:href="./src/img/sprites.svg#icon-btt"></use>
-                </svg>   
+    <!-- //////////////// -->
+    <!-- App box START -->
+    <section class="app-box padding-tb" id="sectionApp">
+      <div class="wrapper-inner">
+        <h2>Apps and websites</h2>
+      </div>
+      <div class="wrapper-inner-full">
+        <div class="app-box__container">
+          <div class="app-box--item">
+            <a href="#">
+              <img
+                class="lazyload"
+                data-src="https://ik.imagekit.io/milanz/src/img/app-images/drg4.webp?tr=h-300,w-600"
+                alt="Website for drg"
+              />
             </a>
+            <a
+              href="http://drg4.surge.sh"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="app-box--item_ht"
+            >
+              <div class="app__info">
+                <h4>
+                  <em>DrG Website</em>
+                </h4>
+                <em>
+                  <span>Flexbox</span>
+                  <span>CSS-Grid</span>
+                  <span>SCSS/CSS3</span>
+                  <span>jQuery</span>
+                </em>
+              </div>
+            </a>
+          </div>
+
+          <!-- <div class="app-box--item">
+            <a href="#">
+              <img
+                class="lazyload"
+                data-src="https://ik.imagekit.io/milanz/src/img/app-images/Milanz.webp?tr=h-300,w-600"
+                alt="Website for drg"
+              />
+            </a>
+            <a
+              href="http://milanzivanovng.surge.sh/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="app-box--item_ht"
+            >
+              <div class="app__info">
+                <h4>
+                  <em>Milanz Website</em>
+                </h4>
+                <em>
+                  <span>Flexbox</span>
+                  <span>Angular</span>
+                  <span>SCSS/CSS3</span>
+                </em>
+              </div>
+            </a>
+          </div> -->
+
+          <!-- <div class="app-box--item">
+            <a href="#">
+              <img
+                class="lazyload"
+                data-src="https://ik.imagekit.io/milanz/src/img/app-images/milanzivanov.webp?tr=h-300,w-600"
+                alt="My personal web site ol"
+              />
+            </a>
+            <a
+              href="http://milanzivanov.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="app-box--item_ht"
+            >
+              <div class="app__info">
+                <h4>
+                  <em>Personal Website</em>
+                </h4>
+                <em>
+                  <span>Angular</span>
+                  <span>SCSS/CSS3</span>
+                  <span>TS</span>
+                </em>
+              </div>
+            </a>
+          </div> -->
+
+          <div class="app-box--item">
+            <a href="#">
+              <img
+                class="lazyload"
+                data-src="https://ik.imagekit.io/milanz/src/img/app-images/fs-test.webp?tr=h-300,w-600"
+                alt="Fe Test in 2020"
+              />
+            </a>
+            <a
+              href="http://fs2020.surge.sh"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="app-box--item_ht"
+            >
+              <div class="app__info">
+                <h4>
+                  <em>Forwardslash</em>
+                </h4>
+                <em>
+                  <span>HTML</span>
+                  <span>SCSS/CSS3</span>
+                  <span>jQuery</span>
+                  <span>RWD</span>
+                </em>
+              </div>
+            </a>
+          </div>
+
+          <div class="app-box--item">
+            <a href="#">
+              <img
+                class="lazyload"
+                data-src="https://ik.imagekit.io/milanz/src/img/app-images/popart2019.webp?tr=h-300,w-600"
+                alt="Popart Test"
+              />
+            </a>
+            <a
+              href="http://popart-fe-task.surge.sh/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="app-box--item_ht"
+            >
+              <div class="app__info">
+                <h4>
+                  <em>Popart</em>
+                </h4>
+                <em>
+                  <span>HTML</span>
+                  <span>SCSS/CSS3</span>
+                  <span>jQuery</span>
+                  <span>RWD</span>
+                </em>
+              </div>
+            </a>
+          </div>
+
+          <div class="app-box--item">
+            <a href="#">
+              <img
+                class="lazyload"
+                data-src="https://ik.imagekit.io/milanz/src/img/app-images/Purezeen-test.webp?tr=h-300,w-600"
+                alt="Perezeen test"
+              />
+            </a>
+            <a
+              href="http://purezeen-task.surge.sh/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="app-box--item_ht"
+            >
+              <div class="app__info">
+                <h4>
+                  <em>Purezeen</em>
+                </h4>
+                <em>
+                  <span>HTML</span>
+                  <span>SCSS/CSS3</span>
+                  <span>jQuery</span>
+                  <span>RWD</span>
+                </em>
+              </div>
+            </a>
+          </div>
+
+          <div class="app-box--item">
+            <a href="#">
+              <img
+                class="lazyload"
+                data-src="https://ik.imagekit.io/milanz/src/img/app-images/Gtw2.webp?tr=h-300,w-600"
+                alt="Get the Wather App"
+              />
+            </a>
+            <a
+              href="http://hideous-news.surge.sh/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="app-box--item_ht"
+            >
+              <div class="app__info">
+                <h4>
+                  <em>Weather App</em>
+                </h4>
+                <em>
+                  <span>Angular</span>
+                  <span>SCSS/CSS3</span>
+                  <span>RWD</span>
+                </em>
+              </div>
+            </a>
+          </div>
+
+          <div class="app-box--item">
+            <a href="#">
+              <img
+                class="lazyload"
+                data-src="https://ik.imagekit.io/milanz/src/img/app-images/OMA-Adriatic.webp?tr=h-300,w-600"
+                alt="Oma Adriatic Website"
+              />
+            </a>
+            <a
+              href="https://milanzivanov.github.io/webadriatic/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="app-box--item_ht"
+            >
+              <div class="app__info">
+                <h4>
+                  <em>Oma Adriatic</em>
+                </h4>
+                <em>
+                  <span>HTML5</span>
+                  <span>SCSS/CSS3</span>
+                  <span>jQuery</span>
+                  <span>RWD</span>
+                </em>
+              </div>
+            </a>
+          </div>
+
+          <div class="app-box--item">
+            <a href="#">
+              <img
+                class="lazyload"
+                data-src="https://ik.imagekit.io/milanz/src/img/app-images/HnNg5V2.webp?tr=h-300,w-600"
+                alt="Hacker News Clone in Angular"
+              />
+            </a>
+            <a
+              href="http://hnclone2019.surge.sh/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="app-box--item_ht"
+            >
+              <div class="app__info">
+                <h4>
+                  <em>Hacker News Clone App</em>
+                </h4>
+                <em>
+                  <span>Angular</span>
+                  <span>SCSS/CSS3</span>
+                  <span>RWD</span>
+                </em>
+              </div>
+            </a>
+          </div>
+
+          <div class="app-box--item">
+            <a href="#">
+              <img
+                class="lazyload"
+                data-src="https://ik.imagekit.io/milanz/src/img/app-images/vega-fe-task.webp?tr=h-300,w-600"
+                alt="Vega It Sourcing Test"
+              />
+            </a>
+            <a
+              href="http://vega-fe-task.surge.sh/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="app-box--item_ht"
+            >
+              <div class="app__info">
+                <h4>
+                  <em>Green Earth</em>
+                </h4>
+                <em>
+                  <span>HTML5</span>
+                  <span>SCSS/CSS3</span>
+                  <span>jQuery</span>
+                  <span>RWD</span>
+                </em>
+              </div>
+            </a>
+          </div>
+
+          <div class="app-box--item">
+            <a href="#">
+              <img
+                class="lazyload"
+                data-src="https://ik.imagekit.io/milanz/src/img/app-images/citiesOfEstSerbia.webp?tr=h-300,w-600"
+                alt="Cities Of East Serbia"
+              />
+            </a>
+            <a
+              href="https://careless-birds.surge.sh/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="app-box--item_ht"
+            >
+              <div class="app__info">
+                <h4>
+                  <em>Cities Of East Serbia</em>
+                </h4>
+                <em>
+                  <span>Angular</span>
+                  <span>SCSS/CSS3</span>
+                  <span>RWD</span>
+                </em>
+              </div>
+            </a>
+          </div>
+
+          <div class="app-box--item">
+            <a href="#">
+              <img
+                class="lazyload"
+                data-src="https://ik.imagekit.io/milanz/src/img/app-images/gptw.webp?tr=h-300,w-600"
+                alt="Great Place To Work Intership Work"
+              />
+            </a>
+            <a
+              href="http://debonair-zinc.surge.sh/main.html"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="app-box--item_ht"
+            >
+              <div class="app__info">
+                <h4>
+                  <em>Intership work</em>
+                </h4>
+                <em>
+                  <span>HTML5</span>
+                  <span>SCSS/CSS3</span>
+                  <span>jQuery</span>
+                  <span>RWD</span>
+                </em>
+              </div>
+            </a>
+          </div>
+
+          <div class="app-box--item">
+            <a href="#">
+              <img
+                class="lazyload"
+                data-src="https://ik.imagekit.io/milanz/src/img/app-images/milanzivanovcv-v2.webp?tr=h-300,w-600"
+                alt="My first personal website"
+              />
+            </a>
+            <a
+              href="https://milanzivanov.github.io/milanzivanovcv-v2/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="app-box--item_ht"
+            >
+              <div class="app__info">
+                <h4>
+                  <em>Personal Website Old</em>
+                </h4>
+                <em>
+                  <span>HTML5</span>
+                  <span>SCSS/CSS3</span>
+                  <span>jQuery</span>
+                </em>
+              </div>
+            </a>
+          </div>
+
+          <div class="app-box--item">
+            <a href="#">
+              <img
+                class="lazyload"
+                data-src="https://ik.imagekit.io/milanz/src/img/app-images/lf-fe-test2020.webp?tr=h-300,w-600"
+                alt="Frontend test"
+              />
+            </a>
+            <a
+              href="http://lftest2020.surge.sh"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="app-box--item_ht"
+            >
+              <div class="app__info">
+                <h4>
+                  <em>Harpoon ventures</em>
+                </h4>
+                <em>
+                  <span>HTML5/CSS3</span>
+                  <span>SCSS</span>
+                  <span>jQuery</span>
+                </em>
+              </div>
+            </a>
+          </div>
         </div>
-        <!-- BTT END -->
-        <!-- //////////////// -->
+      </div>
+    </section>
+    <!-- App box END -->
+    <!-- //////////////// -->
 
-        <script 
-            rel="preload"
-            async 
-            as="script" 
-            src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js">
-        </script>
+    <!-- //////////////// -->
+    <!-- links box START -->
+    <section class="links-box padding-tb" id="sectionLinks">
+      <div class="wrapper-inner">
+        <h2>Social Links</h2>
+        <div class="links-box__container">
+          <a
+            href="https://codepen.io/milanodituti"
+            class="links-box__item"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <svg class="svg__icon svg__icon--color">
+              <use xlink:href="./src/img/sprites.svg#icon-codepen"></use>
+            </svg>
 
-        <!-- for publishing purpuse -->
-        <script
-            rel="preload"
-            as="script"
-            src="./src/assets/jquery.min.js"
-            crossorigin="anonymous">
-        </script>
+            <div class="overlay-links">
+              <div class="overlay-links__inner">
+                <h2>Codepen</h2>
+                <svg class="svg__icon svg__icon--color">
+                  <use xlink:href="./src/img/sprites.svg#icon-enter"></use>
+                </svg>
+              </div>
+            </div>
+          </a>
 
+          <a
+            href="https://github.com/milanzivanov"
+            class="links-box__item"
+            target="_blank"
+          >
+            <svg class="svg__icon svg__icon--color">
+              <use xlink:href="./src/img/sprites.svg#icon-github"></use>
+            </svg>
 
-        <script 
-            rel="preload"
-            as="script" 
-            src="https://unpkg.com/aos@2.3.1/dist/aos.js"            
-            crossorigin="anonymous">
-        </script>
+            <div class="overlay-links">
+              <div class="overlay-links__inner">
+                <h2>Github</h2>
+                <svg class="svg__icon svg__icon--color">
+                  <use xlink:href="./src/img/sprites.svg#icon-enter"></use>
+                </svg>
+              </div>
+            </div>
+          </a>
 
-        <script 
-            rel="preload" 
-            async
-            as="script" 
-            src="./src/assets/lazysizes.min.js"
-            crossorigin="anonymous">
-        </script>
+          <a
+            href="https://www.instagram.com/fit_fit_milan/"
+            class="links-box__item"
+            target="_blank"
+          >
+            <svg class="svg__icon svg__icon--color">
+              <use xlink:href="./src/img/sprites.svg#icon-instagram"></use>
+            </svg>
 
-        <script 
-            rel="preload"
-            async 
-            as="script"
-            src="./dist/main.js"
-            crossorigin="anonymous">
-        </script>
-    </body>
+            <div class="overlay-links">
+              <div class="overlay-links__inner">
+                <h2>Instagram</h2>
+                <svg class="svg__icon svg__icon--color">
+                  <use xlink:href="./src/img/sprites.svg#icon-enter"></use>
+                </svg>
+              </div>
+            </div>
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/milan-%C5%BEivanov1983/"
+            class="links-box__item"
+            target="_blank"
+          >
+            <svg class="svg__icon svg__icon--color">
+              <use xlink:href="./src/img/sprites.svg#icon-linkedin"></use>
+            </svg>
+
+            <div class="overlay-links">
+              <div class="overlay-links__inner">
+                <h2>Linkedin</h2>
+                <svg class="svg__icon svg__icon--color">
+                  <use xlink:href="./src/img/sprites.svg#icon-enter"></use>
+                </svg>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- links box END -->
+    <!-- //////////////// -->
+
+    <!-- //////////////// -->
+    <!-- Contact box START -->
+    <section class="contact-box padding-tb" id="sectionContact">
+      <div class="wrapper-inner">
+        <h2>Contact</h2>
+        <div class="contact-box__container">
+          <div
+            class="contact-box__container--left contact-box__container--item"
+          >
+            <picture>
+              <source srcset="./src/img/mzLogo.webp" type="image/webp" />
+              <img src="./src/img/mzLogo.png" alt="My logo img" />
+            </picture>
+          </div>
+
+          <div
+            class="contact-box__container--right contact-box__container--item"
+          >
+            <form
+              class="contact-box-form"
+              action="https://formspree.io/xjveenen"
+              method="POST"
+            >
+              <span class="contact-box-form__title">
+                Get in touch with me
+              </span>
+
+              <div class="contact-box-input">
+                <input
+                  class="input1"
+                  type="email"
+                  name="_replyto"
+                  placeholder="Email *"
+                  required
+                />
+              </div>
+
+              <div class="contact-box-input">
+                <input
+                  class="input1"
+                  type="text"
+                  name="subject"
+                  placeholder="Subject *"
+                  required
+                />
+              </div>
+
+              <div class="contact-box-input">
+                <textarea
+                  class="input1"
+                  name="message"
+                  placeholder="Message *"
+                  required
+                >
+                </textarea>
+              </div>
+
+              <div class="contact-box-form__container">
+                <button
+                  class="contact-box-form__btn hvr-sweep-to-right"
+                  type="submit"
+                  value="Send"
+                  aria-label="send text"
+                >
+                  <span>
+                    <span>Send</span>
+                    <svg class="svg__icon svg__icon--color">
+                      <use
+                        xlink:href="./src/img/sprites.svg#icon-arrow-right2"
+                      ></use>
+                    </svg>
+                  </span>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Contact box END -->
+    <!-- //////////////// -->
+
+    <!-- //////////////// -->
+    <!-- footer START -->
+    <footer class="footer-box padding-tb">
+      <div class="wrapper-inner footer-box__container">
+        <small>
+          <span
+            >© 2020 - Developed and Designed by
+            <strong>milan.zivanov@gmail.com</strong></span
+          >
+        </small>
+      </div>
+    </footer>
+    <!-- footer END -->
+    <!-- //////////////// -->
+
+    <!-- //////////////// -->
+    <!-- BTT START -->
+    <div class="back-to-top">
+      <a href="#sectionHeader" class="btn-to-top">
+        <svg class="svg__icon svg__icon--color">
+          <use xlink:href="./src/img/sprites.svg#icon-btt"></use>
+        </svg>
+      </a>
+    </div>
+    <!-- BTT END -->
+    <!-- //////////////// -->
+
+    <script
+      rel="preload"
+      async
+      as="script"
+      src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"
+    ></script>
+
+    <!-- for publishing purpuse -->
+    <script
+      rel="preload"
+      as="script"
+      src="./src/assets/jquery.min.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      rel="preload"
+      as="script"
+      src="https://unpkg.com/aos@2.3.1/dist/aos.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      rel="preload"
+      async
+      as="script"
+      src="./src/assets/lazysizes.min.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      rel="preload"
+      async
+      as="script"
+      src="./dist/main.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>

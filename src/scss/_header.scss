@@ -5,208 +5,206 @@
     z-index: 6;
     width: 100%;
     display: flex;
+}
 
-    .header-box__content {
+.header-box__content {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    flex-direction: column;
+
+    
+}
+
+.header-logo {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    color: $blue;
+    font-family: "ns" sans-serif;
+    position: relative;
+    cursor: pointer;
+
+    a {
         display: flex;
-        width: 100%;
-        justify-content: space-between;
-        align-items: center;
-        padding: 20px 0;
-        flex-direction: column;
+        img {
+            max-width: 100%;
+            height: 75px;
+        }
+    }
+}
 
-        .header-logo {
-            display: none;
-            justify-content: center;
-            align-items: center;
+.header-logo:hover span,
+.header-logo:focus span {
+    color: #fff;
+    background-color: #155799;
+    background-image: linear-gradient(120deg, #155799, #159957);
+}
+
+nav.header-nav {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    justify-content: center;
+    padding: 0 5px;
+    width: 100%;
+
+}
+
+// logo for mobile
+.header-logo__mobile {   
+    @include flexCHV;
+    position: relative;
+    color: $blue;
+    font-family: "ns" "Roboto" sans-serif;
+    cursor: pointer;
+    display: none;
+
+    h1 {
+        position: absolute;
+        @include flexCHV;
+        right: 0;
+        top: 0;
+        span {
+            font-family: sans-serif;
+            position: absolute;
+            @include flexCHV;
+            font-size: 15px;
             color: $blue;
-            font-family: "ns" sans-serif;
-            position: relative;
-            cursor: pointer;
-        
-            a {
-                display: flex;
-                img {
-                    max-width: 100%;
-                    height: 75px;
-                }
-            }
+            background: #fff;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            line-height: 22px;
         }
+    }
 
-        .header-logo:hover span,
-        .header-logo:focus span {
-            color: #fff;
-            background-color: #155799;
-            background-image: linear-gradient(120deg, #155799, #159957);
-
+    a {
+        display: flex;
+        img {
+            max-width: 100%;
+            height: 60px;
         }
+    }
 
-        nav.header-nav {
-            position: relative;
+}
+
+ul.header-nav__container {
+    display: flex;
+    position: absolute;
+    background-color: #155799;
+    background-image: linear-gradient(120deg, #155799, #159957);
+
+    transition: all 0.3s ease-in-out;
+    transform: translateX(9999px);
+
+    flex-direction: column;
+    min-width: 100%;
+    bottom: auto;
+    right: 0;
+    top: 81px;
+    height: calc(100vh - 100px);
+    align-items: center;
+    justify-content: center;
+
+    li {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        height: auto;
+
+        a {
             display: flex;
+            padding: 10px;
+            color: $white;
+            transition: 0.3s ease-in-out;
+            height: 100%;
             align-items: center;
 
-            justify-content: center;
-            padding: 0 5px;
-            width: 100%;
+            height: auto;
+            font-size: 27px;
 
-            // logo for mobile
-            .header-logo__mobile {   
-                @include flexCHV;
-                position: relative;
-                color: $blue;
-                font-family: "ns" "Roboto" sans-serif;
-                cursor: pointer;
-                display: none;
-
-                h1 {
-                    position: absolute;
-                    @include flexCHV;
-                    right: 0;
-                    top: 0;
-                    span {
-                        font-family: sans-serif;
-                        position: absolute;
-                        @include flexCHV;
-                        font-size: 15px;
-                        color: $blue;
-                        background: #fff;
-                        width: 22px;
-                        height: 22px;
-                        border-radius: 50%;
-                        line-height: 22px;
-                    }
-                }
- 
-                a {
-                    display: flex;
-                    img {
-                        max-width: 100%;
-                        height: 60px;
-                    }
-                }
-
+            &:hover,
+            &:focus {
+                color: $ltGray;
             }
 
-            ul.header-nav__container {
-                display: flex;
-                position: absolute;
-                background-color: #155799;
-                background-image: linear-gradient(120deg, #155799, #159957);
-            
-                transition: all 0.3s ease-in-out;
-                transform: translateX(9999px);
-
-                flex-direction: column;
-                min-width: 100%;
-                bottom: auto;
-                right: 0;
-                top: 81px;
-                height: calc(100vh - 100px);
-                align-items: center;
-                justify-content: center;
-
-                li {
-                    height: 100%;
-                    display: flex;
-                    align-items: center;
-                    height: auto;
-
-                    a {
-                        display: flex;
-                        padding: 10px;
-                        color: $white;
-                        transition: 0.3s ease-in-out;
-                        height: 100%;
-                        align-items: center;
-
-                        height: auto;
-                        font-size: 27px;
-
-                        &:hover,
-                        &:focus {
-                            color: $ltGray;
-                        }
-
-                    }
-
-                }
-            }
-
-            ul.header-nav__container.active {
-                transform: translateX(0px);
-            }
-
-            // hamburger icon
-            .botton-nav {
-                position: relative;
-                width: 60px;
-                height: 60px;
-                cursor: pointer;
-                padding: 5px;
-                transition: box-shadow 0.3s ease-in-out;
-
-                background-color: transparent;
-    
-                .line {
-                    height: 5px;
-                    background: $dkGray;
-                    position: relative;
-                    top: 50%;
-                    transform: translateY(-50%);
-                    transition: all 1s ease-in-out;
-    
-                    &:before {
-                        content: "";
-                        position: absolute;
-                        height: 5px;
-                        width: 40px;
-                        top: 15px;
-                        z-index: 222;
-                        background: $dkGray;
-                        transition: all 1s ease-in-out;
-                        -webkit-transition: all 1s ease-in-out;
-                        }
-                        &:after {
-                        content: "";
-                        position: absolute;
-                        height: 5px;
-                        width: 40px;
-                        bottom: 15px;
-                        z-index: 222;
-                        background: $dkGray;
-                        transition: all 1s ease-in-out;
-                        -webkit-transition: all 1s ease-in-out;
-                        }
-                }
-
-                
-            }
-        
-
-            // activate
-            .botton-nav.active {
-                background-color: #cecece;
-            }
-
-            .botton-nav.active > .line:before {
-                right: 0;
-                width: 40px;
-            }
-            
-            .botton-nav.active > .line:after {
-                right: 0;
-                width: 40px;
-            }
-    
-            .header-nav ul li a.nav-color {
-                color: $dkGray;
-            }
         }
 
     }
 }
 
+ul.header-nav__container.active {
+    transform: translateX(0px);
+}
 
+// hamburger icon
+.botton-nav {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    padding: 5px;
+    transition: box-shadow 0.3s ease-in-out;
+
+    background-color: transparent;
+
+    .line {
+        height: 5px;
+        background: $dkGray;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: all 1s ease-in-out;
+
+        &:before {
+            content: "";
+            position: absolute;
+            height: 5px;
+            width: 40px;
+            top: 15px;
+            z-index: 222;
+            background: $dkGray;
+            transition: all 1s ease-in-out;
+            -webkit-transition: all 1s ease-in-out;
+            }
+            &:after {
+            content: "";
+            position: absolute;
+            height: 5px;
+            width: 40px;
+            bottom: 15px;
+            z-index: 222;
+            background: $dkGray;
+            transition: all 1s ease-in-out;
+            -webkit-transition: all 1s ease-in-out;
+            }
+    }
+
+}
+
+
+// activate
+.botton-nav.active {
+    background-color: #cecece;
+}
+
+.botton-nav.active > .line:before {
+    right: 0;
+    width: 40px;
+}
+
+.botton-nav.active > .line:after {
+    right: 0;
+    width: 40px;
+}
+
+.header-nav ul li a.nav-color {
+    color: $dkGray;
+}
 @include breakpoint(for-tablet-up) {
 
     .header-box {

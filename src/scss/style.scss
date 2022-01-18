@@ -58,371 +58,317 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-
+    
+    @include breakpoint(for-desktop-up) {
+        align-items: flex-end;
+    }
 
     .wrapper-inner {
         width: 100%;
+    }
+}
 
-        .banner-box__container {
+.banner-box__container {
+    display: flex;
+    width: 100%;
+    position: relative;
+    z-index: 5;
+
+    transition: all 0.3s ease-in-out;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.banner-box__container--item {
+    z-index: 2;
+    overflow: hidden;
+    @include flexCHV;
+    max-width: 300px;
+    padding: 150px;
+
+    @include breakpoint(for-tablet-up) {
+        max-width: 700px;
+        padding: 85px;
+    }
+
+    @include breakpoint(for-desktop-up) {
+        flex: 1;
+        background-size: cover;
+        padding: 57px;
+        max-width: 700px;
+        min-height: 450px;                }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+.banner-box__container--left {
+    background: transparent url("./../src/img/mzLogo2020.svg") center no-repeat;
+    background-size: cover;
+
+    cursor: pointer;
+    position: relative;
+
+    @include breakpoint(for-tablet-up) {
+        display: none;
+    }
+
+    @include breakpoint(for-desktop-up) {
+        background: transparent;
+        display: flex;
+        align-self: flex-end;
+    }
+
+    .mobile-fe-top-left {
+        display: flex;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 100%;
+        transform: translate(-50%, -50%);
+        justify-content: center;
+        padding: 10px;
+
+        background-color: #155799;
+        background-image: linear-gradient(120deg, #155799, #159957);
+        
+        @include breakpoint(for-tablet-up) {
+            display: none;
+        }
+
+        @include breakpoint(for-desktop-up) {
+            display: none;
+        }
+
+        h3 {
+            color: $white;
+            font-size: 25px;
+            font-family: 'gt', 'ns', sans-serif;
+            letter-spacing: 1px;
+        }
+
+    }
+
+    &:hover ~ .banner-box__container--right .hidden-code,
+    &:focus ~ .banner-box__container--right .hidden-code {
+        background-color: $white;
+        visibility: visible;
+        opacity: 1;
+        transition: 
+            visibility .3s linear 0s,
+            opacity linear .3s,
+            padding linear .3s;
+    }
+
+}
+
+picture.desktop-img {
+        
+    img {
+        @include displayHide;
+        @include breakpoint(for-desktop-up) {
             display: flex;
-            width: 100%;
+            max-width: 100%;
+            height: auto;
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+        }
+    }
+}
+
+.banner-box__container--right {
+    @include displayHide;
+    
+    @include breakpoint(for-tablet-up) {
+        display: flex;
+        background: url("./../src/img/bg-wire.svg") center; 
+        flex-direction: column;
+        align-items: flex-start;
+        position: relative;
+        margin-bottom: 10%;
+    }
+
+    
+    @include breakpoint(for-big-desktop-up) {
+        margin-bottom: 15%;
+    }
+    
+    h1 {
+        font-family: 'gt', 'ns' sans-serif;
+        color: $dkGray;
+        font-size: 45px;
+    }
+
+    h2 {
+        color: $white;
+        background-color: $dkGray;
+
+        background-color: #155799;
+        background-image: linear-gradient(120deg, #155799, #159957);
+
+        padding: 5px;
+        font-size: 24px;
+        line-height: 1.3;
+        font-family: sans-serif;
+        font-weight: 100;
+
+    }
+
+    .hidden-code {
+        visibility: hidden;
+        opacity: 0;
+
+        background-color: $white;
+
+        position: absolute;
+        transition: 
+            visibility 0s linear .3s,
+            opacity .3s,
+            padding .3s;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+
+        p.hidden-code-content {
             position: relative;
-            z-index: 5;
+            line-height: inherit;
+            white-space: nowrap;
+            border: none;
+            height: 100%;
+            overflow-y: hidden;
+            margin: auto;
+            font-size: 1rem;
 
-            transition: all 0.3s ease-in-out;
-
-            align-items: center;
-            justify-content: center;
-
-            .banner-box__container--item {
-                z-index: 2;
-                overflow: hidden;
-                @include flexCHV;
-                max-width: 300px;
-                padding: 150px;
-
-                @include breakpoint(for-tablet-up) {
-                    max-width: 700px;
-                    padding: 85px;
-                }
-
-                @include breakpoint(for-desktop-up) {
-                    flex: 1;
-                    background-size: cover;
-                    padding: 57px;
-                    max-width: 700px;
-                    min-height: 450px;                }
-
-                img {
-                    max-width: 100%;
-                    height: auto;
-                }
+            @include breakpoint(for-tablet-up) {
+                padding: 1.8em 1em;
+                font-size: 1.1rem;
+            }
+            @include breakpoint(for-desktop-up) {
+                padding: 4em 1em;
+                font-size: 1rem;
             }
 
-            .banner-box__container--left {
-                background: transparent url("./../src/img/mzLogo2020.svg") center no-repeat;
-                background-size: cover;
-
-                cursor: pointer;
-                position: relative;
-
-                @include breakpoint(for-tablet-up) {
-                    display: none;
-                }
-
-                @include breakpoint(for-desktop-up) {
-                    background: #cbcec3;
-                    display: flex;
-                }
-
-                .mobile-fe-top-left {
-                    display: flex;
-                    position: absolute;
-                    left: 50%;
-                    top: 50%;
-                    width: 100%;
-                    transform: translate(-50%, -50%);
-                    justify-content: center;
-                    padding: 10px;
-
-                    background-color: #155799;
-                    background-image: linear-gradient(120deg, #155799, #159957);
-                    
-                    @include breakpoint(for-tablet-up) {
-                        display: none;
-                    }
-
-                    @include breakpoint(for-desktop-up) {
-                        display: none;
-                    }
-
-                    h3 {
-                        color: $white;
-                        font-size: 25px;
-                        font-family: 'gt', 'ns', sans-serif;
-                        letter-spacing: 1px;
-                    }
-
-                }
-
-                picture {
-                    
-                    img {
-                        @include displayHide;
-                        @include breakpoint(for-desktop-up) {
-                            display: flex;
-                            max-width: 50%;
-                            height: auto;
-                            position: absolute;
-                            left: 0;
-                            bottom: -5px;
-                        }
-                    }
-                }
-
-                &:hover ~ .banner-box__container--right .hidden-code,
-                &:focus ~ .banner-box__container--right .hidden-code {
-                    background-color: $white;
-                    visibility: visible;
-                    opacity: 1;
-                    transition: 
-                        visibility .3s linear 0s,
-                        opacity linear .3s,
-                        padding linear .3s;
-                }
-
+            span, strong {
+                color: $blue;
+                font-weight: 700;
             }
 
-            .banner-box__container--right {
-                @include displayHide;
-                
-                @include breakpoint(for-tablet-up) {
-                    display: flex;
-                    background: url("./../src/img/bg-wire.svg") center; 
-                    flex-direction: column;
-                    align-items: flex-start;
-                    position: relative;
-                }
+            .hover-email {
+                color: $ElectricRed;
+            }
 
-                h1 {
-                    font-family: 'gt', 'ns' 'Roboto' sans-serif;
-                    color: $dkGray;
-                    font-size: 45px;
-                }
-
-                h2 {
-                    color: $white;
-                    background-color: $dkGray;
-
-                    background-color: #155799;
-                    background-image: linear-gradient(120deg, #155799, #159957);
-
-                    padding: 5px;
-                    font-size: 24px;
-                    line-height: 1.3;
-                    font-family: sans-serif;
-                    font-weight: 100;
-
-                }
-
-                .hidden-code {
-                    visibility: hidden;
-                    opacity: 0;
-
-                    background-color: $white;
-
-                    position: absolute;
-                    transition: 
-                        visibility 0s linear .3s,
-                        opacity .3s,
-                        padding .3s;
-                    top: 0;
-                    left: 0;
-                    right: 0;
-                    bottom: 0;
-
-                    p.hidden-code-content {
-                        position: relative;
-                        line-height: inherit;
-                        white-space: nowrap;
-                        border: none;
-                        height: 100%;
-                        overflow-y: hidden;
-                        margin: auto;
-                        font-size: 1rem;
-
-                        @include breakpoint(for-tablet-up) {
-                            padding: 1.8em 1em;
-                            font-size: 1.1rem;
-                        }
-                        @include breakpoint(for-desktop-up) {
-                            padding: 4em 1em;
-                            font-size: 1rem;
-                        }
-
-                        span, strong {
-                            color: $blue;
-                            font-weight: 700;
-                        }
-
-                        .hover-email {
-                            color: $ElectricRed;
-                        }
-
-                        &:hover .hover-email,
-                        &:focus .hover-email {
-                            color: $DeepGreen;
-                        }
-
-                    }
-
-                    @include breakpoint(for-tablet-up) {
-                        background: $white url("./../src/img/bg-wire.svg") center;
-                        visibility: visible;
-                        opacity: 1;
-                    }
-                    @include breakpoint(for-desktop-up) {
-                        background: $white;
-                        visibility: hidden;
-                        opacity: 0;
-                    }
-                }
-
-                &:hover .hidden-code,
-                &:focus .hidden-code {
-                    cursor: pointer;
-                    background-color: $white;
-                    visibility: visible;
-                    opacity: 1;
-                    transition: 
-                        visibility 0s linear .3s,
-                        opacity .3s,
-                        padding .3s;
-                }
+            &:hover .hover-email,
+            &:focus .hover-email {
+                color: $DeepGreen;
             }
 
         }
 
+        @include breakpoint(for-tablet-up) {
+            background: $white url("./../src/img/bg-wire.svg") center;
+            visibility: visible;
+            opacity: 1;
+        }
+        @include breakpoint(for-desktop-up) {
+            background: $white;
+            visibility: hidden;
+            opacity: 0;
+        }
+    }
+
+    &:hover .hidden-code,
+    &:focus .hidden-code {
+        cursor: pointer;
+        background-color: $white;
+        visibility: visible;
+        opacity: 1;
+        transition: 
+            visibility 0s linear .3s,
+            opacity .3s,
+            padding .3s;
     }
 }
 
-.arrow-down-box { 
-    // grid-area: arrow-down-box; // not in use!!!
-    align-self: center;
-    position: absolute;
-    bottom: 10px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    z-index: 5;
-
-    // not in use for now
-    // .bounce-animation {
-    //     display: flex;
-    //     justify-content: center;
-    //     align-items: center;
-    //     height: 50px;
-    //     width: 50px;
-    //     background-color: $ltGray;
-    //     border-radius: 50%;
-    //     padding: 10px;
-    //     line-height: 50px;
-    //     margin: 5px;
-
-    //     animation: bounce 5s infinite;
-    //     transition: 0.5s ease-in-out;
-      
-    //     svg {
-    //         fill: $blue;
-    //         width: 30px;
-    //         height: 30px;
-    //     }
-    // }
-    
-    // .bounce-animation:hover > svg {
-    //     fill: #21a648;
-    // }
-}
-
-// @keyframes bounce {
-//     0%,
-//     20%,
-//     50%,
-//     80%,
-//     100% {
-//         transform: translateY(0);
-//     }
-//     40% {
-//         transform: translateY(-10px);
-//     }
-//     60% {
-//         transform: translateY(-5px);
-//     }
-// }
-
-
 ////////////////////
 // education box
-section.education-box {
-    .wrapper-inner {
+.container-education {
 
-        .container-education {
+    .acc {
+        overflow: hidden;
+        padding: 0;
+        padding: 0 10px 0 10px;
 
-            .acc {
-                overflow: hidden;
-                padding: 0;
-                padding: 0 10px 0 10px;
+        li {
+            .acc_ctrl {
+                display: flex;
+                background: $white;
+                border: none;
+                border-bottom: solid 1px #F2F2F2;
+                cursor: pointer;
+                outline: none;
+                position: relative;
+                text-align: center;
+                width: 100%;
+                
+                h2 {
+                    color: $blue;
+                    display: flex;
+                    align-items: center;
+                    font-family: sans-serif;
+                    font-size: 20px;
 
-                li {
-                    .acc_ctrl {
-                        display: flex;
-                        background: $white;
-                        border: none;
-                        border-bottom: solid 1px #F2F2F2;
-                        cursor: pointer;
-                        outline: none;
-                        position: relative;
-                        text-align: center;
-                        width: 100%;
-                        
-                        h2 {
-                            color: $blue;
-                            display: flex;
-                            align-items: center;
-                            font-family: sans-serif;
-                            font-size: 20px;
-
-                            svg {
-                                height: 30px;
-                                width: 30px;
-                                margin: 0 30px 0 0;
-                            }
-                        }
-                    }
-                      
-                    .acc_ctrl:before {
-                        background: $blue;
-                        content: '';
-                        height: 2px;
-                        margin-right: 10px;
-                        position: absolute;
-                        right: 0;
-                        top: 50%;
-                        transform: rotate(90deg);
-                        transition: all 0.2s ease-in-out;
-                        width: 14px;
-                    }
-                      
-                    .acc_ctrl:after {
-                        background: $blue;
-                        content: '';
-                        height: 2px;
-                        margin-right: 10px;
-                        position: absolute;
-                        right: 0;
-                        top: 50%;
-                        width: 14px;
-                    }
-
-                    .acc_ctrl.active:before {
-                        transform: rotate(0deg);
-                    }
-                      
-                    .acc_ctrl.active h2, .acc_ctrl:focus h2 {
-                        position: relative;
-                    }
-
-                    .acc_panel {
-                        position: relative;
-                        padding: 5px;
-                        background-color: #155799;
-                        background-image: linear-gradient(120deg,#155799,#159957);
-                        display: none;
-                        overflow: hidden;
+                    svg {
+                        height: 30px;
+                        width: 30px;
+                        margin: 0 30px 0 0;
                     }
                 }
+            }
+              
+            .acc_ctrl:before {
+                background: $blue;
+                content: '';
+                height: 2px;
+                margin-right: 10px;
+                position: absolute;
+                right: 0;
+                top: 50%;
+                transform: rotate(90deg);
+                transition: all 0.2s ease-in-out;
+                width: 14px;
+            }
+              
+            .acc_ctrl:after {
+                background: $blue;
+                content: '';
+                height: 2px;
+                margin-right: 10px;
+                position: absolute;
+                right: 0;
+                top: 50%;
+                width: 14px;
+            }
+
+            .acc_ctrl.active:before {
+                transform: rotate(0deg);
+            }
+              
+            .acc_ctrl.active h2, .acc_ctrl:focus h2 {
+                position: relative;
+            }
+
+            .acc_panel {
+                position: relative;
+                padding: 5px;
+                background-color: #155799;
+                background-image: linear-gradient(120deg,#155799,#159957);
+                display: none;
+                overflow: hidden;
             }
         }
     }
@@ -438,66 +384,61 @@ section.education-box {
         flex-direction: row;
     }
 
-    .info-box__item {
-        flex: 1 1 calc(50% - 20px);
-        background: white;
-        
-        p {
-            line-height: 1.8;
-            text-align: justify;
-        }
-
-    }
 }
 
+.info-box__item {
+    flex: 1 1 calc(50% - 20px);
+    background: white;
+    
+    p {
+        line-height: 1.8;
+        text-align: justify;
+    }
+
+}
 .experience-box {
     display: flex;
     flex-wrap: wrap;
     gap: 5px;
+}
 
-    .experience-box__item {
-        flex: 1 1 calc(50% - 40px);
-        gap: 10px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        background: white;
-        text-align: center;
+.experience-box__item {
+    flex: 1 1 calc(50% - 40px);
+    gap: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: white;
+    text-align: center;
+}
 
-        img.education-box-left {
-            width: 150px;
-            height: 150px;
-            padding-top: 20px;
+img.education-box-left {
+    width: 150px;
+    height: 150px;
+    padding-top: 20px;
+}
+
+.education-box-right {
+    ul {
+        h4 {
+            span {
+                color: $blue;
+            }
         }
 
-        .education-box-right {
-            ul {
-                h4 {
-                    span {
-                        color: $blue;
-                    }
-                }
-    
-                h5 {
-                    color: $DeepGreen;
-                    padding-bottom: 2.5rem;
-                }
-                
-                p {
-                    text-align: justify;
-                    a {
-                        color: $blue;
-                    }
-                }
+        h5 {
+            color: $DeepGreen;
+            padding-bottom: 2.5rem;
+        }
+        
+        p {
+            text-align: justify;
+            a {
+                color: $blue;
             }
         }
     }
-
-    // not in use for now
-    // .experience-box__item + .experience-box__item {
-    //     margin-left: 5px;
-    // }
 }
 
 .love-box {
@@ -505,22 +446,20 @@ section.education-box {
     display: flex;
     flex-wrap: wrap;
     height: 100%;
-    // gap: 5px;
+}
 
-    .love-box__item {
-        font-size: 1rem;
-        line-height: 1.5;
-        padding: 5px;
-        flex: 1;
-        background: #cecece;
-        margin: 5px;
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-    }
-
+.love-box__item {
+    font-size: 1rem;
+    line-height: 1.5;
+    padding: 5px;
+    flex: 1;
+    background: #cecece;
+    margin: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 ///////////////////////
@@ -529,85 +468,83 @@ section.education-box {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+}
 
-    .gallery-box-heading {
+.gallery-box-heading {
 
-        .wrapper-inner {
+    .wrapper-inner {
+        display: flex;
+        align-self: center;
+        width: 100%;
+        justify-content: flex-start;
+        @include breakpoint(mobile) {
+            justify-content: center;
+        }
+    }
+}
+
+.gallery-container {
+    background-color: #155799;
+    background-image: linear-gradient(120deg,#155799,#159957);
+}
+
+.gallery-item-container {
+    display: flex;
+    flex-wrap: wrap;
+    .item-flex {
+        position: relative;
+        overflow: hidden;
+        flex: 1 1 50%;
+        
+        &:last-child {
             display: flex;
-            align-self: center;
             width: 100%;
-            justify-content: flex-start;
-            @include breakpoint(mobile) {
-                justify-content: center;
+            justify-content: center;
+        }
+        
+        @include breakpoint(for-desktop-up) {
+            flex: 1 1 33.333%;   
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .item__overlay {
+            position: absolute;
+            z-index: 2;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+
+            background-color: rgba(12,12,12,.5);
+        
+            transform: translateY(100%);
+            transition: 0.2s;
+
+            @include flexCHV;
+            cursor: pointer;
+
+            button {
+                border: 2px solid white;
+                color: white;
+                text-transform: uppercase;
+                background-image: linear-gradient(120deg,#155799,#159957);
+                padding: 5px;
+                cursor: pointer;
+                @include flexCHV;
+                outline: transparent;
+
             }
         }
     }
 
-    .gallery-container {
-        background-color: #155799;
-        background-image: linear-gradient(120deg,#155799,#159957);
-        .wrapper-inner-full {
-            .gallery-item-container {
-                display: flex;
-                flex-wrap: wrap;
-                .item-flex {
-                    position: relative;
-                    overflow: hidden;
-                    flex: 1 1 50%;
-                    
-                    &:last-child {
-                        display: flex;
-                        width: 100%;
-                        justify-content: center;
-                    }
-                    
-                    @include breakpoint(for-desktop-up) {
-                        flex: 1 1 33.333%;   
-                    }
-           
-                    img {
-                        width: 100%;
-                        height: 100%;
-                        object-fit: cover;
-                    }
-            
-                    .item__overlay {
-                        position: absolute;
-                        z-index: 2;
-                        top: 0;
-                        bottom: 0;
-                        left: 0;
-                        right: 0;
-            
-                        background-color: rgba(12,12,12,.5);
-                    
-                        transform: translateY(100%);
-                        transition: 0.2s;
-            
-                        @include flexCHV;
-                        cursor: pointer;
-            
-                        button {
-                            border: 2px solid white;
-                            color: white;
-                            text-transform: uppercase;
-                            background-image: linear-gradient(120deg,#155799,#159957);
-                            padding: 5px;
-                            cursor: pointer;
-                            @include flexCHV;
-                            outline: transparent;
-            
-                        }
-                    }
-                }
-            
-                .item-flex:hover .item__overlay,
-                .item-flex:focus .item__overlay {
-                    transform: translateY(0);
-                }
-            
-            }
-        }
+    .item-flex:hover .item__overlay,
+    .item-flex:focus .item__overlay {
+        transform: translateY(0);
     }
 
 }
