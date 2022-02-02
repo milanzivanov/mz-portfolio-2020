@@ -2,20 +2,20 @@ jQuery(function() {
     'use strict';
 
     // change bg image on page refres
-    let images = [
-        'https://ik.imagekit.io/milanz/src/img/laptopOnTheTable.jpg', 
-        'https://ik.imagekit.io/milanz/src/img/bg-main.jpeg', 
-        'https://ik.imagekit.io/milanz/src/img/laptopOnTheTable.jpg', 
-        'https://ik.imagekit.io/milanz/src/img/bg-main.jpeg', 
-        'https://ik.imagekit.io/milanz/src/img/laptopOnTheTable.jpg', 
-        'https://ik.imagekit.io/milanz/src/img/bg-main.jpeg'
-    ];
+    // let images = [
+    //     'https://ik.imagekit.io/milanz/src/img/laptopOnTheTable.jpg', 
+    //     'https://ik.imagekit.io/milanz/src/img/bg-main.jpeg', 
+    //     'https://ik.imagekit.io/milanz/src/img/laptopOnTheTable.jpg', 
+    //     'https://ik.imagekit.io/milanz/src/img/bg-main.jpeg', 
+    //     'https://ik.imagekit.io/milanz/src/img/laptopOnTheTable.jpg', 
+    //     'https://ik.imagekit.io/milanz/src/img/bg-main.jpeg'
+    // ];
 
-    $('.grid-container').css(
-        {
-            'background-image': 'url(' + images[Math.floor(Math.random() * images.length)] + ')'
-        }
-    );
+    // $('.grid-container').css(
+    //     {
+    //         'background-image': 'url(' + images[Math.floor(Math.random() * images.length)] + ')'
+    //     }
+    // );
 
     // open mobil menu and hamburger btn
     $(".botton-nav").on("click", function(e) {

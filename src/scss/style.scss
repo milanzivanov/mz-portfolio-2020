@@ -36,6 +36,9 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
 
+    background: url("https://ik.imagekit.io/milanz/src/img/bg-main.jpeg") no-repeat;
+    background-size: cover;
+
     &::after {
         content: "";
         background-color: rgba(12, 12, 12, 0.4);
